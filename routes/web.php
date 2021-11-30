@@ -1,6 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BidangController;
+use App\Http\Controllers\BincangController;
+use App\Http\Controllers\EditprofilController;
+use App\Http\Controllers\InformasiController;
+use App\Http\Controllers\MediaController;
+use App\Http\Controllers\kampungkerenController;
+use App\Http\Controllers\pendidikanController;
+use App\Http\Controllers\pojokbacaController;
+use App\Http\Controllers\umkmController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +24,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//tampilan
 Route::get('/', function () {
-    return view('informasi/informasi');
+    return view('beranda.index');
 });
-Route::get('/s', function () {
-    return view('layout/index');
-});
+Route::resource('bidang', BidangController::class);
+Route::resource('bincang', BincangController::class);
+Route::resource('informasi', InformasiController::class);
+Route::resource('media', MediaController::class);
+
+//sektor
+//Route::resource('informasi', InformasiController::class);
+Route::resource('umkm', umkmController::class);
+Route::resource('pendidikan', pendidikanController::class);
+Route::resource('pojokbaca', pojokbacaController::class);
+Route::resource('kampungkeren', kampungkerenController::class);
+
+//profil
+Route::resource('profil', EditprofilController::class);
+Route::get('/profil/{id}/edit', [BarangController::class, 'index']);
+Route::get('/logout', [AuthController::class, 'logout']);
