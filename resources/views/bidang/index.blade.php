@@ -43,10 +43,11 @@
                             <h1>Apa Itu Prodamas</h1>
                         </div>
                     </div>
-                <div class="row mt-3" style="font-family: Montserrat, sans-serif">
-                    <div class="col text-center">
+                <div class="row mt-5" style="font-family: Montserrat, sans-serif">
+                    <div class="col" style="text-align: justify">
                         <p>
-                        Program Fasilitasi Pemberdayaan Masyarakat (PRODAMAS) adalah suatu program dari pemerintah Kota Kediri yang digunakan untuk melaksanakan kegiatan pembangunan masyarakat ditingkat kelurahan yang berbasis di wilayah Rukun Tetangga (RT) yang dimulai sejak tahun 2015 sebagai upaya mewujudkan kemampuan dan kemandirian masyarakat dalam pembangunan infrastruktur, peningkatan ekonomi masyarakat, dan sosial kemasyarakatan
+                        Program Fasilitasi Pemberdayaan Masyarakat (PRODAMAS) adalah suatu program dari pemerintah Kota Kediri yang digunakan untuk melaksanakan kegiatan pembangunan masyarakat ditingkat kelurahan yang berbasis di wilayah Rukun Tetangga (RT) yang dimulai sejak tahun 2015.
+                        <br> <br>Prodamas sebagai upaya mewujudkan kemampuan dan kemandirian masyarakat dalam pembangunan infrastruktur, peningkatan ekonomi masyarakat, dan sosial kemasyarakatan.
                         </p>
                     </div>
                 </div>
@@ -58,7 +59,10 @@
             <!-- Bidang -->
             <section id="bidang">
                 <div class="container mt-5">
-                    <div class="row justify-content-center">
+                    <div class="col text-center">
+                        <h1>6 Cakupan Bidang Prodamas</h1>
+                    </div>
+                    <div class="row justify-content-center mt-5">
                         <div class="col-sm-6-mt-5 mb-4">
                             <div class="box">
                                 <div class="item">

@@ -31,52 +31,49 @@
             <!-- awal jumbotron -->
             <div class="container-fluid banner">
                 <div class="container banner-content">
-                    <h1>informasi</h1>
+                    <h1>PROGRAM PEMBERDAYAAN MASYARAKAT</h1>
+                    <h1>(PRODAMAS)</h1>
                 </div>
             </div>
             <!-- akhir jumbotrom -->
-            </br>
-            </br>
+            <br>
+            <br>
             <div class="content">
             <!--visi misi-->
                 <h2> VISI DAN MISI </h2>
-                </br>
+                <br>
                 <div class="border">
-                    <p id="visi">Visi :
-                        </br>
-                        Mewujudkan Kota Kediri  unggul dan makmur dalam harmoni.
-                        <br></br>
-                        Misi  :
-                        </br>
-                        1. Mewujudkan tata kelola pemerintahan yang bersih, transparan dan berintegritas berorientasi pada  pelayanan prima dan teknologi informasi.
-                        </br>
-                        2. Mewujudkan SDM yang berkualitas dan berdaya saing berbasis nilai agama dan budaya.
-                        </br>
-                        3. Memperkuat perekonomian daerah  berbasis potensi unggulan daerah dan pengembangan ekonomi kreatif yang berkeadilan.
-                        </br>
-                        4. Mewujudkan Kota Kediri yang aman, nyaman, dan berwawasan lingkungan yang.</p>
+                    <p id="visi">Visi :</p>
+                        <p id="isi-visi"> Kota Kediri  unggul dan makmur dalam harmoni.</p>
+                       <p id="visi">Misi  :</p> 
+                       <ul id="isi-misi">
+                           <li>Mewujudkan tata kelola pemerintahan yang bersih, transparan dan berintegritas berorientasi pada  pelayanan prima dan teknologi informasi.</li>
+                           <li>Mewujudkan SDM yang berkualitas dan berdaya saing berbasis nilai agama dan budaya.</li>
+                           <li>Memperkuat perekonomian daerah  berbasis potensi unggulan daerah dan pengembangan ekonomi kreatif yang berkeadilan.</li>
+                           <li>Mewujudkan Kota Kediri yang aman, nyaman, dan berwawasan lingkungan yang.</li>
+                       </ul>
                 </div>
 
-                <br></br>
-                <br></br>
+                <br><br>
+                <br><br>
 
             <!--latar belakang-->
                 <h2> LATAR BELAKANG </h2>
-                </br>
-                    <p id="paragraf">&nbsp; &nbsp; Berawal dari program Musrenbang, kemudian dievaluasi. Selama pelaksanaan Musrenbang ditemukan permasalahan utama yang menjadikan kurang optimalnya 
-                    Musrenbang dalam mengakomodasi seluruh kepentingan masyarakat, yaitu adanya kenyataan bahwa APBD Kota Kediri memiliki keterbatasan untuk merealisasikan 
-                    semua usulan masyarakat hasil Musrenbang sehingga perlu adanya skala prioritas pembangunan ditinjau dari segala segi. </p>
-                    <p id="paragraf">&nbsp; &nbsp;Abdullah Abu Bakar, SE., Wakil Walikota Kediri yang menjadi salah satu kandidat Calon Walikota Kediri periode 2014 – 2019 waktu itu, menawarkan 
+                <br>
+                    <p class="text">Berawal dari program Musrenbang, kemudian dievaluasi. Selama pelaksanaan Musrenbang ditemukan permasalahan utama yang menjadikan kurang optimalnya Musrenbang dalam mengakomodasi seluruh kepentingan masyarakat, yaitu adanya kenyataan bahwa APBD Kota Kediri memiliki keterbatasan untuk merealisasikan semua usulan masyarakat hasil Musrenbang sehingga perlu adanya skala prioritas pembangunan ditinjau dari segala segi.<span class="dots"> ...</span> 
+                    <br><br>
+                    <span class="moreText"> Abdullah Abu Bakar, SE., Wakil Walikota Kediri yang menjadi salah satu kandidat Calon Walikota Kediri periode 2014 – 2019 waktu itu, menawarkan 
                         sebuah konsep pembangunan yang langsung menyentuh pada satuan sistem sosial masyarakat terkecil di kelurahan, yaitu Rukun Tetangga (RT) sebagai 
                         basis utama. Dalam konsep pembangunan tersebut RT diberikan ruang untuk menggelar musyawarah warga RT (rembug warga) guna menentukan dan mengajukan 
                         usulan kebutuhan pembangunan di lingkungannya, dan Pemerintah Kota Kediri akan mengalokasikan secara khusus anggaran per RT pada APBD Kota Kediri 
-                        untuk mewujudkan usulan tersebut. </p>
-                    <p id="paragraf">&nbsp; &nbsp;Setelah beliau terpilih sebagai Walikota Kediri tahun 2014, segera konsep pembangunan tersebut diterapkan secara resmi dengan nama 
+                        untuk mewujudkan usulan tersebut. <br><br>
+                        Setelah beliau terpilih sebagai Walikota Kediri tahun 2014, segera konsep pembangunan tersebut diterapkan secara resmi dengan nama 
                         Program Pemberdayaan Masyarakat (Prodamas), yaitu sebuah program pembangunan berbasis RT yang meliputi pembangunan bidang infrastruktur, 
                         sosial dan ekonomi, dengan besar anggaran (2014 – 2019) Rp. 50 Juta / RT yang dialokasikan pada APBD Kota Kediri. Dalam periode ke – 2, 
                         Walikota Kediri, Abdullah Abu Bakar, SE., menetapkan kenaikan anggaran Prodamas menjadi Rp. 100 Juta / RT, dengan penambahan cakupan pada bidang 
-                        pendidikan, kesehatan dan kepemudaan serta penyebutan program menjadi Program Pemberdayaan Masyarakat Plus (Prodamas Plus).</p>
-
+                        pendidikan, kesehatan dan kepemudaan serta penyebutan program menjadi Program Pemberdayaan Masyarakat Plus (Prodamas Plus).</span></p>
+                    <button class="read-more-btn">Selengkapnya</button>
+    
             <!--SEKTOR-->
                 <div class="bordersektor">
                     <div col>
@@ -90,6 +87,19 @@
                 </div>
             </div><!--div content-->
 
+            <script>
+                const readMoreBtn = document.querySelector(".read-more-btn");
+                const text = document.querySelector(".text");
+
+                readMoreBtn.addEventListener("click", (e) => {
+                text.classList.toggle("show-more");
+                if (readMoreBtn.innerText === "Selengkapnya") {
+                    readMoreBtn.innerText = "Sembunyikan";
+                } else {
+                    readMoreBtn.innerText = "Selengkapnya";
+                }
+                });
+            </script>
 
         </body>
     </html>
