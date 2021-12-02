@@ -22,10 +22,10 @@
 </head>
 <body>
      {{-- NavBar --}}
-    <nav class="navbar navbar-expand-lg navbar-dark transparan">
+    <nav class="navbar navbar-expand-lg navbar-light transparan">
         <div class="container">
             <img src="img/logoprodamas.png" alt="" width="40" height="40" class="d-inline-block align-text-top" />
-            <a class="navbar-brand" style="padding-left: 5px; font-family: Inter, sans-serif" href="#">PRODAMAS</a>
+            <a class="navbar-brand" style="padding-left: 5px; font-family: Inter, sans-serif; color:black;" href="#">PRODAMAS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -56,7 +56,7 @@
     {{-- Login --}}
     <div class="pasLayar">
         <div class="loginLayer">
-            <h1 align="center"><b> PRODAMAS </b></h1>
+            <h2 align="center" style="color:white;"><b> LOGIN </b></h2>
             &nbsp;
             {{-- <h4 align="center"> Login User</h4> --}}
             <form action=" " method="POST">

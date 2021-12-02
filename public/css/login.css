@@ -1,7 +1,8 @@
 body{
-    background-image: url("https://images.unsplash.com/photo-1511108988782-9a5c10cbc062?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+    /* background-image: url("https://images.unsplash.com/photo-1511108988782-9a5c10cbc062?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    background-color: white;
 }
 .transparan{
     background-color: none;
@@ -41,11 +42,16 @@ body{
 }
 .loginLayer{
     color:white;
-    width:320px;
+    width: 400px;
+    padding: 2em;
+    border-radius: 3%;
     margin-top: 7%;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
     margin-left: auto;
     margin-right: auto;
     padding: 2em;
+    background-color: #4d148c;
+
 }
 .registLayer{
     color:white;
