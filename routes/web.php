@@ -44,3 +44,8 @@ Route::resource('kampungkeren', kampungkerenController::class);
 Route::resource('profil', EditprofilController::class);
 Route::get('/profil/{id}/edit', [BarangController::class, 'index']);
 Route::get('/logout', [AuthController::class, 'logout']);
+
+//login
+Route::get('/login', function () {
+    return view('login.login');
+});
