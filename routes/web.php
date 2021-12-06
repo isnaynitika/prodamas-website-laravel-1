@@ -11,6 +11,7 @@ use App\Http\Controllers\kampungkerenController;
 use App\Http\Controllers\pendidikanController;
 use App\Http\Controllers\pojokbacaController;
 use App\Http\Controllers\umkmController;
+use App\Http\Controllers\NewsletterController;
 
 
 /*
@@ -49,3 +50,6 @@ Route::get('/logout', [AuthController::class, 'logout']);
 Route::get('/login', function () {
     return view('login.login');
 });
+
+Route::get('beranda.index', [NewsletterController::class, 'create']);
+Route::post('beranda.index', [NewsletterController::class, 'store']);

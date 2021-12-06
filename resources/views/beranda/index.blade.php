@@ -237,14 +237,36 @@
       <div class="card-body">
         <h5 class="card-title text-center mb-4 mt-5" style="font-weight: bold;font-family:Inter, sans-serif;">Berlangganan</h5>
         <p class="card-text text-center" style="font-family: Montserrat, sans-serif;;">Dapatkan informasi menarik dan terupdate tentang Prodamas Kota Kediri dengan mendaftarkan email Anda.</p>
-        <form>
-          <div class="col-8 offset-2 mb-3">
-            <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailberlangganan">
+        <form action="{{url('beranda.index')}}" method="post">
+          @if ($message = Session::get('success'))
+          <span class="text-success">
+            <center>
+              <strong>{{ $message }}</strong>
+            </center>
+          </span>
+          @endif
+          @if ($message = Session::get('error'))
+          <span class="text-muted">
+            <center>
+              <strong>{{ $message }}</strong>
+            </center>
+          </span>
+          @endif
+          @if($errors->any('email'))
+          <span class="text-danger">
+            <center>
+              <strong>{{$errors->first('email')}}</strong>
+            </center>
+          </span>
+          @endif
+          @csrf
+          <div class="col-8 offset-2 mb-3 mt-2">
+            <input type="text" class="form-control" name="email" aria-describedby="emailberlangganan">
+          </div>
+          <div class="d-grid gap-2 col-6 mx-auto mb-5">
+            <button class="rounded" type="submit" style="background-color: #FF6600; border:none;color:white;height: 35px">Mulai Berlangganan</button>
           </div>
         </form>
-        <div class="d-grid gap-2 col-6 mx-auto mb-5">
-          <button class="rounded" type="button" style="background-color: #FF6600; border:none;color:white;height: 35px">Mulai Berlangganan</button>
-        </div>
       </div>
     </div>
   </div>
