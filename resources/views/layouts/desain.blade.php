@@ -28,8 +28,8 @@
         <!--navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4d148c">
             <div class="container">
-            <img src="img/logoprodamas.png" alt="" width="40" height="40" class="d-inline-block align-text-top" />
-            <a class="navbar-brand" style="padding-left: 5px; font-family: Inter, sans-serif">PRODAMAS</a>
+            <a href="{{ url('/') }}"><img src="img/logoprodamas.png" alt="" width="40" height="40" class="d-inline-block align-text-top" /></a>
+            <a href="{{ url('/') }}" class="navbar-brand" style="padding-left: 5px; font-family: Inter, sans-serif">PRODAMAS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -38,17 +38,40 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="{{ url('/') }}"><u>Beranda</u></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('bidang') }}">Bidang</a>
+                    <li>
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Tentang
+                                </a>
+                                <ul class="dropdown-menu main-navigation">
+                                    <li> <a class="dropdown-item" href="#"> Prodamas </a></li>
+                                    <li> <a class="dropdown-item" href="#"> Bidang </a></li>
+                                    <li> <a class="dropdown-item" href="#"> Data &raquo; </a>
+                                      <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Prodamas Dalam Grafik</a></li>
+                                        <li><a class="dropdown-item" href="#">Prodamas Dalam Peta</a></li>
+                                      </ul>
+                                    </li>
+                              </li>
+                            </ul>
+                          </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('bincang') }}">Bincang Prodamas</a>
+                        <a class="nav-link" href="{{ url('bincang') }}">Artikel</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('informasi') }}">Informasi</a>
+                        <a class="nav-link" href="{{ url('foto') }}">Foto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('media') }}">Media</a>
+                        <a class="nav-link" href="{{ url('video') }}">Video</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('audio') }}">Audio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('media') }}">Medsos</a>
                     </li>
                     
                 </ul>
@@ -81,9 +104,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
-                            <img class="logo-footer" src="img/logoprodamas.png" width="110" height="110" alt="logo-footer" />
+                            <a href={{ url('/') }}><img class="logo-footer" src="img/logoprodamas.png" width="110" height="110" alt="logo-footer" /></a>
                             <div style="margin-top: 12px">
-                                <img src="img/prodamas-text.png" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" />
+                                <a href={{ url('/') }}><img src="img/prodamas-text.png" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
                             </div>
                         </div>
                         <div class="col-md-5 col-lg-5 offset-lg-2 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white">
@@ -98,15 +121,18 @@
                         <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 70px; color: white">
                             <div class="row">
                                 <div class="col-md-6">
+                                    <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold;">Navigasi</p>
                                     <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
-                                    <a class="footer-link" href="{{ url('bidang') }}">Bidang</a> <br />
-                                    <a class="footer-link" href="{{ url('bincang') }}">Bincang Prodamas</a> <br />
-                                    <a class="footer-link" href="{{ url('informasi') }}">Informasi</a>
+                                    <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br />
+                                    <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
+                                    <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br />
+                                    <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a>
                                 </div>
                                 <div class="col-md-6">
-                                    <a class="footer-link" href="{{ url('media') }}">Media</a> <br />
-                                    <a class="footer-link" href="{{ url('indormasi') }}">Visi dan Misi</a> <br />
-                                    <a class="footer-link" href="{{ url('/') }}">Dashboard</a>
+                                    <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold;">Tautan Eksternal</p>
+                                    <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
+                                    <a class="footer-link" href="https://survey123.arcgis.com/share/932769e15a27418aa9b448b0b1e6b6b6">Pengaduan Bank Sampah</a> <br>
+                                    <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
                                 </div>
                             </div>
                         </div>
@@ -133,7 +159,11 @@
         </footer>
         <!-- Akhir footer -->
 
+        <!--Script dropdown-->
+        
+
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></scrip>
     </body>
 </html>
