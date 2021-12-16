@@ -25,8 +25,9 @@
 /* Left column */
 .leftcolumn {   
   float: left; 
-  width: 75%;
+  width: 70%;
   text-align: justify;
+  margin-left: 10px;
 }
 
 /* Right column */
