@@ -1,0 +1,73 @@
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card-right {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.caption {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.caption:hover {
+  transform: scale(1.1);
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left; 
+  width: 75%;
+  text-align: justify;
+}
+
+/* Right column */
+.rightcolumn {
+  text-align: justify;
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn img{   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.list-group-item:hover {
+  transform: scale(1.1);
+}
+
+div#social-links {
+  margin: 0 auto;
+  max-width: 500px;
+}
+div#social-links ul li {
+  display: inline-block;
+}          
+div#social-links ul li a {
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin: 1px;
+  font-size: 30px;
+  color: #222;
+  background-color: #ccc;
+}
+

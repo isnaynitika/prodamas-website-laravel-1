@@ -12,6 +12,8 @@ use App\Http\Controllers\pendidikanController;
 use App\Http\Controllers\pojokbacaController;
 use App\Http\Controllers\umkmController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\artikelController;
+//use App\Http\Controllers\SocialShareButtonsController;
 
 
 /*
@@ -51,5 +53,11 @@ Route::get('/login', function () {
     return view('login.login');
 });
 
+//berlangganan
 Route::get('beranda.index', [NewsletterController::class, 'create']);
 Route::post('beranda.index', [NewsletterController::class, 'store']);
+
+//artikel
+Route::resource('artikel', artikelController::class);
+//Route::post('add_prosess', 'artikelController@add_process');
+Route::get('artikel', [artikelController::class,'ShareWidget']);
