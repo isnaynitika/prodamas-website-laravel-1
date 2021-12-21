@@ -1,112 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <title>Prodamas Plus</title>
-    
+
     <!--icon-->
     <link href="img/icon.png" rel="icon" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
     <!--Goofle Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat&display=swap" rel="stylesheet" />
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat&display=swap"
+        rel="stylesheet" />
+
     <!--font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    
+
     <!--CSS-->
     <link rel="stylesheet" href="css/desain.css">
-    
-    </head>
 
-    <body>
-        <!--navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4d148c">
-            <div class="container">
-            <a href="{{ url('/') }}"><img src="img/logoprodamas.png" alt="" width="40" height="40" class="d-inline-block align-text-top" /></a>
-            <a href="{{ url('/') }}" class="navbar-brand" style="padding-left: 5px; font-family: Inter, sans-serif">PRODAMAS</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto" style="padding-right: 20px; font-weight: lighter; font-size: 13px; font-family: Inter, sans-serif">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{{ url('/') }}"><u>Beranda</u></a>
-                    </li>
-                    <li>
-                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                            <ul class="navbar-nav">
-                              <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                  Tentang
+</head>
+
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4d148c">
+        <div class="container">
+        <a href="{{ url('/') }}"><img src="img/logoprodamas.png" alt="" width="40" height="40" class="d-inline-block align-text-top" /></a>
+        <a href="{{ url('/') }}" class="navbar-brand" style="padding-left: 5px; font-family: Inter, sans-serif">PRODAMAS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto" style="padding-right: 20px; font-weight: lighter; font-size: 13px; font-family: Inter, sans-serif">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{ url('/') }}"><u>Beranda</u></a>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle"  data-bs-toggle="dropdown" aria-expanded="false">
+                                    Tentang
                                 </a>
-                                <ul class="dropdown-menu main-navigation">
-                                    <li> <a class="dropdown-item" href="#"> Prodamas </a></li>
-                                    <li> <a class="dropdown-item" href="#"> Bidang </a></li>
-                                    <li> <a class="dropdown-item" href="#"> Data &raquo; </a>
-                                      <ul class="submenu dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Prodamas Dalam Grafik</a></li>
-                                        <li><a class="dropdown-item" href="#">Prodamas Dalam Peta</a></li>
-                                      </ul>
-                                    </li>
-                              </li>
-                            </ul>
-                          </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('bincang') }}">Artikel</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('foto') }}">Foto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('video') }}">Video</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('audio') }}">Audio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('media') }}">Medsos</a>
-                    </li>
+                                <ul class="dropdown-menu menu-navigation" aria-labelledby="dropdownMenuLink">
+                                    <li> <a class="dropdown-item menu" href="{{ url('/tentang') }}"> Prodamas </a></li>
+                                    <li> <a class="dropdown-item menu" href="{{ url('/bidang') }}"> Bidang </a></li>
+                                    <li> <a class="dropdown-item menu" href="{{ url('/kampungkeren') }}"> Kampung Keren </a></li>
+                                    <li> <a class="dropdown-item menu" href="{{ url('/pokmas') }}"> POKMAS </a></li>
+                                    <li> <a class="dropdown-item menu" > Data &raquo; </a>
+                                        <ul class="submenu dropdown-menu">
+                                            <li><a class="dropdown-item menu" href="{{ url('/grafik') }}">Prodamas Dalam Grafik</a></li>
+                                            <li><a class="dropdown-item menu" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
+                                        </ul>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('bincang') }}">Artikel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('foto') }}">Foto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('video') }}">Video</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('audio') }}">Audio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('media') }}">Medsos</a>
+                </li>
                     
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" style="font-family: 'Font Awesome 5 Free'; font-weight: 600; border-radius: 30px; height: 30px" placeholder=" &#xf002;" aria-label="Search" />
-                </form>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" style="font-family: 'Font Awesome 5 Free'; font-weight: 600; border-radius: 30px; height: 30px" placeholder=" &#xf002;" aria-label="Search" />
+            </form>
 
-                <!--dropdown-->
+                @auth
                 <div class="dropdown">
-                    <button class="btn" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         <i class="fas fa-user" style="font-size:20px; font-weight: lighter; color: white;"></i>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <li><button class="dropdown-item"><a href="{{ url('profil') }}" style="text-decoration: none; color: black;">Edit Profil</a></button></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><button class="dropdown-item"><a href="{{ url('logout') }}" style="text-decoration: none; color: black;">Logout</a></button></li>
+                        <li><button class="dropdown-item"><a href="{{ url('profil') }}"
+                            style="text-decoration: none; color: black;">Edit Profil</a></button></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><button class="dropdown-item"><a href="{{ url('logout') }}"
+                            style="text-decoration: none; color: black;">Logout</a></button></li>
                     </ul>
                 </div>
-                <!--div dropdown-->
-            </div>
-            </div>
-        </nav>
-        <!--end navbar-->
+                @endauth
+                @guest
+                <a class="nav-icon position-relative text-decoration-none " href="{{ url('loginuser') }}">
+                    <i class="fa fa-fw fa-user text-light mr-3"></i>
+                </a>
+                @endguest
 
-        @yield('content');
+            </div>
+        </div>
+    </nav>
+    <!--end navbar-->
 
-        <!-- Awal footer -->
-        <footer>
+    @yield('content');
+
+    <!-- Awal footer -->
+    <footer>
             <div class="footer-top">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
-                            <a href={{ url('/') }}><img class="logo-footer" src="img/logoprodamas.png" width="110" height="110" alt="logo-footer" /></a>
+                            <a href=#><img class="logo-footer" src="img/logoprodamas.png" width="110" height="110" alt="logo-footer" /></a>
                             <div style="margin-top: 12px">
-                                <a href={{ url('/') }}><img src="img/prodamas-text.png" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
+                                <a href=#><img src="img/prodamas-text.png" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
                             </div>
                         </div>
                         <div class="col-md-5 col-lg-5 offset-lg-2 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white">
@@ -118,10 +134,10 @@
                             <p style="font-family: 'Font Awesome 5 Free'; font-weight: 600">&#xf0e0; prodamas.pemkotkediri@gmail.com</p>
                             <p style="font-family: 'Font Awesome 5 Free'; font-weight: 600">&#xf095; (0354) 682955</p>
                         </div>
-                        <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 70px; color: white">
+                        <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold;">Navigasi</p>
+                                    <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">Navigasi</p>
                                     <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
                                     <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br />
                                     <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
@@ -129,7 +145,7 @@
                                     <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a>
                                 </div>
                                 <div class="col-md-6">
-                                    <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold;">Tautan Eksternal</p>
+                                    <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">Tautan Eksternal</p>
                                     <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
                                     <a class="footer-link" href="https://survey123.arcgis.com/share/932769e15a27418aa9b448b0b1e6b6b6">Pengaduan Bank Sampah</a> <br>
                                     <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
@@ -160,9 +176,6 @@
         <!-- Akhir footer -->
 
         <!--Script dropdown-->
-        
-
-        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></scrip>
     </body>
