@@ -28,7 +28,6 @@
   <!-- awal jumbotron -->
   <div class="container-fluid banner">
     <div class="container banner-content">
-      <h1>Bidang</h1>
     </div>
   </div>
   <!-- akhir jumbotrom -->
