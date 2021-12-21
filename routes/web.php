@@ -7,10 +7,6 @@ use App\Http\Controllers\BincangController;
 use App\Http\Controllers\EditprofilController;
 use App\Http\Controllers\InformasiController;
 use App\Http\Controllers\MediaController;
-use App\Http\Controllers\kampungkerenController;
-use App\Http\Controllers\pendidikanController;
-use App\Http\Controllers\pojokbacaController;
-use App\Http\Controllers\umkmController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\artikelController;
 //use App\Http\Controllers\SocialShareButtonsController;
@@ -29,28 +25,31 @@ use App\Http\Controllers\artikelController;
 
 //tampilan
 Route::get('/', function () {
+    // $user = auth()->user()->id;
+    // dd($user);
     return view('beranda.index');
-});
-Route::resource('bidang', BidangController::class);
-Route::resource('bincang', BincangController::class);
+})->name('dashboard');
+
+Route::get('/tentang', [TentangController::class, 'index']);
+Route::get('/bidang', [TentangController::class, 'bidang']);
+Route::get('/kampungkeren', [TentangController::class, 'kampungkeren']);
+Route::get('/pokmas', [TentangController::class, 'pokmas']);
+Route::get('/grafik', [TentangController::class, 'grafik']);
+Route::get('/peta', [TentangController::class, 'peta']);
 Route::resource('informasi', InformasiController::class);
 Route::resource('media', MediaController::class);
 
-//sektor
-//Route::resource('informasi', InformasiController::class);
-Route::resource('umkm', umkmController::class);
-Route::resource('pendidikan', pendidikanController::class);
-Route::resource('pojokbaca', pojokbacaController::class);
-Route::resource('kampungkeren', kampungkerenController::class);
-
-//profil
+//login & profil
+Route::get('/loginuser', [AuthController::class, 'loginuser'])->name('login');
+Route::post('/postlogin', [AuthController::class, 'postlogin']);
+Route::get('/registrasi', [AuthController::class, 'registrasi']);
+Route::post('/postregist', [AuthController::class, 'postregist']);
 Route::resource('profil', EditprofilController::class);
-Route::get('/profil/{id}/edit', [BarangController::class, 'index']);
-Route::get('/logout', [AuthController::class, 'logout']);
 
-//login
-Route::get('/login', function () {
-    return view('login.login');
+Route::group(['middleware' => 'auth'], function(){ //agar tidak dapat tampil menggunakan linknya
+    Route::get('/profil/{id}/edit', [ProfilController::class, 'index']);
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
 });
 
 //berlangganan
