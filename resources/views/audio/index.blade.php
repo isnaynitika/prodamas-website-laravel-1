@@ -73,8 +73,8 @@
                 <div class="modal-body">
                 <div class="row audioPlayerBox">
                     <div class="col-5">
-                        <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=582&q=80" class="d-flex justify-content" width="400em" alt="...">
-                        <audio controls>
+                        <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=582&q=80" class="d-flex justify-content" width="100%" alt="...">
+                        <audio controls style="width: 100%;">
                             <source src="audioProd/Jingle.wav" type="audio/mpeg">
                             Your browser does not support the audio element.
                         </audio>
