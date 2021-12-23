@@ -51,94 +51,48 @@
     <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedAudio">
         {{-- Card Audio --}}
         <div class=" card noBorder cardAudio" style="width: 18rem;">
-            <div class="card h-100 noBorder">
-                <a href="">
-                    <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=582&q=80" class="card-img-top d-flex justify-content" alt="...">
-                </a>
+            <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer">
+                <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=582&q=80" class="card-img-top d-flex justify-content" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">
-                        <a class="btn btn-lg btn-light btnContentLink tittleAudio" href="">
+                        <p class=" tittleAudio" href="">
                             Ini Judul
-                        </a>
+                        </p>
                     </h5>
                 </div>
             </div>
         </div>
+        {{-- Card Modal --}}
+        <div class="modal fade" id="audioPlayer" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                <div class="modal-header ">
+                  <h5 class="modal-title" id="audioPlayerLabel">Judul Audio</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <div class="row audioPlayerBox">
+                    <div class="col-5">
+                        <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=582&q=80" class="d-flex justify-content" width="400em" alt="...">
+                        <audio controls>
+                            <source src="audioProd/Jingle.wav" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="col">
+                        <h2> Judul Audio</h2>
+                        <p>Ini Caption</p>
+                    </div>
+                </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        {{-- Akhir Card Audio --}}
 
-        <div class=" card noBorder cardAudio" style="width: 18rem;">
-            <div class="card h-100 noBorder">
-                <a href="">
-                    <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=582&q=80" class="card-img-top d-flex justify-content" alt="...">
-                </a>
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a class="btn btn-lg btn-light btnContentLink tittleAudio" href="">
-                            Ini Judul
-                        </a>
-                    </h5>
-                </div>
-            </div>
-        </div>
-
-        <div class=" card noBorder cardAudio" style="width: 18rem;">
-            <div class="card h-100 noBorder">
-                <a href="">
-                    <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=582&q=80" class="card-img-top d-flex justify-content" alt="...">
-                </a>
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a class="btn btn-lg btn-light btnContentLink tittleAudio" href="">
-                            Ini Judul
-                        </a>
-                    </h5>
-                </div>
-            </div>
-        </div>
-
-        <div class=" card noBorder cardAudio" style="width: 18rem;">
-            <div class="card h-100 noBorder">
-                <a href="">
-                    <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=582&q=80" class="card-img-top d-flex justify-content" alt="...">
-                </a>
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a class="btn btn-lg btn-light btnContentLink tittleAudio" href="">
-                            Ini Judul
-                        </a>
-                    </h5>
-                </div>
-            </div>
-        </div>
-
-        <div class=" card noBorder cardAudio" style="width: 18rem;">
-            <div class="card h-100 noBorder">
-                <a href="">
-                    <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=582&q=80" class="card-img-top d-flex justify-content" alt="...">
-                </a>
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a class="btn btn-lg btn-light btnContentLink tittleAudio" href="">
-                            Ini Judul
-                        </a>
-                    </h5>
-                </div>
-            </div>
-        </div>
-
-        <div class=" card noBorder cardAudio" style="width: 18rem;">
-            <div class="card h-100 noBorder">
-                <a href="">
-                    <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=582&q=80" class="card-img-top d-flex justify-content" alt="...">
-                </a>
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <a class="btn btn-lg btn-light btnContentLink tittleAudio" href="">
-                            Ini Judul
-                        </a>
-                    </h5>
-                </div>
-            </div>
-        </div>
 
     </div>
     <!-- akhir feed audio -->
