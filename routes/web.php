@@ -8,6 +8,7 @@ use App\Http\Controllers\EditprofilController;
 use App\Http\Controllers\InformasiController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\KritikController;
 use App\Http\Controllers\artikelController;
 //use App\Http\Controllers\SocialShareButtonsController;
 
@@ -60,3 +61,7 @@ Route::post('beranda.index', [NewsletterController::class, 'store']);
 Route::resource('artikel', artikelController::class);
 //Route::post('add_prosess', 'artikelController@add_process');
 Route::get('artikel', [artikelController::class,'ShareWidget']);
+
+//kritik saran
+Route::get('kritik.index', [App\Http\Controllers\KritikController::class, 'kritik'])->name('kritik');
+Route::post('kritik-saran', [App\Http\Controllers\KritikController::class, 'storeContactForm'])->name('contact-form.store');
