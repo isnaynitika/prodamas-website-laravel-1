@@ -10,6 +10,7 @@ use App\Http\Controllers\MediaController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\KritikController;
 use App\Http\Controllers\artikelController;
+use App\Http\Controllers\AudioController;
 //use App\Http\Controllers\SocialShareButtonsController;
 
 
@@ -39,6 +40,9 @@ Route::get('/grafik', [TentangController::class, 'grafik']);
 Route::get('/peta', [TentangController::class, 'peta']);
 Route::resource('informasi', InformasiController::class);
 Route::resource('media', MediaController::class);
+
+//audio
+Route::get('/audio', [AudioController::class, 'index']);
 
 //login & profil
 Route::get('/loginuser', [AuthController::class, 'loginuser'])->name('login');

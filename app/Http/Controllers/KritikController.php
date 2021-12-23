@@ -20,7 +20,7 @@ class KritikController extends Controller
 
     public function storeContactForm(Request $request)
     {
-        
+
         $messages = [
             'required' => ':attribute wajib diisi',
             'min' => ':attribute harus diisi minimal :min karakter',
@@ -38,7 +38,7 @@ class KritikController extends Controller
         kritik::create($input);
 
         //  Send mail to admin
-        \Mail::send('kritik.kritikMail', array(
+        Mail::send('kritik.kritikMail', array(
             'name' => $input['name'],
             'phone' => $input['phone'],
             'email' => $input['email'],
@@ -46,11 +46,11 @@ class KritikController extends Controller
         ), function ($message) use ($request){
             $message->from($request->email);
             $message->to('prodamas.pemkotkediri@gmail.com', 'Kritik & Saran Prodamas')->subject('Kritik & Saran dari Website Prodamas');
-            
-        }); 
+
+        });
 
         return redirect()->back()->with(['success' => 'Terkirim! Terimakasih atas Kritik & Saran Anda']);
     }
 
 
-} 
+}
