@@ -41,6 +41,7 @@ Route::get('/grafik', [TentangController::class, 'grafik']);
 Route::get('/peta', [TentangController::class, 'peta']);
 Route::resource('informasi', InformasiController::class);
 Route::resource('media', MediaController::class);
+Route::resource('kritik', KritikController::class);
 
 //audio
 Route::get('/audio', [AudioController::class, 'index']);
