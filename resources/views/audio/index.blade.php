@@ -80,7 +80,7 @@
                         </audio>
                     </div>
                     <div class="col">
-                        <h2> Judul Audio</h2>
+                        <h1> Judul Audio</h1>
                         <p>Ini Caption</p>
                     </div>
                 </div>
