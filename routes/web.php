@@ -39,6 +39,7 @@ Route::get('/grafik', [TentangController::class, 'grafik']);
 Route::get('/peta', [TentangController::class, 'peta']);
 Route::resource('informasi', InformasiController::class);
 Route::resource('media', MediaController::class);
+Route::resource('kritik', KritikController::class);
 
 //login & profil
 Route::get('/loginuser', [AuthController::class, 'loginuser'])->name('login');
