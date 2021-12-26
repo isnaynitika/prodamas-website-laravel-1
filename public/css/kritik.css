@@ -5,8 +5,13 @@ body {
 .card-body {
     background-color: rgb(255, 255, 255);
     padding: 50px;
-    margin-left: 200px;
-    margin-right: 200px;
+    width: 100%;
+    max-width: 900px;
+    text-align: left;
+    /* margin-left: 70px; */
+    /* margin-right: 70px; */
+    display: flex;
+    align-content: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -27,8 +32,12 @@ h1 {
     color: rgb(0, 0, 0);
     margin-top: 20px;
     height: 75px;
-    margin-left: 200px;
-    margin-right: 200px;
+    width: 100%;
+    align-content: center;
+    max-width: 900px;
+    padding-right: 50px;
+    /* margin-left: 100px; */
+    /* margin-right: 70px; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-family: Arial, Helvetica, sans-serif;
 }
