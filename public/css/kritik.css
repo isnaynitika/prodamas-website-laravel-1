@@ -34,6 +34,7 @@ h1 {
     height: 75px;
     width: 100%;
     align-content: center;
+    text-align: left;
     max-width: 900px;
     padding-right: 50px;
     /* margin-left: 100px; */
