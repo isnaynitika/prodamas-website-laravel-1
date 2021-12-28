@@ -98,27 +98,32 @@ footer {
 
 /* audio css */
 
-.feedAudio{
+.feedAudio {
     border: none;
     margin: 2em;
 }
-.noBorder{
-    border:none;
+.noBorder {
+    border: none;
 }
-.centerItms{
+.centerItms {
     /* position: relative;
     display: flex;
     align-items: center; */
     justify-content: center;
     /* border: 1px solid black; */
 }
-.cardAudio{
+.cardAudio {
     margin: 1em;
     box-shadow: 2px 2px 5px #00000079;
 }
-.audioPlayerBox{
-    padding:1em;
+.audioPlayerBox {
+    padding: 1em;
 }
 /* div{
     border:1px solid black;
 } */
+
+/* Video css */
+.feedVideo {
+    margin: 2em;
+}
