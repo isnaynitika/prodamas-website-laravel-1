@@ -27,18 +27,21 @@
     </head>
 
     <body>
-      
+        
         <section>
+            <center>
             <nav class=section>
                 <div class= center>
-                    <h5>Formulir Kritik & Saran</h5>
-                    
+                    <h5 style="text-align: left">Formulir Kritik & Saran</h5>   
                 </div>
             </nav>
+        </center>
         </section>
+        
 
 
         <!--kritik form-->
+        <center>
         <div class="card-body">
                         
             @if(Session::has('success'))
@@ -48,6 +51,7 @@
                     Session::forget('success');
                 @endphp
             </div>
+        
             @endif
             <form method="POST" action="{{ route('contact-form.store') }}">
                   
@@ -100,6 +104,8 @@
                 </div>
             </form>
         </div>
+    </center>
+    
         <!--end kritik form-->
        
         <!-- link js-->
