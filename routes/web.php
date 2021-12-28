@@ -11,6 +11,7 @@ use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\KritikController;
 use App\Http\Controllers\artikelController;
 use App\Http\Controllers\AudioController;
+use App\Http\Controllers\VideoController;
 use App\Http\Controllers\TulisCeritaController;
 //use App\Http\Controllers\SocialShareButtonsController;
 
@@ -45,6 +46,8 @@ Route::resource('kritik', KritikController::class);
 
 //audio
 Route::get('/audio', [AudioController::class, 'index']);
+//video
+Route::get('/video', [VideoController::class, 'index']);
 
 //tulis Cerita
 Route::get('/tuliscerita', [TulisCeritaController::class, 'index']);
