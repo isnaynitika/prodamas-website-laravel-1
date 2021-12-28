@@ -114,17 +114,17 @@
 
                     <!--POST TIKTOK 2-->
                     <div class="col-md-4 mb-2">
-                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@indonesia_garuda1/video/6991819727857356058" data-video-id="6991819727857356058" style="max-width: 605px;min-width: 325px;">
+                        {{-- <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@indonesia_garuda1/video/6991819727857356058" data-video-id="6991819727857356058" style="max-width: 605px;min-width: 325px;">
                             <section> <a target="_blank" title="@indonesia_garuda1" href="https://www.tiktok.com/@indonesia_garuda1">@indonesia_garuda1</a> <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp">#fyp</a> <a title="indonesia" target="_blank" href="https://www.tiktok.com/tag/indonesia">#indonesia</a> <a title="merdeka" target="_blank" href="https://www.tiktok.com/tag/merdeka">#Merdeka</a> <a target="_blank" title="♬ suara asli - Saya Islam - Indonesia" href="https://www.tiktok.com/music/suara-asli-Saya-Islam-6991819709012396827">♬ suara asli - Saya Islam - Indonesia</a> </section>
-                        </blockquote>
+                        </blockquote> --}}
                         <script async src="https://www.tiktok.com/embed.js"></script>
                     </div>
 
                     <!--POST TIKTOK 3-->
                     <div class="col-md-4 mb-2">
-                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@indonesia_garuda1/video/6989179306211560730" data-video-id="6989179306211560730" style="max-width: 605px;min-width: 325px;">
+                        {{-- <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@indonesia_garuda1/video/6989179306211560730" data-video-id="6989179306211560730" style="max-width: 605px;min-width: 325px;">
                             <section> <a target="_blank" title="@indonesia_garuda1" href="https://www.tiktok.com/@indonesia_garuda1">@indonesia_garuda1</a> Balas @nauvalyuan NEXTT <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp">#fyp</a> <a title="foryoupage" target="_blank" href="https://www.tiktok.com/tag/foryoupage">#foryoupage</a> <a target="_blank" title="♬ Mars Perindo - Perindo" href="https://www.tiktok.com/music/Mars-Perindo-6893045530398574594">♬ Mars Perindo - Perindo</a> </section>
-                        </blockquote>
+                        </blockquote> --}}
                         <script async src="https://www.tiktok.com/embed.js"></script>
                     </div>
                 </div>
