@@ -30,19 +30,25 @@ use App\Http\Controllers\TulisCeritaController;
 
 //tampilan
 Route::get('/', function () {
-    // $user = auth()->user()->id;
-    // dd($user);
     return view('beranda.index');
 })->name('dashboard');
 
+// tentang
 Route::get('/tentang', [TentangController::class, 'index']);
 Route::get('/bidang', [TentangController::class, 'bidang']);
 Route::get('/kampungkeren', [TentangController::class, 'kampungkeren']);
 Route::get('/pokmas', [TentangController::class, 'pokmas']);
-Route::get('/grafik', [TentangController::class, 'grafik']);
-Route::get('/peta', [TentangController::class, 'peta']);
+
+// data
+Route::get('/grafik', [DataController::class, 'grafik']);
+Route::get('/banksampah', [DataController::class, 'banksampah']);
+Route::get('/peta', [DataController::class, 'peta']);
+
+// informasi
 Route::resource('informasi', InformasiController::class);
+// media
 Route::resource('media', MediaController::class);
+// kritik
 Route::resource('kritik', KritikController::class);
 
 //audio
