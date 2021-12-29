@@ -16,7 +16,7 @@ class CreateTulisCeritasTable extends Migration
         Schema::create('tulis_ceritas', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->integer('nomor_telepon');
+            $table->string('nomor_telepon');
             $table->string('email');
             $table->string('judul');
             $table->text('isi');

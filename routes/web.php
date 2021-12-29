@@ -59,6 +59,7 @@ Route::get('/video', [VideoController::class, 'index']);
 //tulis Cerita
 Route::resource('tuliscerita', TulisCeritaController::class);
 
+
 //login & profil
 Route::get('/loginuser', [AuthController::class, 'loginuser'])->name('login');
 Route::post('/postlogin', [AuthController::class, 'postlogin']);

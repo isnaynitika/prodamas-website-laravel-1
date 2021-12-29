@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\TulisCerita;
+use App\Models\Tulis_cerita;
 use Illuminate\Http\Request;
 
 class TulisCeritaController extends Controller
@@ -34,7 +34,7 @@ class TulisCeritaController extends Controller
         $pathStore = $request->foto->move(public_path('imgCerita/foto'), $pathFoto);
 
         // dump($validateData);
-        $data = new TulisCerita();
+        $data = new Tulis_cerita();
         $data->nama = $validateData['nama'];
         $data->nomor_telepon = $validateData['nomor_telepon'];
         $data->email = $validateData['email'];
@@ -42,9 +42,10 @@ class TulisCeritaController extends Controller
         $data->isi = $validateData['isi'];
         $data->thumbnail = $pathThumb;
         $data->foto = $pathFoto;
-        dump($data);
-        // $data->save();
+        // dump($data);
+        $data->save();
 
-        return redirect()->route('tulisCerita.index')->with('pesan', "Cerita sudah di Submit");
+        return redirect()->back()->with('pesan', "Cerita sudah di Submit");
+        // return view('tulisCerita.index')->with('pesan', "Cerita sudah di Submit");
     }
 }
