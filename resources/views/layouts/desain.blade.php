@@ -33,7 +33,7 @@
         <div class="container">
         <a href="{{ url('/') }}"><img src="img/logoprodamas.png" alt="" width="40" height="40" class="d-inline-block align-text-top" /></a>
         <a href="{{ url('/') }}" class="navbar-brand" style="padding-left: 5px; font-family: Inter, sans-serif">PRODAMAS</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -43,23 +43,19 @@
                 </li>
                 <li>
                     <div class="dropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle"  data-bs-toggle="dropdown" aria-expanded="false">
-                                    Tentang
-                                </a>
-                                <ul class="dropdown-menu menu-navigation" aria-labelledby="dropdownMenuLink">
-                                    <li> <a class="dropdown-item menu" href="{{ url('/tentang') }}"> Prodamas </a></li>
-                                    <li> <a class="dropdown-item menu" href="{{ url('/bidang') }}"> Bidang </a></li>
-                                    <li> <a class="dropdown-item menu" href="{{ url('/kampungkeren') }}"> Kampung Keren </a></li>
-                                    <li> <a class="dropdown-item menu" href="{{ url('/pokmas') }}"> POKMAS </a></li>
-                                    <li> <a class="dropdown-item menu" > Data &raquo; </a>
-                                        <ul class="submenu dropdown-menu">
-                                            <li><a class="dropdown-item menu" href="{{ url('/grafik') }}">Prodamas Dalam Grafik</a></li>
-                                            <li><a class="dropdown-item menu" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
-                                        </ul>
+                        <a class="nav-link dropdown-toggle"  href="{{ url('/tentang') }}" data-bs-toggle="dropdown" aria-expanded="false">
+                        Tentang
+                        </a>
+                        <ul class="dropdown-menu menu-navigation" aria-labelledby="dropdownMenuLink">
+                            <li> <a class="dropdown-item menu" href="{{ url('/tentang') }}"> Prodamas </a></li>
+                            <li> <a class="dropdown-item menu" href="{{ url('/bidang') }}"> Bidang </a></li>
+                            <li> <a class="dropdown-item menu" href="{{ url('/kampungkeren') }}"> Kampung Keren </a></li>
+                            <li> <a class="dropdown-item menu" href="{{ url('/pokmas') }}"> POKMAS </a></li>
+                            <li> <a class="dropdown-item menu" > Data &raquo; </a>
+                                <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item menu" href="{{ url('/grafik') }}">Prodamas Dalam Grafik</a></li>
+                                    <li><a class="dropdown-item menu" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
                                 </ul>
-                            </li>
                         </ul>
                     </div>
                 </li>
