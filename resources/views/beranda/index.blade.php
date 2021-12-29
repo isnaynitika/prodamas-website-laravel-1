@@ -26,9 +26,31 @@
 <body>
 
   <!-- awal jumbotron -->
-  <div class="container-fluid banner">
-    <div class="container banner-content">
+  <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/PRODAMASPLUS.png" class="d-block w-100 img-fluid" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/slide3.jpeg" class="d-block w-100 img-fluid" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/slide3.jpeg" class="d-block w-100 img-fluid" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
   <!-- akhir jumbotrom -->
 
@@ -37,22 +59,20 @@
     <div class="container">
       <div class="row">
         <div class="col mt-5 mb-5 text-center">
-          <h2>Tentang Prodamas</h2>
-        </div>
-        <div class="col">
         </div>
       </div>
       <div class="row">
         <div class="col">
+          <h2 class="mb-5" style="text-align: center;">Tentang Prodamas</h2>
           <p style="text-align: justify;">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Program Pemberdayaan Masyarakat (PRODAMAS) adalah suatu program dari pemerintah Kota Kediri
+            yang digunakan untuk melaksanakan kegiatan pembangunan masyarakat ditingkat kelurahan yang
+            berbasis wilayah Rukun Tetangga (RT) yang dimulai sejak tahun 2015 sebagai upaya mewujudkan
+            kemampuan dan kemandirian masyarakat dalam pembangunan.
           </p>
         </div>
         <div class="col">
-          <img src="{{url('../img/PRODAMASPLUS.png')}}" width="600px" height="300px ">
+          <img src="{{url('../img/PRODAMASPLUS.png')}}" class="img-fluid" width="700px" height="300px ">
         </div>
       </div>
     </div>
