@@ -23,10 +23,10 @@ ul li a {
     color: white;
 }
 
-/* li:hover > ul {
+li:hover > ul {
     display: block;
     position: absolute;
-} */
+}
 
 .menu:hover{
     background-color: 	rgba(231, 146, 67, 0.9);
