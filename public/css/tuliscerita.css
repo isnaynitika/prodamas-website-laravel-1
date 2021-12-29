@@ -13,6 +13,7 @@
     padding-top: 15%;
 }
 
+
 .banner h1 {
     font-size: 55px;
 }
@@ -20,9 +21,11 @@
 .formBox{
     margin:1.5em;
     margin-top:2em;
+
 }
 .formBox2{
     padding: 2em;
+
 }
 .formInput{
     margin-top: 1em;
