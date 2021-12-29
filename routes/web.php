@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\BidangController;
 use App\Http\Controllers\BincangController;
 use App\Http\Controllers\EditprofilController;
 use App\Http\Controllers\InformasiController;
@@ -13,6 +12,7 @@ use App\Http\Controllers\KritikController;
 use App\Http\Controllers\artikelController;
 use App\Http\Controllers\AudioController;
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\TentangController;
 use App\Http\Controllers\TulisCeritaController;
 //use App\Http\Controllers\SocialShareButtonsController;
 
