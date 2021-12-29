@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BidangController;
 use App\Http\Controllers\BincangController;
@@ -77,3 +78,36 @@ Route::get('artikel', [artikelController::class,'ShareWidget']);
 //kritik saran
 Route::get('kritik.index', [App\Http\Controllers\KritikController::class, 'kritik'])->name('kritik');
 Route::post('kritik-saran', [App\Http\Controllers\KritikController::class, 'storeContactForm'])->name('contact-form.store');
+
+//Admin 
+Route::post('/admin', 'AuthSubmissionController@home');
+Route::post('/admin/submission', 'SubmissionController@store');
+Route::get('/admin/submission', 'SubmissionController@index');
+Route::get('/admin/submission/{subs_id}', 'SubmissionController@show');
+Route::delete('/admin/submission/{subs_id}', 'SubmissionController@destroy');
+
+//artikel admin
+Route::get('/admin/add-article', 'ArticleController@create');
+Route::post('/admin/list-article', 'ArticleController@store');
+Route::get('/admin/list-article', 'ArticleController@index');
+Route::get('/admin/article/{article_id}', 'ArticleController@edit');
+Route::put('/admin/article/{article_id}', 'ArticleController@update');
+Route::delete('/admin/article/{article_id}', 'ArticleController@destroy');
+
+//foto
+Route::get('/admin/add-foto', 'FotoController@create');
+Route::post('/admin/list-foto', 'FotoController@store');
+Route::get('/admin/list-foto', 'FotoController@index');
+Route::get('/admin/foto/{foto_id}', 'FotoController@edit');
+Route::put('/admin/foto/{foto_id}', 'FotoController@update');
+Route::delete('/admin/foto/{foto_id}', 'FotoController@destroy');
+
+//video
+Route::get('/admin/add-video', 'VideoController@create');
+Route::post('/admin/list-video', 'VideoController@store');
+Route::get('/admin/list-video', 'VideoController@index');
+
+//audio
+Route::get('/admin/add-audio', 'AudioController@create');
+Route::post('/admin/list-audio', 'AudioController@store');
+Route::get('/admin/list-audio', 'AudioController@index');
