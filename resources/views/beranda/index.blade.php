@@ -72,7 +72,7 @@
           </p>
         </div>
         <div class="col">
-          <img src="{{url('../img/PRODAMASPLUS.png')}}" class="img-fluid" width="700px" height="300px ">
+          <img src="img/PRODAMASPLUS.png" class="img-fluid" width="700px" height="300px ">
         </div>
       </div>
     </div>
