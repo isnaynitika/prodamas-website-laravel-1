@@ -51,7 +51,7 @@ Route::get('/audio', [AudioController::class, 'index']);
 Route::get('/video', [VideoController::class, 'index']);
 
 //tulis Cerita
-Route::get('/tuliscerita', [TulisCeritaController::class, 'index']);
+Route::resource('tuliscerita', TulisCeritaController::class);
 
 //login & profil
 Route::get('/loginuser', [AuthController::class, 'loginuser'])->name('login');
@@ -79,7 +79,7 @@ Route::get('artikel', [artikelController::class,'ShareWidget']);
 Route::get('kritik.index', [App\Http\Controllers\KritikController::class, 'kritik'])->name('kritik');
 Route::post('kritik-saran', [App\Http\Controllers\KritikController::class, 'storeContactForm'])->name('contact-form.store');
 
-//Admin 
+//Admin
 Route::post('/admin', 'AuthSubmissionController@home');
 Route::post('/admin/submission', 'SubmissionController@store');
 Route::get('/admin/submission', 'SubmissionController@index');

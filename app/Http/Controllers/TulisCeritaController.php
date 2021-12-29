@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\TulisCerita;
+use Illuminate\Http\Request;
+
 class TulisCeritaController extends Controller
 {
     public function index(){
@@ -12,27 +13,38 @@ class TulisCeritaController extends Controller
     public function store(Request $request)
     {
         $validateData = $request->validate([
-            'judul' => 'required|max:50',
-            'kategori' => 'required|max:20',
-            'pengarang' => 'required',
-            'tahun_terbit' => 'required',
-            'sinopsis' => 'required',
-            'gambar' => 'required|file|image|max:1000'
+            'nama' => 'required|max:120',
+            'nomor_telepon' => 'required|max:15',
+            'email' => 'required',
+            'judul' => 'required',
+            'isi' => 'required',
+            'thumbnail' => 'required|file|image|max:1000',
+            'foto' => 'required|file|image|max:1000'
         ]);
         // dump($request);
-        $extGambar = $request->gambar->getClientOriginalExtension();
-        $pathGambar = "buku-".time().".".$extGambar;
-        $pathStore = $request->gambar->move(public_path('gambar/buku'), $pathGambar);
-        // dump($validateData);
-        $buku = new TulisCerita();
-        $buku->judul = $validateData['judul'];
-        $buku->kategori = $validateData['kategori'];
-        $buku->pengarang = $validateData['pengarang'];
-        $buku->tahun_terbit = $validateData['tahun_terbit'];
-        $buku->sinopsis = $validateData['sinopsis'];
-        $buku->gambar = $pathGambar;
-        $buku->save();
 
-        return redirect()->route('buku.create')->with('pesan', "Buku berhasil ditambah");
+        // thumbnail
+        $extThumb = $request->thumbnail->getClientOriginalExtension();
+        $pathThumb = "thumbnail-".time().".".$extThumb;
+        $pathStore = $request->thumbnail->move(public_path('imgCerita/thumb'), $pathThumb);
+
+        // foto
+        $extFoto = $request->foto->getClientOriginalExtension();
+        $pathFoto = "foto-".time().".".$extFoto;
+        $pathStore = $request->foto->move(public_path('imgCerita/foto'), $pathFoto);
+
+        // dump($validateData);
+        $data = new TulisCerita();
+        $data->nama = $validateData['nama'];
+        $data->nomor_telepon = $validateData['nomor_telepon'];
+        $data->email = $validateData['email'];
+        $data->judul = $validateData['judul'];
+        $data->isi = $validateData['isi'];
+        $data->thumbnail = $pathThumb;
+        $data->foto = $pathFoto;
+        dump($data);
+        // $data->save();
+
+        return redirect()->route('tulisCerita.index')->with('pesan', "Cerita sudah di Submit");
     }
 }

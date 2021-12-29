@@ -49,9 +49,15 @@
 
     {{-- Form Tulis Cerita --}}
     <div class="container formBox">
+        @if (session()->has('pesan'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session()->get('pesan') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
         <h2> Apa Ceritamu tentang <b> PRODAMAS </b>?</h2>
         <div class="formBox2">
-            <form action="{{ route('tuliscerita.store')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('tuliscerita.store')}}" method="POST" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-8">
                         <div class="col-auto formInput">
@@ -62,8 +68,11 @@
                                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                                 </svg>
                               </div>
-                              <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Nama Lengkap">
+                              <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap">
                             </div>
+                            @error('nama')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="col-auto formInput">
                             <label class="visually-hidden" for="autoSizingInputGroup">noTelepon</label>
@@ -73,8 +82,11 @@
                                         <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
                                     </svg>
                                 </div>
-                              <input type="number" class="form-control" id="autoSizingInputGroup" placeholder="Nomor Telepon">
+                              <input type="number" class="form-control" id="nomor_telepon" name="nomor_telepon" placeholder="Nomor Telepon">
                             </div>
+                            @error('nomor_telepon')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="col-auto formInput">
                             <label class="visually-hidden" for="autoSizingInputGroup">email</label>
@@ -84,8 +96,11 @@
                                     <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
                                   </svg>
                               </div>
-                              <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="E-Mail">
+                              <input type="text" class="form-control" id="email" name="email" placeholder="E-Mail">
                             </div>
+                            @error('email')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="col-auto formInput">
                             <label class="visually-hidden" for="autoSizingInputGroup">judul</label>
@@ -96,31 +111,43 @@
                                     <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"/>
                                   </svg>
                               </div>
-                              <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Judul">
+                              <input type="text" class="form-control" id="judul" name="judul" placeholder="Judul">
                             </div>
+                            @error('judul')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="row formInput">
                             <div class="col  ">
                                 <label for="formFileLg" class="form-label">Upload Thumbnail</label>
-                                <input class="form-control form-control" id="formFileLg" type="file" />
+                                <input class="form-control form-control" id="thumbnail" name="thumbnail" type="file" />
                             </div>
                             <div class="col  ">
                                 <label for="formFileLg" class="form-label">Upload Foto Cerita</label>
-                                <input class="form-control form-control" id="formFileLg" type="file" />
+                                <input class="form-control form-control" id="foto" name="foto" type="file" />
                             </div>
                         </div>
+                        @error('foto')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                        @error('thumbnail')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
                         {{-- Teks area awal --}}
                         <div class="formInput">
-                            <textarea name="content" id="editor">
+                            <textarea name="isi" id="isi">
                                 &lt;p&gt;Tulis ceritamu disini.&lt;/p&gt;
                             </textarea>
                             <script>
                                 ClassicEditor
-                                    .create( document.querySelector( '#editor' ) )
+                                    .create( document.querySelector( '#isi' ) )
                                     .catch( error => {
                                         console.error( error );
                                     } );
                             </script>
+                             @error('isi')
+                             <div class="text-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                         {{-- Teks area akhir --}}
 
@@ -130,10 +157,10 @@
                             Dengan mengirimkan tulisan ke <font class="redText"> prodamas.com</font>, penulis telah setuju bahwa tulisan dan foto yang tercantum dapat diedit
                              oleh tim <font class="redText"> prodamas.com</font>. Selain itu, penulis juga bersedia bahwa konten yang dibuat akan dipublikasikan di seluruh media sosial + Kota Kediri.
                         </i></p>
-                        <button type="submit" class="btn btn-primary submitBtn">Submit</button>
+                        <button type="submit" class="btn btn-primary submitBtn" value="submit">Submit</button>
+                        @csrf
                     </div>
                 </div>
-                @csrf
             </form>
         </div>
     </div>
