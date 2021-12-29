@@ -51,16 +51,23 @@
                             <li> <a class="dropdown-item menu" href="{{ url('/bidang') }}"> Bidang </a></li>
                             <li> <a class="dropdown-item menu" href="{{ url('/kampungkeren') }}"> Kampung Keren </a></li>
                             <li> <a class="dropdown-item menu" href="{{ url('/pokmas') }}"> POKMAS </a></li>
-                            <li> <a class="dropdown-item menu" > Data &raquo; </a>
-                                <ul class="submenu dropdown-menu">
-                                    <li><a class="dropdown-item menu" href="{{ url('/grafik') }}">Prodamas Dalam Grafik</a></li>
-                                    <li><a class="dropdown-item menu" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
-                                </ul>
                         </ul>
                     </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('bincang') }}">Artikel</a>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Data
+                        </a>
+                        <ul class="dropdown-menu menu-navigation" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item menu" href="{{ url('/grafik') }}">Prodamas Dalam Grafik</a></li>
+                            <li><a class="dropdown-item menu" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
+                            <li><a class="dropdown-item menu" href="{{ url('/bangsampah') }}"> Bank Sampah </a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('foto') }}">Foto</a>
