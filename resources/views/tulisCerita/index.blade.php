@@ -51,34 +51,51 @@
     <div class="container formBox">
         <h2> Apa Ceritamu tentang <b> PRODAMAS </b>?</h2>
         <div class="formBox2">
-            <form action="">
+            <form action="{{ route('tuliscerita.store')}}" method="POST" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-8">
                         <div class="col-auto formInput">
                             <label class="visually-hidden" for="autoSizingInputGroup">namaLengkap</label>
                             <div class="input-group">
-                              <div class="input-group-text">@</div>
+                              <div class="input-group-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                </svg>
+                              </div>
                               <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Nama Lengkap">
                             </div>
                         </div>
                         <div class="col-auto formInput">
                             <label class="visually-hidden" for="autoSizingInputGroup">noTelepon</label>
                             <div class="input-group">
-                              <div class="input-group-text">@</div>
+                              <div class="input-group-text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                                    </svg>
+                                </div>
                               <input type="number" class="form-control" id="autoSizingInputGroup" placeholder="Nomor Telepon">
                             </div>
                         </div>
                         <div class="col-auto formInput">
                             <label class="visually-hidden" for="autoSizingInputGroup">email</label>
                             <div class="input-group">
-                              <div class="input-group-text">@</div>
+                              <div class="input-group-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                                  </svg>
+                              </div>
                               <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="E-Mail">
                             </div>
                         </div>
                         <div class="col-auto formInput">
                             <label class="visually-hidden" for="autoSizingInputGroup">judul</label>
                             <div class="input-group">
-                              <div class="input-group-text">@</div>
+                              <div class="input-group-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
+                                    <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
+                                    <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"/>
+                                  </svg>
+                              </div>
                               <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Judul">
                             </div>
                         </div>
@@ -116,6 +133,7 @@
                         <button type="submit" class="btn btn-primary submitBtn">Submit</button>
                     </div>
                 </div>
+                @csrf
             </form>
         </div>
     </div>
