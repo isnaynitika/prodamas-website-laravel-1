@@ -4,9 +4,6 @@
 <html lang="en">
 
 <head>
-
-  <head>
-
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -53,7 +50,7 @@
         @forelse ($audios as $audio)
             <div class=" card noBorder cardAudio" style="width: 18rem;">
                 <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer">
-                    <img src="'/audio/thumb/'.$audio->gambar_sampul" class="card-img-top d-flex justify-content" alt="...">
+                    <img src="{{ asset('/audio/thumb/'.$audio->gambar_sampul) }}" class="card-img-top d-flex justify-content" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">
                             <p class=" tittleAudio" href="">
@@ -74,9 +71,9 @@
                     <div class="modal-body">
                         <div class="row audioPlayerBox">
                             <div class="col-5">
-                                <img src="'/audio/thumb/'.$audio->gambar_sampul" class="d-flex justify-content" width="100%" alt="...">
+                                <img src="{{ asset('/audio/thumb/'.$audio->gambar_sampul) }}" class="d-flex justify-content" width="100%" alt="...">
                                 <audio controls style="width: 100%;">
-                                    <source src="'/audio/fileaudio/'.$audio->slug" type="audio/mpeg">
+                                    <source src="{{ asset('/audio/fileaudio/'.$audio->slug) }}" type="audio/mpeg">
                                     Your browser does not support the audio element.
                                 </audio>
                             </div>
@@ -98,6 +95,7 @@
                 Tidak ada data
             </div>
         @endforelse
+
     </div>
     <!-- akhir feed audio -->
 
