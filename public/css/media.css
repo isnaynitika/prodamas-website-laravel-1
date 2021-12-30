@@ -121,7 +121,9 @@ footer {
 }
 
 .audioThumbModal{
-    width:15rem;
+    width:12em;
+    margin-right: 15px;
+    padding:0.5em
 }
 
 /* div{

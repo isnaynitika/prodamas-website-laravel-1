@@ -67,7 +67,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="row audioPlayerBox">
+                        <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 audioPlayerBox">
                             <div class="card audioThumbModal">
                                 <img src="{{ asset('/audioProd/thumb/'.$audio->gambar_sampul) }}" class="d-flex justify-content"  style="width: 15rem;" alt="...">
                                 <audio controls style="width: 100%;">
