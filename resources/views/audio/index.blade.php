@@ -69,7 +69,7 @@
                     <div class="modal-body">
                         <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 audioPlayerBox centerItms">
                             <div class="card" style="
-                                width: 30rem;
+                                width: 25rem;
                                 border: none;
                                 margin-right:1em;
                                 ">
@@ -80,7 +80,7 @@
                                 </audio>
                             </div>
                             <div class="card" style="
-                            width: 30rem;
+                            width: 25rem;
                             border: none;
                             ">>
                                 <h1> {{$audio->judul}}</h1>
