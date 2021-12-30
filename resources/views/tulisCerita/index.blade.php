@@ -58,7 +58,7 @@
         <h2> Apa Ceritamu tentang <b> PRODAMAS </b>?</h2>
         <div class="formBox2">
             <form action="{{route('tuliscerita.store')}}" method="POST" enctype="multipart/form-data">
-                <div class="row centerItms">
+                <div class="centerItms">
                     <div class="card" style="
                     width: 40rem;
                     border: none;
