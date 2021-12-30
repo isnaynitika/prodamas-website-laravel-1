@@ -82,7 +82,7 @@
                             <div class="card" style="
                             width: 25rem;
                             border: none;
-                            ">>
+                            ">
                                 <h1> {{$audio->judul}}</h1>
                                 <p>{{$audio->konten}}</p>
                             </div>
