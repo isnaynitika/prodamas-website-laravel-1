@@ -159,7 +159,7 @@
                     <div class="card" style="
                     width: 25rem;
                     border: none;
-                    margin-right:1em;
+                    margin-top:1em;
                     ">
                         <p> <i>Segala informasi dalam <font class="redText"> prodamas.com</font> diterbitkan dengan tujuan baik dan hanya untuk tujuan informasi secara umum.
                             Dengan mengirimkan tulisan ke <font class="redText"> prodamas.com</font>, penulis telah setuju bahwa tulisan dan foto yang tercantum dapat diedit
