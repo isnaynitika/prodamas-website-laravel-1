@@ -69,9 +69,9 @@
                     <div class="modal-body">
                         <div class="row audioPlayerBox">
                             <div class="col-5">
-                                <img src="{{ asset('/audio/thumb/'.$audio->gambar_sampul) }}" class="d-flex justify-content" width="100%" alt="...">
+                                <img src="{{ asset('/audioProd/thumb/'.$audio->gambar_sampul) }}" class="d-flex justify-content" width="100%" alt="...">
                                 <audio controls style="width: 100%;">
-                                    <source src="{{ asset('/audio/fileaudio/'.$audio->slug) }}" type="audio/mpeg">
+                                    <source src="{{ asset('/audioProd/fileaudio/'.$audio->slug) }}" type="audio/mpeg">
                                     Your browser does not support the audio element.
                                 </audio>
                             </div>
