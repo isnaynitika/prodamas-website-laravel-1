@@ -60,7 +60,7 @@
             <form action="{{route('tuliscerita.store')}}" method="POST" enctype="multipart/form-data">
                 <div class="row">
                     <div class="card" style="
-                    width: 35rem;
+                    width: 40rem;
                     border: none;
                     margin-right:1em;
                     ">
