@@ -59,7 +59,11 @@
         <div class="formBox2">
             <form action="{{route('tuliscerita.store')}}" method="POST" enctype="multipart/form-data">
                 <div class="row">
-                    <div class="col-8">
+                    <div class="card" style="
+                    width: 35rem;
+                    border: none;
+                    margin-right:1em;
+                    ">
                         <div class="col-auto formInput">
                             <label class="visually-hidden" for="autoSizingInputGroup">namaLengkap</label>
                             <div class="input-group">
@@ -152,7 +156,11 @@
                         {{-- Teks area akhir --}}
 
                     </div>
-                    <div class="col">
+                    <div class="card" style="
+                    width: 25rem;
+                    border: none;
+                    margin-right:1em;
+                    ">
                         <p> <i>Segala informasi dalam <font class="redText"> prodamas.com</font> diterbitkan dengan tujuan baik dan hanya untuk tujuan informasi secara umum.
                             Dengan mengirimkan tulisan ke <font class="redText"> prodamas.com</font>, penulis telah setuju bahwa tulisan dan foto yang tercantum dapat diedit
                              oleh tim <font class="redText"> prodamas.com</font>. Selain itu, penulis juga bersedia bahwa konten yang dibuat akan dipublikasikan di seluruh media sosial + Kota Kediri.
