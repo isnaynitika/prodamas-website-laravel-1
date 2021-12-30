@@ -52,7 +52,7 @@ Route::resource('media', MediaController::class);
 Route::resource('kritik', KritikController::class);
 
 //audio
-Route::get('/audio', [AudioController::class, 'index']);
+Route::resource('audio', AudioController::class);
 //video
 Route::get('/video', [VideoController::class, 'index']);
 
