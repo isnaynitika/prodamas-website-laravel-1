@@ -51,7 +51,7 @@
     <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedAudio">
         {{-- Card Audio --}}
         @forelse ($audios as $audio)
-            {{-- <div class=" card noBorder cardAudio" style="width: 18rem;">
+            <div class=" card noBorder cardAudio" style="width: 18rem;">
                 <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer">
                     <img src="{{ asset('/audio/thumb/'.$audio->gambar_sampul) }}" class="card-img-top d-flex justify-content" alt="...">
                     <div class="card-body">
@@ -91,7 +91,7 @@
                     </div>
                 </div>
                 </div>
-            </div> --}}
+            </div>
             {{-- Akhir Card Audio --}}
             @empty
             <div class="alert alert-success" role="alert">
