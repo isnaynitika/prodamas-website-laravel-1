@@ -48,7 +48,7 @@
         @forelse ($audios as $audio)
             <div class=" card noBorder cardAudio" style="width: 18rem;">
                 <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer">
-                    <img src="{{ asset('/audio/thumb/'.$audio->gambar_sampul) }}" class="card-img-top d-flex justify-content" alt="...">
+                    <img src="{{ asset('/audioProd/thumb/'.$audio->gambar_sampul) }}" class="card-img-top d-flex justify-content" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">
                             <p class=" tittleAudio" href="">
