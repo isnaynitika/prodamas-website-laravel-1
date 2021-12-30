@@ -68,7 +68,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="row audioPlayerBox">
-                            <div class="col-5">
+                            <div class="col audioThumbModal">
                                 <img src="{{ asset('/audioProd/thumb/'.$audio->gambar_sampul) }}" class="d-flex justify-content" width="100%" alt="...">
                                 <audio controls style="width: 100%;">
                                     <source src="{{ asset('/audioProd/fileaudio/'.$audio->slug) }}" type="audio/mpeg">

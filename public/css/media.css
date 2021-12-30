@@ -119,6 +119,12 @@ footer {
 .audioPlayerBox {
     padding: 1em;
 }
+
+.audioThumbModal{
+    width:50%;
+    min-width: 500px;
+}
+
 /* div{
     border:1px solid black;
 } */
