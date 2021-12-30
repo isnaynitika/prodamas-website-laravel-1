@@ -75,7 +75,7 @@
                                     Your browser does not support the audio element.
                                 </audio>
                             </div>
-                            <div class="card ">
+                            <div class="card audioThumbModal">
                                 <h1> {{$audio->judul}}</h1>
                                 <p>{{$audio->konten}}</p>
                             </div>
