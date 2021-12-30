@@ -69,8 +69,9 @@
                     <div class="modal-body">
                         <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 audioPlayerBox centerItms">
                             <div class="card" style="
-                                width: 35rem;
+                                width: 30rem;
                                 border: none;
+                                margin-right:1em;
                                 ">
                                 <img src="{{ asset('/audioProd/thumb/'.$audio->gambar_sampul) }}" class="d-flex justify-content"  style="width: 100%;" alt="...">
                                 <audio controls style="width: 100%;">
@@ -79,7 +80,7 @@
                                 </audio>
                             </div>
                             <div class="card" style="
-                            width: 40rem;
+                            width: 30rem;
                             border: none;
                             ">>
                                 <h1> {{$audio->judul}}</h1>
