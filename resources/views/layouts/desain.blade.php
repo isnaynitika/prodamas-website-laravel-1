@@ -81,7 +81,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('media') }}">Medsos</a>
                 </li>
-                    
+
             </ul>
             <form class="d-flex">
                 <input class="form-control me-2" type="search" style="font-family: 'Font Awesome 5 Free'; font-weight: 600; border-radius: 30px; height: 30px" placeholder=" &#xf002;" aria-label="Search" />
