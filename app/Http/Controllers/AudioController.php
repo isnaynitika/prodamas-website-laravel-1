@@ -8,7 +8,7 @@ class AudioController extends Controller
 {
     public function index(){
         // $audios = Audio::all();
-
-        return view('audio.index');
+        $audios = DB::table('audios')->get();
+        return view('audio.index',['audios'=>$audios]);
     }
 }
