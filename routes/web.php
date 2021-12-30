@@ -53,6 +53,7 @@ Route::resource('kritik', KritikController::class);
 
 //audio
 Route::resource('audio', AudioController::class);
+
 //video
 Route::get('/video', [VideoController::class, 'index']);
 
