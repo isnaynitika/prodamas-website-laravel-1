@@ -99,24 +99,6 @@
 
                 <div class="mb-3 kartu">
                     <div class="row g-0">
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.
-                                    This is a wider card with supporting text below as a natural lead-in to additional
-                                    content. This content is a little bit longer.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <img src="img/sosial-budaya.jpg" class="img-fluid rounded-start">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-3 kartu">
-                    <div class="row g-0">
                         <div class="col-md-4">
                             <img src="img/sosial-budaya.jpg" class="img-fluid rounded-start">
                         </div>
@@ -129,24 +111,6 @@
                                     content. This content is a little bit longer.
                                 </p>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-3 kartu">
-                    <div class="row g-0">
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.
-                                    This is a wider card with supporting text below as a natural lead-in to additional
-                                    content. This content is a little bit longer.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <img src="img/sosial-budaya.jpg" class="img-fluid rounded-start">
                         </div>
                     </div>
                 </div>
@@ -171,6 +135,9 @@
 
                 <div class="mb-3 kartu">
                     <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="img/sosial-budaya.jpg" class="img-fluid rounded-start">
+                        </div>
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
@@ -181,8 +148,42 @@
                                 </p>
                             </div>
                         </div>
+
+                    </div>
+                </div>
+
+                <div class="mb-3 kartu">
+                    <div class="row g-0">
                         <div class="col-md-4">
                             <img src="img/sosial-budaya.jpg" class="img-fluid rounded-start">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.
+                                    This is a wider card with supporting text below as a natural lead-in to additional
+                                    content. This content is a little bit longer.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 kartu">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="img/sosial-budaya.jpg" class="img-fluid rounded-start">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.
+                                    This is a wider card with supporting text below as a natural lead-in to additional
+                                    content. This content is a little bit longer.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
