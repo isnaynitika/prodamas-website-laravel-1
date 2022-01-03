@@ -36,7 +36,7 @@ Foto Submission
                     <a href="/admin/foto/{{$foto->id}}" class="btn btn-info">Edit</a>
                     @csrf
                     @method('DELETE')
-                    <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Are you sure?')"
+                    <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus Data?')"
                         value="Delete">
                 </form>
             </td>

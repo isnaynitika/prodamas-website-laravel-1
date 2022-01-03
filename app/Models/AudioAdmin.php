@@ -1,19 +1,20 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 
-class Article extends Model
+class AudioAdmin extends Model
 {
-    protected $table = "articles";
+    use HasFactory;
+    protected $table = "audios";
 
-    protected $fillable = ["status","kategori","gambar_sampul","text_sampul","judul","slug","article","picture"];
+    protected $fillable = ["gambar_sampul","judul","konten","caption",];
 
     public function getCreatedAtAttribute() {
         return Carbon::parse($this->attributes['created_at'])
             ->translatedFormat('d F Y');
     }
-
 }

@@ -56,15 +56,6 @@
             @enderror
         </div>
         <div class="form-group">
-            <label for="slug">Slug</label>
-            <input type="text" class="form-control" name="slug" id="slug" placeholder="slug of audio" value="{{$audio->slug}}">
-            @error('slug')
-                <div class="alert alert-danger">
-                    {{ $message }}
-                </div>
-            @enderror
-        </div>
-        <div class="form-group">
             <label for="audio">Konten</label>
             <textarea name="audio" class="form-control" cols="30" rows="10">{{$audio->audio}}</textarea>
             @error('audio')
@@ -73,6 +64,15 @@
                 </div>
             @enderror
         </div><br>
+        <div class="form-group">
+            <label for="caption">Caption</label>
+            <textarea name="caption" class="form-control" cols="30" rows="10"></textarea>
+            @error('caption')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
         <button type="submit" class="btn btn-primary">Edit Audio</button>
         <a href="/admin/list-audio" class="btn btn-outline-primary">Back</a>
     </form>

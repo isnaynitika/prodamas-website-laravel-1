@@ -20,22 +20,12 @@
         @csrf
         <div class="form-group">
             <label for="status">Ststus</label>
-            <select class="form-control" name="status" id="id_status" placeholder="Status">
+            <select class="form-control" name="status" id="status" placeholder="Status">
                 <option value="">- pilih -</option>
-                @foreach ($statuss as $item)
-                    <option value=""></option>
-                @endforeach
+                <option value="published">Published</option>
+                <option value="unpublished">Unpublished</option>
             </select>
             @error('status')
-                <div class="alert alert-danger">
-                    {{ $message }}
-                </div>
-            @enderror
-        </div>
-        <div class="form-group">
-            <label for="kategori">Kategori</label>
-            <input type="text" class="form-control" name="kategori" id="kategori" placeholder="Kategori">
-            @error('kategori')
                 <div class="alert alert-danger">
                     {{ $message }}
                 </div>
