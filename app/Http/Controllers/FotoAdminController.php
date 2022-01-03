@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Foto;
+use App\Models\Foto;
 use DB;
 use File;
 
-class FotoController extends Controller
+class FotoAdmin extends Controller
 {
     public function create()
     {
@@ -17,36 +18,24 @@ class FotoController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'gambar_sampul' => 'mimes:jpeg,jpg,png|max:2200',
-            'text_sampul' => 'required',
             'judul' => 'required',
-            'slug' => 'required',
-            'konten' => 'mimes:jpeg,jpg,png|max:2200',
+            'foto_konten' => 'required|file|image|max:2200',
             'caption' => 'required',
-            //'picture' => 'mimes:jpeg,jpg,png|max:2200'
         ]);
 
-        $foto_sampul = $request->foto_sampul;
-        $new_foto_sampul = time() . ' - ' . $foto_sampul->getClientOriginalName();
-
-        $konten = $request->konten;
-        $new_konten = time() . ' - ' . $konten->getClientOriginalName();
-
+        $extFoto = $request->foto_konten->getClientOriginalExtension();
+        $pathFoto = "foto-".time().".".$extFoto;
+        $pathStore = $request->foto_konten->move(public_path('img-foto-konten'), $pathFoto);
 
         foto::create([
-            "gambar_sampul" => $new_foto_sampul,
-            "text_sampul" => $request["text_sampul"],
             "judul" => $request["judul"],
-            "slug" => $request["slug"],
-            "konten" => $new_konten,
+            "foto_konten" => $pathFoto,
             "caption" => $request["caption"],
         ]);
 
-        //$picture->move('img-upload/', $new_picture);
-        $gambar_sampul->move('img-foto-sampul/', $new_foto_sampul);
-        $konten->move('img-foto-konten/', $new_foto_konten);
+        //$foto_konten->move('img-foto-konten/', $new_foto_konten);
 
-        return redirect('/admin/list-foto')->with('success', 'Data submission successful!');
+        return redirect('/admin/list-foto')->with('success', 'Foto Berhasil Ditambahkan!');
     }
 
     public function index()
@@ -67,20 +56,17 @@ class FotoController extends Controller
 
     public function update($id, Request $request) {
         $request->validate([
-            'gambar_sampul' => 'mimes:jpeg,jpg,png|max:2200',
-            'text_sampul' => 'required',
             'judul' => 'required',
-            'slug' => 'required',
-            'konten' => 'mimes:jpeg,jpg,png|max:2200', //masih belum bisa upload 2
+            'foto_konten' => 'mimes:jpeg,jpg,png|max:2200', 
             'caption' => 'required'
         ]);
 
         $foto = foto::findorfail($id);
         if ($request->has('picture')) {
-            File::delete("img-foto-sampul/".$foto->picture);
+            File::delete("img-foto-konten/".$foto->picture);
             $picture = $request->picture;
-            $new_foto_sampul = time() . ' - ' . $picture->getClientOriginalName();
-            $picture->move('img-foto-sampul/', $new_foto_sampul);
+            $pathFoto = time() . ' - ' . $picture->getClientOriginalName();
+            $picture->move('img-foto-konten/', $pathFoto);
 /*
             $request->has('konten_picture')) {
             File::delete("img-foto-konten/".$foto->konten_picture);
@@ -89,32 +75,26 @@ class FotoController extends Controller
             $konten_picture->move('img-foto-konten/', $new_foto_sampul);
 */
             $foto_data = [
-                "gambar_sampul" => $new_foto_sampul,
-                "text_sampul" => ["text-sampul"],
                 "judul" => $request["judul"],
-                "slug" => $request["slug"],
-                "konten" => $new_konten,
+                "foto_konten" => $pathFoto,
                 "caption" => $request["caption"],
             ];
         } else {
             $foto_data = [
-                "gambar-sampul" => $new_picture["gambar-sampul"],
-                "text_sampul" => $request["text_sampul"],
                 "judul" => $request["judul"],
-                "slug" => $request["slug"],
-                "konten" => $new_konten,
+                //"foto_konten" => $pathFoto,
                 "caption" => $request["caption"]
             ];
         }
         
         $foto->update($foto_data);
 
-        return redirect('/admin/list-foto')->with('success', 'Submission successfully updated!');
+        return redirect('/admin/list-foto')->with('success', 'Foto Berhasil Diupdate!');
     }
 
     public function destroy($id) {
         $submission = DB::table('fotos')->where('id', $id)->delete();
-        return redirect('/admin/list-foto')->with('success', 'Submission successfully deleted!');
+        return redirect('/admin/list-foto')->with('success', 'Foto Berhasil Dihapus!');
     }
 /*
     public function upload($id) {

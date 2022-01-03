@@ -16,10 +16,9 @@ class CreateAudiosTable extends Migration
         Schema::create('audios', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('gambar_sampul',40);
-            $table->string('text_sampul',100);
             $table->string('judul',100);
-            $table->string('slug',50);
             $table->longText('konten');
+            $table->string('caption',255);
             $table->timestamps();
         });
     }

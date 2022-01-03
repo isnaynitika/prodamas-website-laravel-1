@@ -11,7 +11,7 @@
         </div>
     @endif
 
-    <form action="/admin/list-foto" method="POST"  enctype="multipart/form-data" >
+    <form action="{{route('addVideo')}}" method="POST"  enctype="multipart/form-data" >
         @csrf
         <div class="form-group">
             <label for="gambar_sampul">Upload Gambar Sampul</label><br>
@@ -23,28 +23,9 @@
             @enderror
         </div>
         <div class="form-group">
-            <label for="text_sampul">Caption Sampul</label>
-            <input type="text" class="form-control" name="text_sampul" id="text_sampul" placeholder="Judul">
-            @error('text_sampul')
-                <div class="alert alert-danger">
-                    {{ $message }}
-                </div>
-            @enderror
-        </div><br>
-
-        <div class="form-group">
             <label for="judul">Judul</label>
-            <input name="judul" class="form-control" name="judul" id="judul" placeholder="Judul"></input>
+            <input name="judul" class="form-control" name="judul" id="judul" placeholder="Judul">
             @error('judul')
-                <div class="alert alert-danger">
-                    {{ $message }}
-                </div>
-            @enderror
-        </div>
-        <div class="form-group">
-            <label for="slug">Slug</label>
-            <input name="slug" class="form-control" name="slug" id="slug" placeholder="Slug"></input>
-            @error('slug')
                 <div class="alert alert-danger">
                     {{ $message }}
                 </div>
@@ -68,7 +49,7 @@
                 </div>
             @enderror
         </div>
-        <button type="submit" class="btn btn-primary">Tambah Video</button>
+        <button type="submit" class="btn btn-primary" value="submit">Tambah Video</button>
         <a href="/admin/list-video" class="btn btn-outline-primary">Kembali</a>
     </form>
 @endsection

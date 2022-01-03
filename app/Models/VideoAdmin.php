@@ -1,15 +1,17 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 
-class Foto extends Model
+class VideoAdmin extends Model
 {
-    protected $table = "fotos";
+    use HasFactory;
+    protected $table = "videos";
 
-    protected $fillable = ["gambar_sampul","text_sampul","judul","slug","konten","caption"];
+    protected $fillable = ["gambar_sampul","judul","video","caption"];
 
     public function getCreatedAtAttribute() {
         return Carbon::parse($this->attributes['created_at'])
