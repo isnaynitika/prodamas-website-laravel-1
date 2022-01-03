@@ -82,7 +82,7 @@ Route::post('beranda.index', [NewsletterController::class, 'store']);
 //artikel
 Route::resource('artikel', artikelController::class);
 //Route::post('add_prosess', 'artikelController@add_process');
-Route::get('artikel', [artikelController::class,'ShareWidget']);
+Route::get('/artikel', [artikelController::class,'index']);
 
 //kritik saran
 Route::get('kritik.index', [App\Http\Controllers\KritikController::class, 'kritik'])->name('kritik');
