@@ -1,4 +1,11 @@
 @extends('layouts.desain')
+@section('search')
+<form class="d-flex">
+    <input class="form-control me-2" type="search"
+        style="font-family: 'Font Awesome 5 Free'; font-weight: 600; border-radius: 30px; height: 30px"
+        placeholder=" &#xf002;" aria-label="Search" />
+</form>
+@endsection
 @section('content')
 
 <!DOCTYPE html>
@@ -35,14 +42,14 @@
             </div>
         </div>
         <!-- akhir jumbotrom -->
-    
-    
+
+
         <!-- Awal feed video -->
         <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedAudio">
             {{-- Card video --}}
             <div class=" card noBorder cardAudio" style="width: 18rem;">
                 <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer">
-                    <img src="https://cdn-2.tstatic.net/surabaya/foto/bank/images/sosialisasi-prodamas-kediri-untuk-bantuan.jpg" 
+                    <img src="https://cdn-2.tstatic.net/surabaya/foto/bank/images/sosialisasi-prodamas-kediri-untuk-bantuan.jpg"
                     style="width: 250px; height: 270px" class="card-img-top d-flex justify-content" alt="video-prodamas">
                     <div class="card-body">
                         <h5 class="card-title">
@@ -67,7 +74,7 @@
                             <video width="520" height="340" controls>
                                 <source src="videoProd/video1.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
-                              </video> 
+                              </video>
                         </div>
                         <div class="col-6">
                             <h3> JELANG PELAKSANAAN PRODAMAS PLUS 2021, PEMKOT KEDIRI LAKSANAKAN SOSIALISASI</h3>
@@ -111,7 +118,7 @@
                             <video width="520" height="340" controls>
                                 <source src="videoProd/video1.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
-                              </video> 
+                              </video>
                         </div>
                         <div class="col-6">
                             <h3> JELANG PELAKSANAAN PRODAMAS PLUS 2021, PEMKOT KEDIRI LAKSANAKAN SOSIALISASI</h3>
@@ -153,7 +160,7 @@
                             <video width="520" height="340" controls>
                                 <source src="videoProd/video1.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
-                              </video> 
+                              </video>
                         </div>
                         <div class="col-6">
                             <h3> JELANG PELAKSANAAN PRODAMAS PLUS 2021, PEMKOT KEDIRI LAKSANAKAN SOSIALISASI</h3>
@@ -168,10 +175,10 @@
                 </div>
             </div>
             {{-- Akhir Card Video --}}
-            
-            
-    
-    
+
+
+
+
         </div>
         <!-- akhir feed video -->
 
