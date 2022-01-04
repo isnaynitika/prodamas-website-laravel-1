@@ -10,6 +10,7 @@ use App\Http\Controllers\MediaController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\KritikController;
 use App\Http\Controllers\artikelController;
+use App\Http\Controllers\FotoController;
 use App\Http\Controllers\AudioController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\TentangController;
@@ -58,6 +59,9 @@ Route::resource('audio', AudioController::class);
 
 //video
 Route::get('/video', [VideoController::class, 'index']);
+
+//foto
+Route::resource('foto', FotoController::class);
 
 //tulis Cerita
 Route::resource('tuliscerita', TulisCeritaController::class);
