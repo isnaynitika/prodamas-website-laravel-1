@@ -1,4 +1,9 @@
 @extends('layouts.desain')
+
+@section('search','<form class="d-flex">
+    <input class="form-control me-2" type="search"
+        style="font-family: 'Font Awesome 5 Free'; font-weight: 600; border-radius: 30px; height: 30px"
+        placeholder=" &#xf002;" aria-label="Search" /></form>')
 @section('content')
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +32,7 @@
     <!--font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
-    <!-- Template Main CSS File 
+    <!-- Template Main CSS File
     <LINK rel="stylesheet" type="text/css"
      href="media.css" title="Default Styles" media="screen">-->
 
@@ -96,18 +101,18 @@
                 <div class="row justify-content-beetween">
                     <!--POST TIKTOK 1-->
                     <div class="col-md-4 mb-2">
-                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@prodamasplus/video/7030775600730180890" data-video-id="7030775600730180890" style="max-width: 605px;min-width: 325px;" > 
-                            <section> 
-                                <a target="_blank" title="@prodamasplus" href="https://www.tiktok.com/@prodamasplus">@prodamasplus</a> 
-                                <p>Salam hangat dari Prodamas Plus Kota Kediri <a title="prodamasberdaya" target="_blank" href="https://www.tiktok.com/tag/prodamasberdaya">##ProdamasBerdaya</a> 
-                                <a title="prodamas" target="_blank" href="https://www.tiktok.com/tag/prodamas">##Prodamas</a> 
-                                <a title="prodamasplus" target="_blank" href="https://www.tiktok.com/tag/prodamasplus">##ProdamasPlus</a> 
-                                <a title="kedirimandiri" target="_blank" href="https://www.tiktok.com/tag/kedirimandiri">##KediriMandiri</a> 
-                                <a title="pemkotkediri" target="_blank" href="https://www.tiktok.com/tag/pemkotkediri">##PemkotKediri</a> 
-                                <a title="harmonikediri" target="_blank" href="https://www.tiktok.com/tag/harmonikediri">##HarmoniKediri</a></p> 
-                                <a target="_blank" title="♬ suara asli  - Prodamas Plus" href="https://www.tiktok.com/music/suara-asli-Prodamas-Plus-7030775590659705626">♬ suara asli  - Prodamas Plus</a> 
-                            </section> 
-                        </blockquote> 
+                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@prodamasplus/video/7030775600730180890" data-video-id="7030775600730180890" style="max-width: 605px;min-width: 325px;" >
+                            <section>
+                                <a target="_blank" title="@prodamasplus" href="https://www.tiktok.com/@prodamasplus">@prodamasplus</a>
+                                <p>Salam hangat dari Prodamas Plus Kota Kediri <a title="prodamasberdaya" target="_blank" href="https://www.tiktok.com/tag/prodamasberdaya">##ProdamasBerdaya</a>
+                                <a title="prodamas" target="_blank" href="https://www.tiktok.com/tag/prodamas">##Prodamas</a>
+                                <a title="prodamasplus" target="_blank" href="https://www.tiktok.com/tag/prodamasplus">##ProdamasPlus</a>
+                                <a title="kedirimandiri" target="_blank" href="https://www.tiktok.com/tag/kedirimandiri">##KediriMandiri</a>
+                                <a title="pemkotkediri" target="_blank" href="https://www.tiktok.com/tag/pemkotkediri">##PemkotKediri</a>
+                                <a title="harmonikediri" target="_blank" href="https://www.tiktok.com/tag/harmonikediri">##HarmoniKediri</a></p>
+                                <a target="_blank" title="♬ suara asli  - Prodamas Plus" href="https://www.tiktok.com/music/suara-asli-Prodamas-Plus-7030775590659705626">♬ suara asli  - Prodamas Plus</a>
+                            </section>
+                        </blockquote>
 
                         <script async src="https://www.tiktok.com/embed.js"></script>
                     </div>
