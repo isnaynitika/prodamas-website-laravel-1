@@ -14,6 +14,7 @@ use App\Http\Controllers\AudioController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\TentangController;
 use App\Http\Controllers\TulisCeritaController;
+use App\Http\Controllers\AdminController;
 //use App\Http\Controllers\SocialShareButtonsController;
 
 
@@ -120,3 +121,6 @@ Route::get('/admin/list-video', 'VideoController@index');
 Route::get('/admin/add-audio', 'AudioController@create');
 Route::post('/admin/list-audio', 'AudioController@store');
 Route::get('/admin/list-audio', 'AudioController@index');
+
+//admin
+Route::resource('admin', AdminController::class);

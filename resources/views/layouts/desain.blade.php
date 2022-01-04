@@ -190,6 +190,7 @@
                         <a href="https://www.youtube.com/channel/UCX6KxXBUbivqWXTku0nnPbA"><i
                                 class="fab fa-youtube"></i></a>
                         <a href="https://www.instagram.com/prodamasplus/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/Prodamas-Plus-105191455380017/"><i class="fab fa-facebook"></i></a>
                         <a href="https://vt.tiktok.com/ZSejpETUx/"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
