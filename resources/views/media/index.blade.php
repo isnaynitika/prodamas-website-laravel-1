@@ -2,7 +2,7 @@
 
 @section('search','<form class="d-flex">
     <input class="form-control me-2" type="search"
-        style="font-family: 'Font Awesome 5 Free'; font-weight: 600; border-radius: 30px; height: 30px"
+        style="font-family: "Font Awesome 5 Free"; font-weight: 600; border-radius: 30px; height: 30px"
         placeholder=" &#xf002;" aria-label="Search" /></form>')
 @section('content')
 <!DOCTYPE html>
@@ -119,32 +119,32 @@
 
                     <!--POST TIKTOK 2-->
                     <div class="col-md-4 mb-2">
-                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@prodamasplus/video/7048902776780295451" data-video-id="7048902776780295451" style="max-width: 605px;min-width: 325px;" > <section> 
-                        <a target="_blank" title="@prodamasplus" href="https://www.tiktok.com/@prodamasplus">@prodamasplus</a> Apa kata pemuda tentang Prodamas? 
-                        <a title="kotakediri" target="_blank" href="https://www.tiktok.com/tag/kotakediri">#KotaKediri</a> 
-                        <a title="prodamasplus" target="_blank" href="https://www.tiktok.com/tag/prodamasplus">#ProdamasPlus</a> 
-                        <a title="pemkotkediri" target="_blank" href="https://www.tiktok.com/tag/pemkotkediri">#PemkotKediri</a> 
-                        <a title="prodamas" target="_blank" href="https://www.tiktok.com/tag/prodamas">#Prodamas</a> 
-                        <a title="harmonikediri" target="_blank" href="https://www.tiktok.com/tag/harmonikediri">#HarmoniKediri</a> 
-                        <a title="kediri" target="_blank" href="https://www.tiktok.com/tag/kediri">#Kediri</a> 
-                        <a target="_blank" title="♬ suara asli  - Prodamas Plus" href="https://www.tiktok.com/music/suara-asli-Prodamas-Plus-7048902813321153307">♬ suara asli  - Prodamas Plus</a> 
-                        </section> </blockquote> 
+                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@prodamasplus/video/7048902776780295451" data-video-id="7048902776780295451" style="max-width: 605px;min-width: 325px;" > <section>
+                        <a target="_blank" title="@prodamasplus" href="https://www.tiktok.com/@prodamasplus">@prodamasplus</a> Apa kata pemuda tentang Prodamas?
+                        <a title="kotakediri" target="_blank" href="https://www.tiktok.com/tag/kotakediri">#KotaKediri</a>
+                        <a title="prodamasplus" target="_blank" href="https://www.tiktok.com/tag/prodamasplus">#ProdamasPlus</a>
+                        <a title="pemkotkediri" target="_blank" href="https://www.tiktok.com/tag/pemkotkediri">#PemkotKediri</a>
+                        <a title="prodamas" target="_blank" href="https://www.tiktok.com/tag/prodamas">#Prodamas</a>
+                        <a title="harmonikediri" target="_blank" href="https://www.tiktok.com/tag/harmonikediri">#HarmoniKediri</a>
+                        <a title="kediri" target="_blank" href="https://www.tiktok.com/tag/kediri">#Kediri</a>
+                        <a target="_blank" title="♬ suara asli  - Prodamas Plus" href="https://www.tiktok.com/music/suara-asli-Prodamas-Plus-7048902813321153307">♬ suara asli  - Prodamas Plus</a>
+                        </section> </blockquote>
                         <script async src="https://www.tiktok.com/embed.js"></script>
-              
+
                     </div>
 
                     <!--POST TIKTOK 3-->
                     <div class="col-md-4 mb-2">
-                       <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@prodamasplus/video/7049218495858412826" data-video-id="7049218495858412826" style="max-width: 605px;min-width: 325px;" > 
-                       <section> <a target="_blank" title="@prodamasplus" href="https://www.tiktok.com/@prodamasplus">@prodamasplus</a> Kampung 
-                       <a title="herbal" target="_blank" href="https://www.tiktok.com/tag/herbal">#herbal</a> di tengah 
-                       <a title="kota" target="_blank" href="https://www.tiktok.com/tag/kota">#kota</a> ? 
-                       <a title="prodamasplus" target="_blank" href="https://www.tiktok.com/tag/prodamasplus">#prodamasplus</a> 
-                       <a title="kampungkeren" target="_blank" href="https://www.tiktok.com/tag/kampungkeren">#kampungkeren</a> 
-                       <a title="kediri" target="_blank" href="https://www.tiktok.com/tag/kediri">#kediri</a> 
-                       <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp">#fyp</a> 
-                       <a target="_blank" title="♬ Every Summertime - NIKI" href="https://www.tiktok.com/music/Every-Summertime-6995859258554189826">♬ Every Summertime - NIKI</a> 
-                       </section> </blockquote> 
+                       <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@prodamasplus/video/7049218495858412826" data-video-id="7049218495858412826" style="max-width: 605px;min-width: 325px;" >
+                       <section> <a target="_blank" title="@prodamasplus" href="https://www.tiktok.com/@prodamasplus">@prodamasplus</a> Kampung
+                       <a title="herbal" target="_blank" href="https://www.tiktok.com/tag/herbal">#herbal</a> di tengah
+                       <a title="kota" target="_blank" href="https://www.tiktok.com/tag/kota">#kota</a> ?
+                       <a title="prodamasplus" target="_blank" href="https://www.tiktok.com/tag/prodamasplus">#prodamasplus</a>
+                       <a title="kampungkeren" target="_blank" href="https://www.tiktok.com/tag/kampungkeren">#kampungkeren</a>
+                       <a title="kediri" target="_blank" href="https://www.tiktok.com/tag/kediri">#kediri</a>
+                       <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp">#fyp</a>
+                       <a target="_blank" title="♬ Every Summertime - NIKI" href="https://www.tiktok.com/music/Every-Summertime-6995859258554189826">♬ Every Summertime - NIKI</a>
+                       </section> </blockquote>
                        <script async src="https://www.tiktok.com/embed.js"></script>
                     </div>
                 </div>
