@@ -90,7 +90,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <div data-bs-toggle="modal" data-bs-target="#audioPlayer" class="link-dark">
+                                <div class="link-dark">
                                     <h5 class="card-title">Wali Kota Kediri Luncurkan 10 Kampung Keren Prodamas, Harapkan Ekonomi dan Kreativitas Akan Terus Tumbuh</h5>
                                 </div>
                                 <p class="card-text">Wali Kota Kediri Abdullah Abu Bakar meluncurkan 10 Kampung Kreatif dan Independen (Keren) Prodamas, Selasa (9/11) bertempat di IKCC.
@@ -194,7 +194,7 @@
         </div>
     </div>
     {{-- Card Modal --}}
-    <div class="modal fade" id="audioPlayer" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
+    {{-- <div class="modal fade" id="audioPlayer" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header ">
@@ -305,7 +305,7 @@
             </div>
         </div>
     </div>
-    {{-- Akhir Card Audio --}}
+    Akhir Card Audio --}}
 </body>
 
 </html>
