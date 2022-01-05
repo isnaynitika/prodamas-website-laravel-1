@@ -65,7 +65,7 @@
                                 <li><a class="dropdown-item menu" href="{{ url('/grafik') }}">Prodamas Dalam Grafik</a>
                                 </li>
                                 <li><a class="dropdown-item menu" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
-                                <li><a class="dropdown-item menu" href="{{ url('/bangsampah') }}"> Bank Sampah </a></li>
+                                <li><a class="dropdown-item menu" href="{{ url('/banksampah') }}"> Bank Sampah </a></li>
                             </ul>
                         </div>
                     </li>
