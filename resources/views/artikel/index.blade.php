@@ -90,9 +90,9 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <a data-bs-toggle="modal" data-bs-target="#audioPlayer" class="link-dark">
+                                <div data-bs-toggle="modal" data-bs-target="#audioPlayer" class="link-dark">
                                     <h5 class="card-title">Wali Kota Kediri Luncurkan 10 Kampung Keren Prodamas, Harapkan Ekonomi dan Kreativitas Akan Terus Tumbuh</h5>
-                                </a>
+                                </div>
                                 <p class="card-text">Wali Kota Kediri Abdullah Abu Bakar meluncurkan 10 Kampung Kreatif dan Independen (Keren) Prodamas, Selasa (9/11) bertempat di IKCC.
                                 </p>
                             </div>
