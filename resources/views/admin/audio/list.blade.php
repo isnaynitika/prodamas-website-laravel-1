@@ -27,10 +27,10 @@ Audio Submission
         <tr>
             <td>{{$key + 1}}</th>
             <td>{{$audio->created_at}}</td>
-            <!-- <td>{{$audio->name}}</td> -->
-            <td>{{$audio->judul}}</td>
+            <!-- <td>{{$audio->judul}}</td> -->
+            <td>{{$audio->Judul}}</td>
             <!-- <td>{{Str::limit($audio->audio, 60)}}</td> -->
-            <td>{{$audio->status}}</td>
+            <td>{{$audio->konten}}</td>
             <td>
                 <form action="/admin/audio/{{$audio->id}}" method="POST">
                     <a href="/admin/audio/{{$audio->id}}" class="btn btn-info">Edit</a>

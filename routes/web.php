@@ -10,10 +10,12 @@ use App\Http\Controllers\MediaController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\KritikController;
 use App\Http\Controllers\artikelController;
+use App\Http\Controllers\FotoController;
 use App\Http\Controllers\AudioController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\TentangController;
 use App\Http\Controllers\TulisCeritaController;
+use App\Http\Controllers\AdminController;
 //use App\Http\Controllers\SocialShareButtonsController;
 
 
@@ -52,12 +54,18 @@ Route::resource('media', MediaController::class);
 Route::resource('kritik', KritikController::class);
 
 //audio
-Route::get('/audio', [AudioController::class, 'index']);
+Route::resource('audio', AudioController::class);
+// Route::get('/audio', [AudioController::class, 'index']);
+
 //video
 Route::get('/video', [VideoController::class, 'index']);
 
+//foto
+Route::resource('foto', FotoController::class);
+
 //tulis Cerita
-Route::get('/tuliscerita', [TulisCeritaController::class, 'index']);
+Route::resource('tuliscerita', TulisCeritaController::class);
+
 
 //login & profil
 Route::get('/loginuser', [AuthController::class, 'loginuser'])->name('login');
@@ -78,14 +86,16 @@ Route::post('beranda.index', [NewsletterController::class, 'store']);
 
 //artikel
 Route::resource('artikel', artikelController::class);
+Route::get('/artikel/1', function () {
+    return view('artikel.artikelLay');
+});
 //Route::post('add_prosess', 'artikelController@add_process');
-Route::get('artikel', [artikelController::class,'ShareWidget']);
 
 //kritik saran
 Route::get('kritik.index', [App\Http\Controllers\KritikController::class, 'kritik'])->name('kritik');
 Route::post('kritik-saran', [App\Http\Controllers\KritikController::class, 'storeContactForm'])->name('contact-form.store');
 
-//Admin 
+//Admin
 Route::post('/admin', 'AuthSubmissionController@home');
 Route::post('/admin/submission', 'SubmissionController@store');
 Route::get('/admin/submission', 'SubmissionController@index');
@@ -117,3 +127,6 @@ Route::get('/admin/list-video', 'VideoController@index');
 Route::get('/admin/add-audio', 'AudioController@create');
 Route::post('/admin/list-audio', 'AudioController@store');
 Route::get('/admin/list-audio', 'AudioController@index');
+
+//admin
+Route::resource('admin', AdminController::class);

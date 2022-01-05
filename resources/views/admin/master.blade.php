@@ -2,7 +2,7 @@
 <html>
 
 <head>
-@stack('link_summer') 
+@stack('link_summer')
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Admin Page | PRODAMAS </title>
@@ -86,5 +86,5 @@
 
     @stack('scripts')
 </body>
-@stack('link_summer') 
+@stack('link_summer')
 </html>

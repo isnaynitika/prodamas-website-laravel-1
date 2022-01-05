@@ -1,5 +1,10 @@
 @extends('admin.master')
 
+@push('link_summer')
+    <!-- Summernote -->
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+@endpush
+
 @section('title')
     Edit Artikel
 @endsection
@@ -11,17 +16,12 @@
         @method('put')
         <div class="form-group">
             <label for="status">Status</label>
-            <input type="text" class="form-control" name="status" id="status" placeholder="status of article" value="{{$article->status}}">
+            <select class="form-control" name="status" id="id_status" placeholder="status" value="{{$article->status}}">
+                <option value="">- pilih -</option>
+                <option value="published">Published</option>
+                <option value="unpublished">Unpublished</option>
+            </select> 
             @error('status')
-                <div class="alert alert-danger">
-                    {{ $message }}
-                </div>
-            @enderror
-        </div>
-        <div class="form-group">
-            <label for="kategori">kategori</label>
-            <input type="text" class="form-control" name="kategori" id="kategori" placeholder="kategori of article" value="{{$article->kategori}}">
-            @error('kategori')
                 <div class="alert alert-danger">
                     {{ $message }}
                 </div>
@@ -66,7 +66,7 @@
         </div>
         <div class="form-group">
             <label for="article">Konten</label>
-            <textarea name="article" class="form-control" cols="30" rows="10">{{$article->article}}</textarea>
+            <textarea name="article" id="summernote" class="form-control" cols="30" rows="10">{{$article->article}}</textarea>
             @error('article')
                 <div class="alert alert-danger">
                     {{ $message }}
@@ -77,3 +77,17 @@
         <a href="/admin/list-article" class="btn btn-outline-primary">Back</a>
     </form>
 @endsection
+
+@push('summernote')
+    <!-- Summernote -->
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+  <script>
+    $('#summernote').summernote({
+      placeholder: 'Article...',
+      fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Merriweather', 'Montserrat', 'Scheherazade', 'Helvetica', 'Impact', 'Tahoma', 'Times New Roman', 'Verdana'],
+      fontNamesIgnoreCheck: ['Merriweather', 'Montserrat', 'Scheherazade'],
+      height: 400,
+      popatmouse: true
+    });
+  </script>
+@endpush

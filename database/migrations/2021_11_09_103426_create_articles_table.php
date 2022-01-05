@@ -15,8 +15,7 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('id_status',20);
-            $table->string('id_kategori',20);
+            $table->string('status',20);
             $table->string('gambar_sampul',255);
             $table->string('text_sampul',255);
             $table->string('judul',255);
