@@ -89,7 +89,7 @@ Route::resource('artikel', artikelController::class);
 
 Route::get('/public/layoutartikel/', function () {
     return view('artikel.layout');
-})->name('layoutart');
+});
 
 //Route::post('add_prosess', 'artikelController@add_process');
 Route::get('/artikel', [artikelController::class,'index']);
