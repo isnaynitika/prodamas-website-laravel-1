@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+{{-- <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,7 +21,7 @@
   <!--CSS-->
   <link rel="stylesheet" href="css/artikel.css">
 
-</head>
+</head> --}}
 
 <body>
 <!-- Content -->
@@ -37,11 +37,11 @@
                     </div>
                     <div class="col-sm-4">
                         <h6>Rabu, 5 Januari 2021</h6>
-                    </div> 
+                    </div>
                 </div>
                 <br>
                 <div class="">
-                    <img src="https://www.w3schools.com/howto/img_snow.jpg" alt="" style="height:100%;">   
+                    <img src="https://www.w3schools.com/howto/img_snow.jpg" alt="" style="height:100%;">
                 </div>
                 <p>Wali Kota Kediri Abdullah Abu Bakar meluncurkan 10 Kampung Kreatif dan Independen (Keren) Prodamas, Selasa (9/11) bertempat di IKCC. Peluncuran ditandai dengan pemukulan kentongan oleh Wali Kota Kediri yang didampingi Camat Kota, Camat Pesantren, dan Camat Mojoroto.</p>
                 <p>Kampung Keren Prodamas merupakan salah satu dari 10 program unggulan Wali Kota Kediri. Program ini memicu tumbuhnya kreativitas dan kemandirian masyarakat di Kota Kediri untuk memunculkan karakteristik kawasan, keunikan, budaya, keterampilan dan peningkatan potensi ekonomi di kelurahannya. Kesepuluh Kampung Keren Prodamas yang diluncurkan ini telah melewati verifikasi dan memenuhi kriteria yang ditetapkan oleh Pemerintah Kota Kediri yang bekerja sama dengan akademisi dari beberapa perguruan tinggi. “Kita ingin ada 46 Kampung Keren Prodamas tapi sekarang baru 10. Kampung Keren ini sebenarnya untuk memancing kreatifitas seluruh warga yang ada di kelurahan karena bisa kita lihat di era distrupsi ini seluruh masyarakat mencari spot-spot baru yang keren. Kalau kita lihat banyak spot-spot baru di Indonesia yang tumbuh perekonomiannya dari tempat-tepat keren seperti ini,” ujar Wali Kota Kediri.
@@ -109,7 +109,7 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
             <div class="card-right bg-light">
                 <h5 class="card-header">Kunjungi Website</h5>
                     <ul class="list-group list-group-flush">
