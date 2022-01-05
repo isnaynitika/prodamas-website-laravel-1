@@ -15,20 +15,20 @@ class artikelController extends Controller
     }
 
     public function show(){
-        return "Artikel Berhasil ditambahkan";
+        return view ('artikel.artikelLay');
     }
 
     public function add_process(request$article){
         {
             DB::table('kontenn')->insert(['judul_konten'=>$article->judul_konten, 'slug_konten'=>$article->slug_konten, 'isi_konten'=>$article->isi_konten]);
-            
+
             return redirect()->action('artikelcontroller@show');
         }
     }
 
     public function ShareWidget()
     {
-        $shareComponent = \Share::page(
+        $shareComponent = Share::page(
             'https://www.positronx.io/create-autocomplete-search-in-laravel-with-typeahead-js/',
             'Your share text comes here',
         )
@@ -39,5 +39,5 @@ class artikelController extends Controller
         ->whatsapp();
         //dd($shareComponent);
         return view('artikel.index', compact('shareComponent'));
-    }  
+    }
 }

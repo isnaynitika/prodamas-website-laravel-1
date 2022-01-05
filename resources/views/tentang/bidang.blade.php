@@ -27,16 +27,16 @@
         <link rel="stylesheet" href="css/bidang.css">
     </head>
 
-    <body>
-        <!-- Awal header -->
-        <!--Apa itu prodamas-->
-            <section id="prodamas">
-                <div class="container">
-                    <div class="row mt-5">
-                        <div class="col text-center">
-                            <h1>Cakupan Bidang</h1>
-                        </div>
-                    </div>
+<body>
+    <!-- Awal header -->
+    <!--Apa itu prodamas-->
+    <section id="prodamas">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col text-center">
+                    <h1>Cakupan Bidang</h1>
+                </div>
+            </div>
                 <div class="row mt-5" style="font-family: Montserrat, sans-serif">
                     <div class="col cakupan">
                         <p>
@@ -45,6 +45,7 @@
                         </p>
                     </div>
                 </div>
+
                 </div>
                 <!--div container-->
             </section>
@@ -67,6 +68,7 @@
                         </div>
                     </div>
                     </div> -->
+
                     <div class="col-sm-6-mt-5 mb-4">
                             <div class="box">
                                 <div class="item">
@@ -137,6 +139,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-md4 mb-4">
                             <div class="box">
                                 <div class="item">
