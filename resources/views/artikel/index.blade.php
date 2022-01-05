@@ -86,7 +86,7 @@
                 <div class="mb-3 kartu">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="img/sosial-budaya.jpg" class="img-fluid rounded-start">
+                            <img src="img/slide1.jpeg" class="img-fluid rounded-start">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">

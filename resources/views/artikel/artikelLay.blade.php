@@ -59,7 +59,7 @@
                 <h5 class="card-header">Update Artikel</h5>
                 <div class="col-sm-12">
                     <div class="caption">
-                        <h5>kampung Keren</h5>
+                        <h5>Kampung Keren</h5>
                         <div class="row">
                             <div class="col-xl-3">
                                 <img src="{{ asset('img/slide1.jpeg') }}" width="100%" alt="Cinque Terre">
