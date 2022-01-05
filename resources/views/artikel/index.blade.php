@@ -90,7 +90,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <a href="/public/layoutartikel" class="link-dark">
+                                <a data-bs-toggle="modal" data-bs-target="#audioPlayer" class="link-dark">
                                     <h5 class="card-title">Wali Kota Kediri Luncurkan 10 Kampung Keren Prodamas, Harapkan Ekonomi dan Kreativitas Akan Terus Tumbuh</h5>
                                 </a>
                                 <p class="card-text">Wali Kota Kediri Abdullah Abu Bakar meluncurkan 10 Kampung Kreatif dan Independen (Keren) Prodamas, Selasa (9/11) bertempat di IKCC.
@@ -193,6 +193,119 @@
             </div>
         </div>
     </div>
+    {{-- Card Modal --}}
+    <div class="modal fade" id="audioPlayer" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h5 class="modal-title" id="audioPlayerLabel">{{$audio->judul}}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="leftcolumn">
+                            <div class="card">
+                                <h2>Wali Kota Kediri Luncurkan 10 Kampung Keren Prodamas, Harapkan Ekonomi dan Kreativitas Akan Terus Tumbuh </h2><br>
+                                <div class="row">
+                                    <!--<div class="col-sm-12">buat share
+                                    </div>-->
+                                    <div class="col-sm-8">
+                                        <h6>Bagian Protokol dan Komunikasi Pimpinan Sekretariat Daerah Kota Kediri</h6>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <h6>Rabu, 5 Januari 2021</h6>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="">
+                                    <img src="https://www.w3schools.com/howto/img_snow.jpg" alt="" style="height:100%;">
+                                </div>
+                                <p>Wali Kota Kediri Abdullah Abu Bakar meluncurkan 10 Kampung Kreatif dan Independen (Keren) Prodamas, Selasa (9/11) bertempat di IKCC. Peluncuran ditandai dengan pemukulan kentongan oleh Wali Kota Kediri yang didampingi Camat Kota, Camat Pesantren, dan Camat Mojoroto.</p>
+                                <p>Kampung Keren Prodamas merupakan salah satu dari 10 program unggulan Wali Kota Kediri. Program ini memicu tumbuhnya kreativitas dan kemandirian masyarakat di Kota Kediri untuk memunculkan karakteristik kawasan, keunikan, budaya, keterampilan dan peningkatan potensi ekonomi di kelurahannya. Kesepuluh Kampung Keren Prodamas yang diluncurkan ini telah melewati verifikasi dan memenuhi kriteria yang ditetapkan oleh Pemerintah Kota Kediri yang bekerja sama dengan akademisi dari beberapa perguruan tinggi. “Kita ingin ada 46 Kampung Keren Prodamas tapi sekarang baru 10. Kampung Keren ini sebenarnya untuk memancing kreatifitas seluruh warga yang ada di kelurahan karena bisa kita lihat di era distrupsi ini seluruh masyarakat mencari spot-spot baru yang keren. Kalau kita lihat banyak spot-spot baru di Indonesia yang tumbuh perekonomiannya dari tempat-tepat keren seperti ini,” ujar Wali Kota Kediri.
+                                </p>
+                                <p>Adanya Kampung Keren Prodamas ini tentu dapat mendorong perekonomian yang ada di Kota Kediri. Apalagi akibat pandemi ini, perekonomian Kota Kediri terkoreksi cukup dalam. Diharapkan Kampung Keren Prodamas ini dapat membangkitkan perekonomian yang ada di Kota Kediri. Kampung Keren Prodamas ini harus terus dijaga dan dikembangkan agar semakin bagus. OPD-OPD yang ada di Kota Kediri harus bekolaborasi di kampung Keren Prodamas ini. “Saya mengajak kepada seluruh elemen di Kota Kediri untuk bisa menangkap peluang dari adanya tol dan bandara yang akan ada di Kediri. Tentu multiplier effectnya harus kita ambil. Saya berharap ini bisa membangkitkan perekonomian kita lagi. Saya yakin Kota Kediri akan melompat jauh lebih tinggi,” pungkasnya.</p>
+                                <p>Kesepuluh Kampung Keren Prodamas tersebut adalah Kampung Tani Kelurahan Jamsaren, Kampung Winer (Wisata Kuliner) Kelurahan Kampung Dalem, Kampung Pecut Kelurahan Kemasan, Kampung Harmony Betta (Ikan Cupang) Kelurahan Ketami, Kampung Herbal Kelurahan Mojoroto, Kampung Heritage Kelurahan Pakelan, Kampung Seni Kelurahan Ringinanom, Kampung Tahu Kelurahan Tinalan, Kampung Wisata Air Sumber Banteng Kelurahan Tempurejo, dan Kampung Tenun Ikat Kelurahan Bandar Kidul.
+                                </p>
+                                <p>Peluncuran Kampung Keren Prodamas ini juga diisi sosialisasi Gempur Rokok Ilegal melalui hiburan guyonan dari Cak Percil. Kegiatan ini dihadiri oleh Sekretaris Daerah Kota Kediri, perwakilan Forkopimda Kota Kediri, Asisten, Kepala OPD, Lurah, LPMK, perwakilan perguruan tinggi, tim Prodamas Kota Kediri, Direktur BUMD Kota Kediri, dan peserta Magang Medeka Scale Up Prodamas Plus.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="rightcolumn">
+                            <div class="card-right bg-light">
+                                <h5 class="card-header">Update Artikel</h5>
+                                <div class="col-sm-12">
+                                    <div class="caption">
+                                        <h5>Web Programming</h5>
+                                        <div class="row">
+                                            <div class="col-xl-3">
+                                                <img src="gambar/Programming.png" width="100%" alt="Cinque Terre">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisgna aliqua.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="caption">
+                                        <h5>Belajar HTML & CSS</h5>
+                                        <div class="row">
+                                            <div class="col-xl-3">
+                                                <img src="gambar/HTML_&_CSS.png" width="100%" alt="Cinque Terre">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisgna aliqua.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="caption">
+                                        <h5>Desain UI & UX</h5>
+                                        <div class="row">
+                                            <div class="col-xl-3">
+                                                <img src="gambar/Desain_UI_&_UX.png" width="100%" alt="Cinque Terre">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisgna aliqua.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="caption">
+                                        <h5>Belajar Python</h5>
+                                        <div class="row">
+                                            <div class="col-xl-3">
+                                                <img src="gambar/Python.png" width="100%"alt="Cinque Terre">
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisgna aliqua.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-right bg-light">
+                                <h5 class="card-header">Kunjungi Website</h5>
+                                    <ul class="list-group list-group-flush">
+                                        <a class="list-group-item">An item</a>
+                                        <a class="list-group-item">A second item</a>
+                                        <a class="list-group-item">A third item</a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- Akhir Card Audio --}}
 </body>
 
 </html>

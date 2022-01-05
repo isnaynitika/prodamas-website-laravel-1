@@ -87,7 +87,7 @@ Route::post('beranda.index', [NewsletterController::class, 'store']);
 //artikel
 Route::resource('artikel', artikelController::class);
 
-Route::get('/public/layoutartikel', function () {
+Route::get('/layoutartikel/', function () {
     return view('artikel.layout');
 });
 
