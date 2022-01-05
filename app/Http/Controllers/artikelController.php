@@ -14,14 +14,14 @@ class artikelController extends Controller
         return view('artikel.index');
     }
 
-    public function show(){
-        return "Artikel Berhasil ditambahkan";
-    }
+    // public function show(){
+    //     return "Artikel Berhasil ditambahkan";
+    // }
 
     public function add_process(request$article){
         {
             DB::table('kontenn')->insert(['judul_konten'=>$article->judul_konten, 'slug_konten'=>$article->slug_konten, 'isi_konten'=>$article->isi_konten]);
-            
+
             return redirect()->action('artikelcontroller@show');
         }
     }
@@ -39,5 +39,5 @@ class artikelController extends Controller
         ->whatsapp();
         //dd($shareComponent);
         return view('artikel.index', compact('shareComponent'));
-    }  
+    }
 }
