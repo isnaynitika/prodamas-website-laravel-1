@@ -62,7 +62,7 @@
                         <h5>Web Programming</h5>
                         <div class="row">
                             <div class="col-xl-3">
-                                <img src="gambar/Programming.png" width="100%" alt="Cinque Terre">
+                                <img src="{{ asset('gambar/Programming.png') }}" width="100%" alt="Cinque Terre">
                             </div>
                             <div class="col-sm-9">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisgna aliqua.</p>
@@ -75,7 +75,7 @@
                         <h5>Belajar HTML & CSS</h5>
                         <div class="row">
                             <div class="col-xl-3">
-                                <img src="gambar/HTML_&_CSS.png" width="100%" alt="Cinque Terre">
+                                <img src="{{ asset('gambar/HTML_&_CSS.png') }}" width="100%" alt="Cinque Terre">
                             </div>
                             <div class="col-sm-9">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisgna aliqua.</p>
@@ -88,7 +88,7 @@
                         <h5>Desain UI & UX</h5>
                         <div class="row">
                             <div class="col-xl-3">
-                                <img src="gambar/Desain_UI_&_UX.png" width="100%" alt="Cinque Terre">
+                                <img src="{{ asset('gambar/Desain_UI_&_UX.png') }}" width="100%" alt="Cinque Terre">
                             </div>
                             <div class="col-sm-9">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisgna aliqua.</p>
@@ -101,7 +101,7 @@
                         <h5>Belajar Python</h5>
                         <div class="row">
                             <div class="col-xl-3">
-                                <img src="gambar/Python.png" width="100%"alt="Cinque Terre">
+                                <img src="{{ asset('gambar/Python.png') }}" width="100%"alt="Cinque Terre">
                             </div>
                             <div class="col-sm-9">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisgna aliqua.</p>
