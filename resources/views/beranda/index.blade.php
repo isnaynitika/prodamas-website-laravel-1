@@ -83,15 +83,15 @@
   <div class="container artikel mb-5 mt-5">
     <h3 class="mb-4" style="font-family: Inter, sans-serif">Artikel</h3>
     <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
+      <a href="../artikel/layout.blade"><div class="col">
         <div class="card h-100 hover-card">
           <img src="img/slide3.jpeg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Launching Kampung Keren</h5>
-            <p class="card-text">Dana untuk pemberdayaan warga di level RT di Kota Kediri melalui program pemberdayaan masyarakat (Prodamas) plus bakal dikucurkan.</p>
+            <p class="card-text">Wali Kota Kediri Abdullah Abu Bakar meluncurkan 10 Kampung Kreatif dan Independen (Keren) Prodamas, Selasa (9/11) bertempat di IKCC.</p>
           </div>
         </div>
-      </div>
+      </div></a>
       <div class="col">
         <div class="card h-100 hover-card">
           <img src="img/slide4.jpeg" class="card-img-top" alt="...">
