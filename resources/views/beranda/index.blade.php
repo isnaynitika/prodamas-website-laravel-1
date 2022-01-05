@@ -26,53 +26,47 @@
 <body>
 
   <!-- awal jumbotron -->
-  <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+  <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="img/PRODAMASPLUS.png" class="d-block w-100 img-fluid" alt="...">
+        <img src="img/header1.png" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="img/slide3.jpeg" class="d-block w-100 img-fluid" alt="...">
+        <img src="img/header2.png" class="d-block w-100" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="img/slide3.jpeg" class="d-block w-100 img-fluid" alt="...">
+        <img src="img/slide1.jpeg" class="d-block w-100" alt="...">
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselndicators" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <!-- akhir jumbotrom -->
+
 
   <!--Tentang-->
-  <section class="tentang">
+  <section class="tentang mt-5 ">
     <div class="container">
       <div class="row">
-        <div class="col mt-5 mb-5 text-center">
+        <div class="col-md-6 py-5">
+          <h1 class="text-center mb-5">Tentang Prodamas</h1>
+          <p class="fs-5" style="text-align: justify;">Program Pemberdayaan Masyarakat (PRODAMAS) adalah suatu program dari Pemerintah Kota Kediri
+            yang digunakan untuk melaksanakan kegiatan pembangunan masyarakat ditingkat kelurahan yang berbasis
+            wilayah Rukun Tetangga (RT) yang dimulai sejak tahun 2015 sebagai upaya mewujudkan kemampuan dan
+            kemandirian masyarakat dalam pembangunan.</p>
         </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <h2 class="mb-5" style="text-align: center;">Tentang Prodamas</h2>
-          <p style="text-align: justify;">
-            Program Pemberdayaan Masyarakat (PRODAMAS) adalah suatu program dari pemerintah Kota Kediri
-            yang digunakan untuk melaksanakan kegiatan pembangunan masyarakat ditingkat kelurahan yang
-            berbasis wilayah Rukun Tetangga (RT) yang dimulai sejak tahun 2015 sebagai upaya mewujudkan
-            kemampuan dan kemandirian masyarakat dalam pembangunan.
-          </p>
-        </div>
-        <div class="col">
-          <img src="img/PRODAMASPLUS.png" class="img-fluid" width="700px" height="300px ">
+        <div class="col-md-6 py-5">
+          <img src="img/tentangProdamas.jpeg" class="img-fluid rounded-3">
         </div>
       </div>
     </div>
