@@ -14,7 +14,10 @@ class artikelController extends Controller
         return view('artikel.index');
     }
 
-    public function show(){
+    // public function show(){
+    //     return "Artikel Berhasil ditambahkan";
+    // }
+    public function test1(){
         return view('artikel.layout');
     }
 
