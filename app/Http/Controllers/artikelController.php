@@ -14,9 +14,9 @@ class artikelController extends Controller
         return view('artikel.index');
     }
 
-    // public function show(){
-    //     return "Artikel Berhasil ditambahkan";
-    // }
+    public function show(){
+        return view('artikel.layout');
+    }
 
     public function add_process(request$article){
         {
