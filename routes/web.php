@@ -86,11 +86,6 @@ Route::post('beranda.index', [NewsletterController::class, 'store']);
 
 //artikel
 Route::resource('artikel', artikelController::class);
-
-Route::get('/layoutartikel/', function () {
-    return view('artikel.layout');
-});
-
 //Route::post('add_prosess', 'artikelController@add_process');
 Route::get('/artikel', [artikelController::class,'index']);
 
