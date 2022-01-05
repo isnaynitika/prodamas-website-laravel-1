@@ -41,8 +41,8 @@
                 </div>
                 <br>
                 <div class="">
-                    <img src="https://www.w3schools.com/howto/img_snow.jpg" alt="" style="height:100%;">
-                </div>
+                    <img src="{{ asset('img/tentangProdamas.jpeg') }}" alt="" style="height:100%;">
+                </div><br>
                 <p>Wali Kota Kediri Abdullah Abu Bakar meluncurkan 10 Kampung Kreatif dan Independen (Keren) Prodamas, Selasa (9/11) bertempat di IKCC. Peluncuran ditandai dengan pemukulan kentongan oleh Wali Kota Kediri yang didampingi Camat Kota, Camat Pesantren, dan Camat Mojoroto.</p>
                 <p>Kampung Keren Prodamas merupakan salah satu dari 10 program unggulan Wali Kota Kediri. Program ini memicu tumbuhnya kreativitas dan kemandirian masyarakat di Kota Kediri untuk memunculkan karakteristik kawasan, keunikan, budaya, keterampilan dan peningkatan potensi ekonomi di kelurahannya. Kesepuluh Kampung Keren Prodamas yang diluncurkan ini telah melewati verifikasi dan memenuhi kriteria yang ditetapkan oleh Pemerintah Kota Kediri yang bekerja sama dengan akademisi dari beberapa perguruan tinggi. “Kita ingin ada 46 Kampung Keren Prodamas tapi sekarang baru 10. Kampung Keren ini sebenarnya untuk memancing kreatifitas seluruh warga yang ada di kelurahan karena bisa kita lihat di era distrupsi ini seluruh masyarakat mencari spot-spot baru yang keren. Kalau kita lihat banyak spot-spot baru di Indonesia yang tumbuh perekonomiannya dari tempat-tepat keren seperti ini,” ujar Wali Kota Kediri.
                 </p>
@@ -59,52 +59,52 @@
                 <h5 class="card-header">Update Artikel</h5>
                 <div class="col-sm-12">
                     <div class="caption">
-                        <h5>Web Programming</h5>
+                        <h5>kampung Keren</h5>
                         <div class="row">
                             <div class="col-xl-3">
-                                <img src="{{ asset('gambar/Programming.png') }}" width="100%" alt="Cinque Terre">
+                                <img src="{{ asset('img/slide1.jpeg') }}" width="100%" alt="Cinque Terre">
                             </div>
                             <div class="col-sm-9">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisgna aliqua.</p>
+                                <p>Kampung Keren Prodamas merupakan salah satu dari 10 program unggulan Wali Kota Kediri. </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-12">
                     <div class="caption">
-                        <h5>Belajar HTML & CSS</h5>
+                        <h5>Kampung Keren</h5>
                         <div class="row">
                             <div class="col-xl-3">
-                                <img src="{{ asset('gambar/HTML_&_CSS.png') }}" width="100%" alt="Cinque Terre">
+                                <img src="{{ asset('img/slide2.jpeg') }}" width="100%" alt="Cinque Terre">
                             </div>
                             <div class="col-sm-9">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisgna aliqua.</p>
+                                <p>Kampung Keren Prodamas merupakan salah satu dari 10 program unggulan Wali Kota Kediri. </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-12">
                     <div class="caption">
-                        <h5>Desain UI & UX</h5>
+                        <h5>Kampung Keren</h5>
                         <div class="row">
                             <div class="col-xl-3">
-                                <img src="{{ asset('gambar/Desain_UI_&_UX.png') }}" width="100%" alt="Cinque Terre">
+                                <img src="{{ asset('img/slide3.jpeg') }}" width="100%" alt="Cinque Terre">
                             </div>
                             <div class="col-sm-9">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisgna aliqua.</p>
+                                <p>Kampung Keren Prodamas merupakan salah satu dari 10 program unggulan Wali Kota Kediri. </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-12">
                     <div class="caption">
-                        <h5>Belajar Python</h5>
+                        <h5>Kampung Keren</h5>
                         <div class="row">
                             <div class="col-xl-3">
-                                <img src="{{ asset('gambar/Python.png') }}" width="100%"alt="Cinque Terre">
+                                <img src="{{ asset('img/slide4.jpeg') }}" width="100%"alt="Cinque Terre">
                             </div>
                             <div class="col-sm-9">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisgna aliqua.</p>
+                                <p>Kampung Keren Prodamas merupakan salah satu dari 10 program unggulan Wali Kota Kediri. </p>
                             </div>
                         </div>
                     </div>
@@ -113,9 +113,9 @@
             <div class="card-right bg-light">
                 <h5 class="card-header">Kunjungi Website</h5>
                     <ul class="list-group list-group-flush">
-                        <a class="list-group-item">An item</a>
-                        <a class="list-group-item">A second item</a>
-                        <a class="list-group-item">A third item</a>
+                        <a class="list-group-item" href="https://www.kedirikota.go.id/">Pemerintah Kota Kediri</a>
+                        <a class="list-group-item" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
+                        <a class="list-group-item" href="https://survey123.arcgis.com/share/932769e15a27418aa9b448b0b1e6b6b6">Bank Sampah</a>
                     </ul>
                 </div>
             </div>
