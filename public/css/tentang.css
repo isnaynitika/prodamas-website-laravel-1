@@ -4,7 +4,7 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  background: url(../img/header-bidang.jpg);
+  background: url(../img-tentang/header-tentang-prodamas.png);
   background-size: cover;
   background-position: center;
   text-align: left;
@@ -82,18 +82,58 @@ ul:after {
 }
 
 .kartukanan{
-  max-width: 700px;
+  max-width: auto;
   margin-left: auto;
 }
-
-/* .tabel img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-} */
 
 table, th, td{
   border: 1px solid rgb(146, 145, 145);
   border-collapse: collapse;
   text-align: center;
 }
+
+.isi h5{
+  font-family: 'Inter', sans-serif;
+  font-size: large;
+}
+
+.isi p{
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+}
+
+
+
+/* .item {
+  float: left;
+  width: 50%;
+  height: 200px;
+  border-radius: 20px;
+  flex: 1;
+}
+
+.item h1 {
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 50px;
+  font-family: "Inter", sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 20pt;
+}
+
+.item p {
+  padding-top: 40px;
+  padding-left: 110px;
+  padding-right: 50px;
+  color: black;
+  font-weight: bold;
+  font-size: large;
+}
+
+.item img {
+  border-radius: 20px;
+  height: 250px;
+  width: 100%;
+  max-width: auto;
+} */

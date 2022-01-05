@@ -3,7 +3,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    background: url(../img/header-bidang.jpg);
+    background: url(../img-tentang/header-kampung-keren.png);
     background-size: cover;
     background-position: center;
     text-align: left;
@@ -87,9 +87,19 @@ ul:after {
 }
 
 .kartu{
-    max-width: 700px;
+    max-width: auto;
 }
 
 .kartuatas{
     max-width: 18rem;
+}
+
+.item h5{
+    font-family: 'Inter', sans-serif;
+    font-size: large;
+  }
+  
+.item p{
+   font-family: 'Montserrat', sans-serif;
+   text-align: justify;
 }
