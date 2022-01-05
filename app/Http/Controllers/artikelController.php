@@ -28,7 +28,7 @@ class artikelController extends Controller
 
     public function ShareWidget()
     {
-        $shareComponent = \Share::page(
+        $shareComponent = Share::page(
             'https://www.positronx.io/create-autocomplete-search-in-laravel-with-typeahead-js/',
             'Your share text comes here',
         )
