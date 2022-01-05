@@ -107,6 +107,30 @@
 
         </div>
     </div>
+    
+    <style>
+        body {
+    /* background-color: rgb(226, 225, 225); */
+}
+
+.banner {
+    text-align: center;
+    margin-top: 50px;
+}
+
+p ul li {
+    font-family: "Montserrat", sans-serif;
+}
+
+.card {
+    background-color: white;
+    margin: 100px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+    </style>
+    
 </body>
 
 </html>
