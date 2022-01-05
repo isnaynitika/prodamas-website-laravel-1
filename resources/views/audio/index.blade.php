@@ -1,15 +1,15 @@
 @extends('layouts.desain')
+@section('audio','active')
 @section('search')
 <form class="d-flex">
-    <input class="form-control me-2" type="search"
-        style="font-family: 'Font Awesome 5 Free'; font-weight: 600; border-radius: 30px; height: 30px"
-        placeholder=" &#xf002;" aria-label="Search" />
+    <input class="form-control me-2" type="search" style="font-family: 'Font Awesome 5 Free'; font-weight: 600; border-radius: 30px; height: 30px" placeholder=" &#xf002;" aria-label="Search" />
 </form>
 @endsection
 @section('content')
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -38,6 +38,7 @@
     <!--CSS-->
     <link rel="stylesheet" href="css/media.css">
 </head>
+
 <body>
 
     <!-- awal jumbotron -->
@@ -53,25 +54,25 @@
     <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedAudio">
         {{-- Card Audio --}}
         @forelse ($audios as $audio)
-            <div class=" card noBorder cardAudio" style="width: 18rem;">
-                <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer">
-                    <img src="{{ asset('/audioProd/thumb/'.$audio->gambar_sampul) }}" class="card-img-top d-flex justify-content" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <p class=" tittleAudio" href="">
-                                {{$audio->judul}}
-                            </p>
-                        </h5>
-                    </div>
+        <div class=" card noBorder cardAudio" style="width: 18rem;">
+            <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer">
+                <img src="{{ asset('/audioProd/thumb/'.$audio->gambar_sampul) }}" class="card-img-top d-flex justify-content" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <p class=" tittleAudio" href="">
+                            {{$audio->judul}}
+                        </p>
+                    </h5>
                 </div>
             </div>
-            {{-- Card Modal --}}
-            <div class="modal fade" id="audioPlayer" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
+        </div>
+        {{-- Card Modal --}}
+        <div class="modal fade" id="audioPlayer" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
                     <div class="modal-header ">
-                    <h5 class="modal-title" id="audioPlayerLabel">{{$audio->judul}}</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title" id="audioPlayerLabel">{{$audio->judul}}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 audioPlayerBox centerItms">
@@ -80,7 +81,7 @@
                                 border: none;
                                 margin-right:1em;
                                 ">
-                                <img src="{{ asset('/audioProd/thumb/'.$audio->gambar_sampul) }}" class="d-flex justify-content"  style="width: 100%;" alt="...">
+                                <img src="{{ asset('/audioProd/thumb/'.$audio->gambar_sampul) }}" class="d-flex justify-content" style="width: 100%;" alt="...">
                                 <audio controls style="width: 100%;">
                                     <source src="{{ asset('/audioProd/fileaudio/'.$audio->slug) }}" type="audio/mpeg">
                                     Your browser does not support the audio element.
@@ -96,21 +97,22 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
-                </div>
             </div>
-            {{-- Akhir Card Audio --}}
-            @empty
-            <div class="alert alert-success" role="alert">
-                Tidak ada data
-            </div>
+        </div>
+        {{-- Akhir Card Audio --}}
+        @empty
+        <div class="alert alert-success" role="alert">
+            Tidak ada data
+        </div>
         @endforelse
 
     </div>
     <!-- akhir feed audio -->
 
-  </body>
+</body>
+
 </html>
 @endsection
