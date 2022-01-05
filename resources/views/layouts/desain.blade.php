@@ -9,7 +9,7 @@
     <title>Prodamas Plus</title>
 
     <!--icon-->
-    <link href="img/icon.png" rel="icon" />
+    <link href="{{ asset('img/icon.png') }}" rel="icon" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
     <!--Goofle Font-->
@@ -29,7 +29,7 @@
     <!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4d148c">
         <div class="container">
-            <a href="{{ url('/') }}"><img src="img/logoprodamas.png" alt="" width="40" height="40" class="d-inline-block align-text-top" /></a>
+            <a href="{{ url('/') }}"><img src="{{ asset('img/logoprodamas.png') }}" alt="" width="40" height="40" class="d-inline-block align-text-top" /></a>
             <a href="{{ url('/') }}" class="navbar-brand" style="padding-left: 5px; font-family: Inter, sans-serif">PRODAMAS</a>
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -123,9 +123,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-1 col-lg-2 footer-logo" style="margin-top: 45px">
-                        <a href=#><img class="logo-footer" src="img/logoprodamas.png" width="110" height="110" alt="logo-footer" /></a>
+                        <a href=#><img class="logo-footer" src="{{ asset('img/logoprodamas.png ') }}" width="110" height="110" alt="logo-footer" /></a>
                         <div style="margin-top: 12px">
-                            <a href=#><img src="img/prodamas-text.png" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
+                            <a href=#><img src="{{ asset('img/prodamas-text.png') }}" alt="logo-prodamas-text" width="110" height="27" class="d-inline-block" /></a>
                         </div>
                     </div>
                     <div class="col-md-5 col-lg-5 offset-lg-2 footer-contact" style="margin-top: 45px; margin-left: 0px; color: white">
