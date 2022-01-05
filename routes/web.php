@@ -85,7 +85,7 @@ Route::get('beranda.index', [NewsletterController::class, 'create']);
 Route::post('beranda.index', [NewsletterController::class, 'store']);
 
 //artikel
-// Route::resource('artikel', artikelController::class);
+Route::resource('artikel', artikelController::class);
 Route::get('/artikel/1', function () {
     return view('artikel.artikelLay');
 });

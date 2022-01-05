@@ -15,7 +15,7 @@ class artikelController extends Controller
     }
 
     public function show(){
-        return "Artikel Berhasil ditambahkan";
+        return view ('artikel.artikelLay');
     }
 
     public function add_process(request$article){
