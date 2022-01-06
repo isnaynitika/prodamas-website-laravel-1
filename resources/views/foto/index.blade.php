@@ -51,7 +51,7 @@
             @forelse ($fotos as $foto)
             <div class=" card noBorder cardAudio" style="width: 18rem;">
                 <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer">
-                    <img src="{{ asset('fotoProd/'. $foto->foto_konten) }}" style="width: 250px; height: 270px" class="card-img-top d-flex justify-content" alt="foto-prodamas">
+                    <img src="{{ asset('fotoProd/'. $foto->konten) }}" style="width: 250px; height: 270px" class="card-img-top d-flex justify-content" alt="foto-prodamas">
                     <div class="card-body">
                         <h5 class="card-title">
                             <p class=" tittleAudio" href="">
@@ -72,7 +72,7 @@
                         <div class="modal-body">
                             <div class="row videoPlayerBox">
                                 <div class="col-6">
-                                    <img src="{{ asset('fotoProd/'. $foto->foto_konten)}}" width="520" height="340" controls>
+                                    <img src="{{ asset('fotoProd/'. $foto->konten)}}" width="520" height="340" controls>
                                 </div>
                                 <div class="col-6">
                                     <h3>{{ $foto->judul }}</h3>
