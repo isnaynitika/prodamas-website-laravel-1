@@ -1,82 +1,42 @@
 @extends('layouts.desain')
-@section('main-tentang','active')
-@section('tentang','active')
-@section('search')
-<form class="d-flex">
-    <input class="form-control me-2" type="search" style="font-family: 'Font Awesome 5 Free'; font-weight: 600; border-radius: 30px; height: 30px" placeholder=" &#xf002;" aria-label="Search" />
-</form>
-@endsection
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        
+        <title>Prodamas Plus</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <!--Goofle Font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat&display=swap" rel="stylesheet" />
 
-    <title>Prodamas Plus</title>
-
-
-    <!--Goofle Font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat&display=swap" rel="stylesheet" />
-
-    <!--font awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-
-    <!--CSS-->
-    <link rel="stylesheet" href="css/tentang.css">
-</head>
-
-<body>
-    <!-- awal jumbotron -->
-    <div class="container-fluid banner">
-        <div class="container banner-content">
-            <h1>tentang</h1>
+        <!--font awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
         <!--CSS-->
-        <link rel="stylesheet" href="css/tentang.css">
+        <link rel="stylesheet"  href="{{ asset('css/tentang.min.css') }}">
     </head>
     <body>
         <!-- awal jumbotron -->
         <div class="container-fluid banner">
             <div class="container banner-content">
             </div>
-
         </div>
-    </div>
-    <!-- akhir jumbotrom -->
+        <!-- akhir jumbotrom -->
 
-    <div class="container">
-        <div class="row justify-content-between mt-5">
-            <!-- Sejarah Prodamas -->
-            <div class="col">
+        <div class="container">
+            <div class="row justify-content-between mt-5">
+                <!-- Sejarah Prodamas -->
+                <div class="col">
                 <div class="mb-3 kartukiri">
                     <div class="row g-0">
-
-                        <div class="col-md-4">
-                            <img src="img/sosial-budaya.jpg" class="img-fluid rounded-start">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="mb-3 kartukiri">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                        <img src="img/sosial-budaya.jpg" class="img-fluid rounded-start" >
-
                         <div class="col-md-4 mt-5">
                         <img src="img-tentang/Sejarah Prodamas.jpg" class="img-fluid rounded-start" alt="Gambar Sejarah Prodamas" >
                         </div>
@@ -88,7 +48,6 @@
                                 dalam mengakomodasi seluruh kepentingan masyarakat, yaitu adanya kenyataan bahwa APBD Kota Kediri memiliki
                                 keterbatasan untuk merealisasikan semua usulan masyarakat hasil Musrenbang sehingga perlu adanya skala prioritas pembangunan 
                                 ditinjau dari segala segi.</p>
-
                         </div>
                         </div>
                         <div class="isi">
@@ -107,17 +66,6 @@
                 <div class="mb-3 kartukanan">
                     <div class="row g-0">
                         <div class="col-md-8">
-
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                    This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <img src="img/sosial-budaya.jpg" class="img-fluid rounded-start">
-
                         <div class="card-body isi">
                             <h5 class="card-title">Transformasi Prodamas menjadi Prodamas Plus</h5>
                             <p class="card-text">Peralihan Prodamas ke Prodamas Plus merupakan langkah 
@@ -130,7 +78,6 @@
                         </div>
                         <div class="col-md-4">
                         <img src="img-tentang/Foto Sebelah Tulisan.jpg" class="img-fluid rounded-start" alt="Gambar" >
-
                         </div>
                     </div>
                 </div>
@@ -142,32 +89,6 @@
                 </div>
 
                 <!-- Accordion -->
-
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Prodamas 2014
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Prodamas 2017
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                            </div>
-                        </div>
-
                 <div class="accordion mt-5" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
@@ -205,26 +126,122 @@
                     <div class="accordion-body">
                         <strong>PERWALI 23 Tahun 2020 </strong>
                         <a href="/perwali/PERWAL 23 Tahun 2020.pdf"> <button type="button" class="btn btn-outline-secondary">Download</button></a>
-
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Prodamas Plus 2021
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                            </div>
-                        </div>
                     </div>
                 </div>
+                </div>
+                </div>
+                <!-- End Accordion -->
+            </div> 
             </div>
-            <!-- End Accordion -->
-        </div>
-    </div>
-</body>
+            
+            
+            <style>
+                .banner {
+  height: 90vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: url(../img-tentang/header-tentang-prodamas.png);
+  background-size: cover;
+  background-position: center;
+  text-align: left;
+  text-shadow: 5px 5px 10px #4d148c;
+  font-size: xx-large;
+  color: white;
+  font-weight: bold;
+  padding-top: 15%;
+}
 
-</html>
+/* dropdown */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  display: block;
+  position: relative;
+  float: left;
+}
+
+li ul {
+  display: none;
+}
+
+ul li a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  white-space: nowrap;
+  color: white;
+}
+
+li:hover > ul {
+  display: block;
+  position: absolute;
+}
+
+.menu:hover{
+  background-color: 	rgba(231, 146, 67, 0.9);
+}
+
+li:hover li {
+  float: none;
+}
+
+.main-navigation li ul li {
+  border-top: 0;
+}
+
+
+ul ul ul {
+  left: 100%;
+  top: 0;
+  
+}
+
+ul:before,
+ul:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+  
+}
+
+ul:after {
+  clear: both;
+}
+
+/* end dropdown */
+
+.kartukiri{
+  max-width: auto;
+}
+
+.kartukanan{
+  max-width: auto;
+  margin-left: auto;
+}
+
+table, th, td{
+  border: 1px solid rgb(146, 145, 145);
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.isi h5{
+  font-family: 'Inter', sans-serif;
+  font-size: large;
+}
+
+.isi p{
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+}
+            </style>
+            
+            
+        </body>
+    </html>
 @endsection
