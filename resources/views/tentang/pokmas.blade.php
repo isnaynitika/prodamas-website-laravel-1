@@ -60,11 +60,11 @@
                     kemampuan dan komitmen untuk melaksanakan pekerjaan swakelola,
                     diutamakan dari Pengurus RT dan Pengurus RW.</p>
                 <p>Pokmas harus memenuhi ketentuan sebagai berikut :
-                    <ul>
+                    <ol>
                         <li>Telah mendapatkan pengesahan dari Camat;</li>
                         <li>Memiliki struktur organisasi/pengurus yang ditandatangani oleh Ketua Pokmas;</li>
                         <li>Memiliki sekretariat yang berdomisili di kelurahan setempat dibuktikan dengan surat keterangan dari kelurahan.</li>
-                    </ul>
+                    </ol>
                 </p>
               </div>
           </div>
@@ -75,7 +75,7 @@
 
     <!--Judul data pokmas-->
     <div>
-        <h3 style='text-align: center; font-weight:bold'><u>Data Pokmas</u></h3>
+        <h3 style='text-align: center;'><u>Data Pokmas</u></h3>
         <br>
     </div>
 
@@ -118,15 +118,26 @@
     margin-top: 50px;
 }
 
-p ul li {
+h2 h3 {
+    font-family: "Inter", sans-serif;
+}
+
+p ol {
     font-family: "Montserrat", sans-serif;
 }
 
 .card {
     background-color: white;
-    margin: 100px;
+    width: 100%;
+    margin: auto;
     margin-top: 10px;
     border-radius: 5px;
+}
+
+.tableauPlaceholder {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
 }
 
     </style>
