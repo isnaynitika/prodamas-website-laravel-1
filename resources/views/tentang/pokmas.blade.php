@@ -122,7 +122,7 @@ h2 h3 {
     font-family: "Inter", sans-serif;
 }
 
-p ol li {
+p ol {
     font-family: "Montserrat", sans-serif;
 }
 
