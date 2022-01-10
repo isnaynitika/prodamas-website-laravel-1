@@ -77,7 +77,7 @@
                                     margin-top: 30px;
                                     ">
                                     <video width="100%" max-width="850" height="auto" controls>
-                                        <source src="videoProd/video.mp4" type="video/mp4">
+                                        <source src="videoProd/video1.mp4" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
@@ -129,7 +129,7 @@
                                     margin-top: 30px;
                                     ">
                                     <video width="100%" max-width="850" height="auto" controls>
-                                        <source src="videoProd/video.mp4" type="video/mp4">
+                                        <source src="videoProd/video1.mp4" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
