@@ -37,11 +37,11 @@
     <body>
 
         <!-- awal jumbotron -->
-        <div class="container-fluid banner">
-            <div class="container banner-content">
-                <h1> Foto </h1>
-            </div>
-        </div>
+        <div class="banner">
+            <video id="background-video" autoplay loop muted poster="kota.png">
+              <source src="img/FOTO.mp4" type="video/mp4" />
+            </video>
+          </div>
         <!-- akhir jumbotrom -->
 
 
