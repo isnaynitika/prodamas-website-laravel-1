@@ -60,11 +60,11 @@
                     kemampuan dan komitmen untuk melaksanakan pekerjaan swakelola,
                     diutamakan dari Pengurus RT dan Pengurus RW.</p>
                 <p>Pokmas harus memenuhi ketentuan sebagai berikut :
-                    <ul>
+                    <ol>
                         <li>Telah mendapatkan pengesahan dari Camat;</li>
                         <li>Memiliki struktur organisasi/pengurus yang ditandatangani oleh Ketua Pokmas;</li>
                         <li>Memiliki sekretariat yang berdomisili di kelurahan setempat dibuktikan dengan surat keterangan dari kelurahan.</li>
-                    </ul>
+                    </ol>
                 </p>
               </div>
           </div>
@@ -124,9 +124,16 @@ p ul li {
 
 .card {
     background-color: white;
-    margin: 100px;
+    width: 100%;
+    margin: auto;
     margin-top: 10px;
     border-radius: 5px;
+}
+
+.tableauPlaceholder {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
 }
 
     </style>
