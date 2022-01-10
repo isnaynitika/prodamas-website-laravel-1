@@ -60,12 +60,12 @@
                     </div>
                 </div>
             </div>
-            {{-- Card Modal 1--}}
-            <div class="modal fade" id="videoPlayer" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
+            {{-- Card Modal --}}
+            <div class="modal fade" id="audioPlayer" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
                 <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                         <div class="modal-header ">
-                            <h5 class="modal-title" id="videoPlayerLabel">Sosialisasi Pelaksanaan Prodamas Plus 2021</h5>
+                            <h5 class="modal-title" id="fotoLabel">Sosialisasi Pelaksanaan Prodamas Plus 2021</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -102,7 +102,7 @@
             {{-- Card video 2--}}
             <div class=" card noBorder cardAudio" style="width: 18rem;">
                 <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer">
-                    <img src="https://awsimages.detik.net.id/community/media/visual/2021/11/10/wali-kota-kediri-abdullah-abu-bakar_169.jpeg?w=700&q=90" style="width: 250px; height: 270px" class="card-img-top d-flex justify-content" alt="video-prodamas">
+                    <img src="https://t-2.tstatic.net/mataraman/foto/bank/images/peluncuran-10-kampung-keren-prodamas-di-Kota-Kediri.jpg" style="width: 250px; height: 270px" class="card-img-top d-flex justify-content" alt="video-prodamas">
                     <div class="card-body">
                         <h5 class="card-title">
                             <p class=" tittleAudio" href="">
