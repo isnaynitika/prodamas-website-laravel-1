@@ -75,7 +75,7 @@
 
     <!--Judul data pokmas-->
     <div>
-        <h3 style='text-align: center; font-weight:bold'><u>Data Pokmas</u></h3>
+        <h3 style='text-align: center;'><u>Data Pokmas</u></h3>
         <br>
     </div>
 
@@ -118,7 +118,11 @@
     margin-top: 50px;
 }
 
-p ul li {
+h2 h3 {
+    font-family: "Inter", sans-serif;
+}
+
+p ol li {
     font-family: "Montserrat", sans-serif;
 }
 
