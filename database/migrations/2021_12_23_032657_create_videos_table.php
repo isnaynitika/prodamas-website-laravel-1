@@ -17,7 +17,7 @@ class CreateVideosTable extends Migration
             $table->bigIncrements('id');
             $table->string('gambar_sampul',40);
             $table->string('judul',100);
-            $table->longText('video');
+            $table->longText('konten');
             $table->string('caption',255);
             $table->timestamps();
         });
