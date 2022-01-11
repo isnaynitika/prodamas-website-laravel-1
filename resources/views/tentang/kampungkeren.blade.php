@@ -200,6 +200,29 @@
             
         </div> --}}
         </div>
+        
+        <style>
+        .kampung-keren {
+    margin-top: 30px;
+}
+
+.kampung-keren h2 {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+
+.kampung-keren h5 {
+    margin: auto;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: "Montserrat", sans-serif;
+    text-align: justify;
+}
+
+.kampung {
+    padding: 70px;
+}
+        </style>
         </body>
     </html>
 @endsection
