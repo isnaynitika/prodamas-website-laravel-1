@@ -76,7 +76,7 @@
                                 margin: 0;
                                 margin-top: 30px;
                                 ">
-                                    <img src="{{ asset('fotoProd/'. $foto->konten)}}" width="520" height="340" controls>
+                                    <img class="fotoResp" src="{{ asset('fotoProd/'. $foto->konten)}}" width="520" height="340" controls>
                                 </div>
                                 <div class="col-6" style="
                                 width: 25rem; 
