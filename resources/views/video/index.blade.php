@@ -50,11 +50,11 @@
             {{-- Card video 1--}}
             <div class=" card noBorder cardAudio" style="width: 18rem;">
                 <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer">
-                    <img src="https://cdn-2.tstatic.net/surabaya/foto/bank/images/sosialisasi-prodamas-kediri-untuk-bantuan.jpg" style="width: 250px; height: 270px" class="card-img-top d-flex justify-content" alt="video-prodamas">
+                    <img src="{{ asset('/videoProd/sampul/'.$video->gambar_sampul) }}" style="width: 250px; height: 270px" class="card-img-top d-flex justify-content" alt="video-prodamas">
                     <div class="card-body">
                         <h5 class="card-title">
                             <p class=" tittleAudio" href="">
-                                Sosialisasi Pelaksanaan Prodamas Plus 2021
+                                {{ $video->judul }}
                             </p>
                         </h5>
                     </div>
@@ -65,7 +65,7 @@
                 <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                         <div class="modal-header ">
-                            <h5 class="modal-title" id="fotoLabel">Sosialisasi Pelaksanaan Prodamas Plus 2021</h5>
+                            <h5 class="modal-title" id="fotoLabel">{{ $video->judul }}</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -77,7 +77,7 @@
                                     margin-top: 30px;
                                     ">
                                     <video width="100%" max-width="850" height="auto" controls>
-                                        <source src="videoProd/video1.mp4" type="video/mp4">
+                                        <source src="{{ asset('/videoProd'.$video->video) }}" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
@@ -85,8 +85,8 @@
                                     width: 25rem;
                                     border: none;
                                     ">
-                                    <h3> JELANG PELAKSANAAN PRODAMAS PLUS 2021, PEMKOT KEDIRI LAKSANAKAN SOSIALISASI</h3>
-                                    <p>Wali kota Kediri menyelenggarakan sosialisasi prodamas plus kepada seluruh OPD.</p>
+                                    <h3> {{ $video->judul }} </h3>
+                                    <p> {{ $video->caption }} </p>
                                 </div>
                             </div>
                         </div>
@@ -97,57 +97,11 @@
                 </div>
             </div>
             {{-- Akhir Card Video --}}
-
-
-            {{-- Card video 2--}}
-            <div class=" card noBorder cardAudio" style="width: 18rem;">
-                <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer">
-                    <img src="https://t-2.tstatic.net/mataraman/foto/bank/images/peluncuran-10-kampung-keren-prodamas-di-Kota-Kediri.jpg" style="width: 250px; height: 270px" class="card-img-top d-flex justify-content" alt="video-prodamas">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <p class=" tittleAudio" href="">
-                                Peresmian Kampung Keren
-                            </p>
-                        </h5>
-                    </div>
-                </div>
+            @empty
+            <div class="alert alert-success" role="alert">
+                Tidak ada data
             </div>
-            {{-- Card Modal 2--}}
-            <div class="modal fade" id="videoPlayer" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
-                        <div class="modal-header ">
-                            <h5 class="modal-title" id="videoPlayerLabel">Peresmian Kampung Keren</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 videoPlayerBox centerItms">
-                                <div class="card" style="
-                                    width: 25rem;
-                                    border: none;
-                                    margin: 0;
-                                    margin-top: 30px;
-                                    ">
-                                    <video width="100%" max-width="850" height="auto" controls>
-                                        <source src="videoProd/video1.mp4" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </div>
-                                <div class="card" style="
-                                    width: 25rem;
-                                    border: none;
-                                    ">
-                                    <h3> Kampung Kreatif & Independen di Kota Kediri</h3>
-                                    <p>Wali kota Kediri menyelenggarakan sosialisasi prodamas plus kepada seluruh OPD.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforelse
         </div>
         <!-- akhir feed video -->
 

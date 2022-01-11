@@ -117,8 +117,6 @@ footer {
     padding: 1em;
 }
 
-
-
 /* div{
     border:1px solid black;
 } */
@@ -134,7 +132,6 @@ footer {
     .fotoResp{   
         width: 100%;
         padding: 0;
-        margin: 2em;
+        margin-left: 0;
     }
 }
-
