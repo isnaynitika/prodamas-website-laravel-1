@@ -59,7 +59,7 @@ Route::resource('audio', AudioController::class);
 // Route::get('/audio', [AudioController::class, 'index']);
 
 //video
-Route::get('/video', [VideoController::class);
+Route::get('/video', VideoController::class);
 
 //foto
 Route::resource('foto', FotoController::class);
