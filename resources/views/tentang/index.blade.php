@@ -138,107 +138,111 @@
             
             <style>
                 .banner {
-  height: 90vh;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  background: url(../img-tentang/header-tentang-prodamas.png);
-  background-size: cover;
-  background-position: center;
-  text-align: left;
-  text-shadow: 5px 5px 10px #4d148c;
-  font-size: xx-large;
-  color: white;
-  font-weight: bold;
-  padding-top: 15%;
-}
+                    height: 90vh;
+                    width: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    background: url(../img-tentang/header-tentang-prodamas.png);
+                    /* background-size: cover; */
+                    background-position: center;
+                    text-align: left;
+                    text-shadow: 5px 5px 10px #4d148c;
+                    font-size: xx-large;
+                    color: white;
+                    font-weight: bold;
+                    padding-top: 15%;
+                    -webkit-background-size: 100% 100%;
+                    -moz-background-size: 100% 100%;
+                    -o-background-size: 100% 100%;
+                    background-size: 100% 100%;
+                }
 
-/* dropdown */
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+                /* dropdown */
+                ul {
+                  list-style: none;
+                  padding: 0;
+                  margin: 0;
+                }
 
-ul li {
-  display: block;
-  position: relative;
-  float: left;
-}
+                ul li {
+                  display: block;
+                  position: relative;
+                  float: left;
+                }
 
-li ul {
-  display: none;
-}
+                li ul {
+                  display: none;
+                }
 
-ul li a {
-  display: block;
-  padding: 1em;
-  text-decoration: none;
-  white-space: nowrap;
-  color: white;
-}
+                ul li a {
+                  display: block;
+                  padding: 1em;
+                  text-decoration: none;
+                  white-space: nowrap;
+                  color: white;
+                }
 
-li:hover > ul {
-  display: block;
-  position: absolute;
-}
+                li:hover > ul {
+                  display: block;
+                  position: absolute;
+                }
 
-.menu:hover{
-  background-color: 	rgba(231, 146, 67, 0.9);
-}
+                .menu:hover{
+                  background-color: 	rgba(231, 146, 67, 0.9);
+                }
 
-li:hover li {
-  float: none;
-}
+                li:hover li {
+                  float: none;
+                }
 
-.main-navigation li ul li {
-  border-top: 0;
-}
+                .main-navigation li ul li {
+                  border-top: 0;
+                }
 
 
-ul ul ul {
-  left: 100%;
-  top: 0;
-  
-}
+                ul ul ul {
+                  left: 100%;
+                  top: 0;
 
-ul:before,
-ul:after {
-  content: " "; /* 1 */
-  display: table; /* 2 */
-  
-}
+                }
 
-ul:after {
-  clear: both;
-}
+                ul:before,
+                ul:after {
+                  content: " "; /* 1 */
+                  display: table; /* 2 */
 
-/* end dropdown */
+                }
 
-.kartukiri{
-  max-width: auto;
-}
+                ul:after {
+                  clear: both;
+                }
 
-.kartukanan{
-  max-width: auto;
-  margin-left: auto;
-}
+                /* end dropdown */
 
-table, th, td{
-  border: 1px solid rgb(146, 145, 145);
-  border-collapse: collapse;
-  text-align: center;
-}
+                .kartukiri{
+                  max-width: auto;
+                }
 
-.isi h5{
-  font-family: 'Inter', sans-serif;
-  font-size: large;
-}
+                .kartukanan{
+                  max-width: auto;
+                  margin-left: auto;
+                }
 
-.isi p{
-  font-family: 'Montserrat', sans-serif;
-  text-align: justify;
-}
+                table, th, td{
+                  border: 1px solid rgb(146, 145, 145);
+                  border-collapse: collapse;
+                  text-align: center;
+                }
+
+                .isi h5{
+                  font-family: 'Inter', sans-serif;
+                  font-size: large;
+                }
+
+                .isi p{
+                  font-family: 'Montserrat', sans-serif;
+                  text-align: justify;
+                }
             </style>
             
             

@@ -1,18 +1,22 @@
 /* jumbotron */
 .banner {
-  height: 90vh;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  background: url(../img-tentang/header-tentang-prodamas.png);
-  background-size: cover;
-  background-position: center;
-  text-align: left;
-  text-shadow: 5px 5px 10px #4d148c;
-  font-size: xx-large;
-  color: white;
-  font-weight: bold;
-  padding-top: 15%;
+    height: 90vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background: url(../img-tentang/header-tentang-prodamas.png);
+    /* background-size: cover; */
+    background-position: center;
+    text-align: left;
+    text-shadow: 5px 5px 10px #4d148c;
+    font-size: xx-large;
+    color: white;
+    font-weight: bold;
+    padding-top: 15%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
 }
 
 /* dropdown */
