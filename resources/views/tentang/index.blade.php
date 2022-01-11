@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
         <!--CSS-->
-        <link rel="stylesheet"  href="{{ asset('css/tentang.min.css') }}">
+        <link rel="stylesheet" href="css/tentang.css">
     </head>
     <body>
         <!-- awal jumbotron -->
@@ -31,6 +31,8 @@
         </div>
         <!-- akhir jumbotrom -->
 
+
+        
         <div class="container">
             <div class="row justify-content-between mt-5">
                 <!-- Sejarah Prodamas -->
@@ -40,9 +42,10 @@
                         <div class="col-md-4 mt-5">
                         <img src="img-tentang/Sejarah Prodamas.jpg" class="img-fluid rounded-start" alt="Gambar Sejarah Prodamas" >
                         </div>
-                        <div class="col-md-8">
-                        <div class="card-body isi">
-                            <h5 class="card-title">Sejarah Prodamas</h5>
+                        <div class="col-md-8  mt-4">
+                        <div class="card-body isi"> 
+                            <h4 style="font-family: Inter, sans-serif; text-decoration-line: underline; text-decoration-style: double;" 
+                            class="card-title">Sejarah Prodamas</h4>
                             <p class="card-text">Prodamas lahir dari hasil evaluasi Musrenbang (Musyawarah Perencanaan Pembangunan)
                                 yang mana dalam pelaksanaanya ditemukan permasalahan utama yang menjadikan kurang optimalnya Musrenbang
                                 dalam mengakomodasi seluruh kepentingan masyarakat, yaitu adanya kenyataan bahwa APBD Kota Kediri memiliki
@@ -65,9 +68,13 @@
                 
                 <div class="mb-3 kartukanan">
                     <div class="row g-0">
+                        {{-- <div class="col-md-4 mt-5">
+                            <img src="img-tentang/Foto Sebelah Tulisan.jpg" class="img-fluid rounded-start" alt="Gambar" >
+                        </div> --}}
                         <div class="col-md-8">
                         <div class="card-body isi">
-                            <h5 class="card-title">Transformasi Prodamas menjadi Prodamas Plus</h5>
+                            <h4 style="font-family: Inter, sans-serif; text-decoration-line: underline; text-decoration-style: double;"
+                            class="card-title">Transformasi Prodamas menjadi Prodamas Plus</h4>
                             <p class="card-text">Peralihan Prodamas ke Prodamas Plus merupakan langkah 
                                 baru untuk membantu mewujudkan visi dan misi Kota Kediri untuk selalu 
                                 terus menggerakan pembangunan dari segala aspek. Perubahan ini ditandai 
@@ -76,176 +83,143 @@
                             </p>
                         </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 mt-5">
                         <img src="img-tentang/Foto Sebelah Tulisan.jpg" class="img-fluid rounded-start" alt="Gambar" >
                         </div>
                     </div>
                 </div>
                 <!-- End Sejarah Prodamas -->
 
-                <div class="text-center mt-5">
+                <div class="text-center mt-3">
                     <img src="/img-tentang/Transformasi Prodamas-Prodamas Plus.jpg" 
                     class="rounded" style="width: 100%;" alt="Gambar Transformasi Prodamas-Prodamas Plus">
                 </div>
 
                 <!-- Accordion -->
-                <div class="accordion mt-5" id="accordionExample">
+                <br><br>
+                <h3 style="font-family: Inter, sans-serif; text-decoration-line: underline; text-decoration-style: double;">Regulasi Prodamas</h3>
+                <p style="font-family: Montserrat, sans-serif;">Hal - hal yang mengatur Prodamas telah tercantum dalam Perwali Prodamas yang telah mengalami beberapa kali perubahan.</p>
+                <div class="accordion mt-3" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Prodamas 2014
                     </button>
                     </h2>
+                    <!--perwal 1-->
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>PERWALI 23 Tahun 2020 </strong>
-                        <a href="/perwali/PERWAL 23 Tahun 2020.pdf"> <button type="button" class="btn btn-outline-secondary">Download</button></a>
+                        <strong>(Peraturan Walikota Kediri Nomor 40  Tahun 2014)<br />Pedoman Pelaksanaan Program Fasilitasi Pemberdayaan Masyarakat</strong>
+                        <br><a href="/perwali/40 PERWAL PRODAMAS.pdf"> <button type="button" class="btn btn-outline-secondary">Download</button></a>
+                    </div><hr>
                     </div>
-                    </div>
+                    <!--perwal 2-->
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>(Peraturan Walikota Kediri Nomor  52  Tahun 2014)<br />Perubahan Atas Peraturan Walikota Kediri Nomor 40 Tahun 2014 Tentang Pedoman Pelaksanaan Program Fasilitasi Pemberdayaan Masyarakat</strong>
+                            <a href="/perwali/52_PERWAL_2014_ttg_PERUBAHAN_PERWAL_ATAS_PERWAL_40_TAHUN_2014_ttg_PRODAMAS.pdf"> <button type="button" class="btn btn-outline-secondary">Download</button></a>
+                        </div>
+                        </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Prodamas 2017
+                        Prodamas 2015
                     </button>
                     </h2>
+                    <!--Perwal 3-->
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>PERWALI 23 Tahun 2020 </strong>
-                        <a href="/perwali/PERWAL 23 Tahun 2020.pdf"> <button type="button" class="btn btn-outline-secondary">Download</button></a>
-                    </div>
+                        <div class="accordion-body">
+                            <strong>(Peraturan Walikota Kota Kediri Nomor 19 Tahun 2015)<br />Perubahan Kedua Atas Peraturan Walikota Kediri Nomor 40 Tahun 2014 Tentang Pedoman Pelaksanaan Program Fasilitasi Pemberdayaan Masyarakat </strong>
+                            <br><a href="/perwali/19_PERWAL_2015_ttg_PERUBAHAN_KEDUA_PRODAMAS.pdf"> <button type="button" class="btn btn-outline-secondary">Download</button></a>
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Prodamas Plus 2021
+                        Prodamas 2016
                     </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>(Peraturan Walikota Kota Kediri Nomor 2 Tahun 2016)<br />Perubahan Ketiga Atas Peraturan Walikota Kediri Nomor 40 Tahun 2014 tentang Pedoman Pelaksanaan Program Fasilitasi Pemberdayaan Masyarakat</strong>
+                            <br><a href="/perwali/2,_PERWAL_2016_ttg_PERUBAHAN_KE-3_PRODAMAS.pdf"> <button type="button" class="btn btn-outline-secondary">Download</button></a>                    </div>
+                        <hr></div>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>(Peraturan Walikota Kediri Nomor   21   Tahun 2016)<br />Peraturan Walikota Tentang Perubahan Kempat Atas Peraturan Walikota Kediri Nomor 40 Tahun 2014 Tentang Pedoman Pelaksanaan Program Fasilitasi Pemberdayaan Masyarakat.</strong>
+                            <br><a href="/perwali/21_PERWAL_2016_ttg_PERUBAHAN_KEEMPAT_PERWAL_40_TAHUN_2014_ttg_PRODAMAS_kpm.pdf"> <button type="button" class="btn btn-outline-secondary">Download</button></a>                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Prodamas 2017
+                    </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>(Peraturan Walikota Kediri Nomor  2 tahun 2017)<br />Perubahan Kelima Atas Peraturan Walikota Kediri Nomor 40 Tahun 2014 Tentang Pedoman Pelaksanaan Program Fasilitasi Pemberdayaan Masyarakat</strong>
+                            <br><a href="/perwali/2_PERWAL_2017_ttg_PERUBAHAN_KELIMA_PERWALI_PRODAMAS_20174.pdf"> <button type="button" class="btn btn-outline-secondary">Download</button></a>                    </div>
+                        <hr></div>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>(Peraturan Walikota Kediri Nomor 27 Tahun 2017)<br />Pedoman Pembentukan Kader Pemberdayaan Masyarakat</strong>
+                            <br><a href="/perwali/27_PERWAL_2017_ttg_PEDOMAN_PEMBENTUKAN_KADER_MASYARAKAT__GERDU_SEHATI_pemerintahan.pdf"> <button type="button" class="btn btn-outline-secondary">Download</button></a>                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Prodamas 2019
+                    </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>(Peraturan Walikota Kediri Nomor 3 Tahun 2019)<br />Pedoman Teknis Pelaksanaan ProgramPemberdayaan Masyarakat Plus </strong>
+                            <br><a href="/perwali/3_PERWALI_2019_ttg_PRODAMAS_PLUS_(FINAL_2)_edit.pdf"> <button type="button" class="btn btn-outline-secondary">Download</button></a>                    </div>
+                        <hr></div>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>(Peraturan Walikota Kediri Nomor   4   Tahun 2019)<br />Perubahan Keenam Atas Peraturan Walikota Kediri Nomor 40 Tahun 2014 Tentang Pedoman Pelaksanaan Program Fasilitasi Pemberdayaan Masyarakat</strong>
+                            <br><a href="/perwali/SALINAN_PERWAL_4_TH_2019_PERUBAHAN_KE-6_PERWAL_40_TH_2014_PRODAMAS.pdf"> <button type="button" class="btn btn-outline-secondary">Download</button></a>                    </div>
+                        </div>
+                    {{-- </div> --}}
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Prodamas Plus 2020
+                    </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>(Peraturan Walikota Kediri Nomor  23  Tahun 2020)<br />Pedoman Teknis Pelaksanaan&nbsp;ProgramPemberdayaan Masyarakat Plus</strong>
+                            <br><a href="/perwali/PERWAL 23 Tahun 2020.pdf"> <button type="button" class="btn btn-outline-secondary">Download</button></a>                    </div>
+                        </div>
+                    {{-- </div> --}}
+                </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    Prodamas Plus 2021
+                </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>PERWALI 23 Tahun 2020 </strong>
-                        <a href="/perwali/PERWAL 23 Tahun 2020.pdf"> <button type="button" class="btn btn-outline-secondary">Download</button></a>
-                    </div>
+                        <strong>(Peraturan Walikota Kediri Nomor  32  Tahun 2021)<br />Pedoman Teknis ProgramPemberdayaan Masyarakat Plus Tahun Anggaran 2022</strong>
+                        <br><a href="/perwali/PERWAL_32_Pedoman_Teknis_Prodamas_Plus_TA_2022__27_MEI.pdf"> <button type="button" class="btn btn-outline-secondary">Download</button></a>                    </div>
                     </div>
                 </div>
-                </div>
+            </div>
+                <!--tag akhir-->
                 </div>
                 <!-- End Accordion -->
             </div> 
             </div>
-            
-            
-            <style>
-                .banner {
-                    height: 90vh;
-                    width: 100%;
-                    justify-content: center;
-                    align-items: center;
-                    background: url(../img-tentang/header-tentang-prodamas.png);
-                    /* background-size: cover; */
-                    background-position: center;
-                    text-align: left;
-                    text-shadow: 5px 5px 10px #4d148c;
-                    font-size: xx-large;
-                    color: white;
-                    font-weight: bold;
-                    padding-top: 15%;
-                    -webkit-background-size: 100% 100%;
-                    -moz-background-size: 100% 100%;
-                    -o-background-size: 100% 100%;
-                    background-size: 100% 100%;
-                }
-
-                /* dropdown */
-                ul {
-                  list-style: none;
-                  padding: 0;
-                  margin: 0;
-                }
-
-                ul li {
-                  display: block;
-                  position: relative;
-                  float: left;
-                }
-
-                li ul {
-                  display: none;
-                }
-
-                ul li a {
-                  display: block;
-                  padding: 1em;
-                  text-decoration: none;
-                  white-space: nowrap;
-                  color: white;
-                }
-
-                li:hover > ul {
-                  display: block;
-                  position: absolute;
-                }
-
-                .menu:hover{
-                  background-color: 	rgba(231, 146, 67, 0.9);
-                }
-
-                li:hover li {
-                  float: none;
-                }
-
-                .main-navigation li ul li {
-                  border-top: 0;
-                }
-
-
-                ul ul ul {
-                  left: 100%;
-                  top: 0;
-
-                }
-
-                ul:before,
-                ul:after {
-                  content: " "; /* 1 */
-                  display: table; /* 2 */
-
-                }
-
-                ul:after {
-                  clear: both;
-                }
-
-                /* end dropdown */
-
-                .kartukiri{
-                  max-width: auto;
-                }
-
-                .kartukanan{
-                  max-width: auto;
-                  margin-left: auto;
-                }
-
-                table, th, td{
-                  border: 1px solid rgb(146, 145, 145);
-                  border-collapse: collapse;
-                  text-align: center;
-                }
-
-                .isi h5{
-                  font-family: 'Inter', sans-serif;
-                  font-size: large;
-                }
-
-                .isi p{
-                  font-family: 'Montserrat', sans-serif;
-                  text-align: justify;
-                }
-            </style>
-            
-            
         </body>
     </html>
 @endsection
