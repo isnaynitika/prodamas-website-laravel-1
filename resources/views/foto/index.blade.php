@@ -71,10 +71,17 @@
                         </div>
                         <div class="modal-body">
                             <div class="row videoPlayerBox">
-                                <div class="col-6 feedFoto">
+                                <div class="col-6" style="width: 25rem;
+                                border: none;
+                                margin: 0;
+                                margin-top: 30px;
+                                ">
                                     <img src="{{ asset('fotoProd/'. $foto->konten)}}" width="520" height="340" controls>
                                 </div>
-                                <div class="col-6 feedText">
+                                <div class="col-6" style="
+                                width: 25rem; 
+                                border: none;
+                                ">
                                     <h3>{{ $foto->judul }}</h3>
                                     <p>{{ $foto->caption }}</p>
                                 </div>
