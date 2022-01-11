@@ -127,3 +127,16 @@ footer {
 .feedVideo {
     margin: 2em;
 }
+
+/* Foto css */
+.feedFoto {
+    margin: 0;
+    width: 25rem;
+    border: none;
+    margin-top: 30px;
+} 
+
+.feedText {
+    width: 25rem;
+    border: none;
+}
