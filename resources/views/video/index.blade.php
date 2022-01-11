@@ -46,7 +46,7 @@
 
 
        <!-- Awal feed video -->
-        <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedVideo" style="max-width: 1000px">
+        <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedVideo">
             {{-- Card video 1--}}
             @forelse ($videos as $video)
             <div class=" card noBorder cardAudio" style="width: 18rem;">
@@ -78,7 +78,7 @@
                                     margin-top: 30px;
                                     ">
                                     <video width="100%" max-width="850" height="auto" controls>
-                                        <source src="{{ asset('/videoProd'.$video->konten) }}">
+                                        <source src="{{ asset('/videoProd/konten/'.$video->konten) }}">
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
