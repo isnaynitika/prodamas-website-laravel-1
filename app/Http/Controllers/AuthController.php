@@ -20,7 +20,7 @@ class AuthController extends Controller //auth disini dipake buat memberikan hak
         if(Auth::attempt($request->only('username', 'password'))){ 
             
             //pindah ke halaman dashboard atau beranda
-            return redirect('/');
+            return redirect('admin.master');
         } 
 
         //gagal login 
