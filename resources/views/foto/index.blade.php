@@ -73,7 +73,7 @@
                             <div class="row videoPlayerBox">
                                 <div class="col-6" style="width: 25rem;
                                 border: none;
-                                margin: 0;
+                                margin: 0;  
                                 margin-top: 30px;
                                 ">
                                     <img class="fotoResp" src="{{ asset('fotoProd/'. $foto->konten)}}" width="520" height="340" controls>
