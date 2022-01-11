@@ -20,7 +20,7 @@ class VideoAdmin extends Controller
         $this->validate($request,[
             'gambar_sampul' => 'mimes:jpeg,jpg,png|max:2200',
             'judul' => 'required',
-            'video' => 'required|file',
+            'konten' => 'required|file',
             'caption' => 'required'
         ]);
 
@@ -39,7 +39,7 @@ class VideoAdmin extends Controller
         video::create([
             "gambar_sampul" => $pathThumb,
             "judul" => $request["judul"],
-            "video" => $videoname,
+            "konten" => $videoname,
             "caption" => $request["caption"],
         ]);
 
@@ -69,7 +69,7 @@ class VideoAdmin extends Controller
         $request->validate([
             'gambar_sampul' => 'mimes:jpeg,jpg,png|max:2200',
             'judul' => 'required',
-            //'konten' => 'mimes:video/mp4', //masih belum bisa upload 2
+            //'konten' => 'mimes:video/mp4', 
             'caption' => 'required'
         ]);
 
@@ -88,18 +88,14 @@ class VideoAdmin extends Controller
 */
             $video_data = [
                 "gambar_sampul" => $new_video_sampul,
-                "text_sampul" => ["text-sampul"],
                 "judul" => $request["judul"],
-                "slug" => $request["slug"],
                 "konten" => $new_konten,
                 "caption" => $request["caption"],
             ];
         } else {
             $video_data = [
                 //"gambar-sampul" => $new_picture,
-                "text_sampul" => $request["text_sampul"],
                 "judul" => $request["judul"],
-                "slug" => $request["slug"],
                 //"konten" => $new_konten,
                 "caption" => $request["caption"]
             ];
