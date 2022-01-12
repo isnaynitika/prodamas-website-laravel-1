@@ -63,33 +63,13 @@
         <img src="img/instagram-icon.png" alt="instagram" width="40" height="40" class="d-inline-block" />
         <a class="usernameig" href="https://www.instagram.com/prodamasplus/">@prodamasplus</a>
 
-        <!-- Tampilan Post ig -->
-        <section id="igpost">
-            <div class="container">
-                <div class="row justify-content-beetween">
-                    <div class="col-md-4 mb-4">
-                        <a href="https://www.instagram.com/prodamasplus/"><img src="img/ig/ig1.png" class="card-img-top" alt="instagram_prodamas" /></a>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <a href="https://www.instagram.com/prodamasplus/"><img src="img/ig/ig2.jpg" class="card-img-top" alt="instagram_prodamas" /></a>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <a href="https://www.instagram.com/prodamasplus/"><img src="img/ig/ig3.png" class="card-img-top" alt="instagram_prodamas" /></a>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <a href="https://www.instagram.com/prodamasplus/"><img src="img/ig/ig4.jpg" class="card-img-top" alt="instagram_prodamas" /></a>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <a href="https://www.instagram.com/prodamasplus/"><img src="img/ig/ig5.png" class="card-img-top" alt="instagram_prodamas" /></a>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <a href="https://www.instagram.com/prodamasplus/"><img src="img/ig/ig6.png" class="card-img-top" alt="instagram_prodamas" /></a>
-                    </div>
-                </div>
-            </div>
+        <!-- Tampilan embed Post ig -->
+         <div class="embedsocial-hashtag" style="" data-ref="60609657683c98bf0999eaee66f5be494f4530b2">
+            </div><script>(function(d, s, id){var js; if (d.getElementById(id)) 
+            {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; 
+            d.getElementsByTagName("head")[0].appendChild(js);}
+            (document, "script", "EmbedSocialHashtagScript"));</script>
     </div>
-    </div>
-    </section>
 
     </div>
     <!-- Akhir embed IG -->
