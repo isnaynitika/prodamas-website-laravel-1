@@ -79,7 +79,7 @@
                                     <img src="{{ asset('fotoProd/'. $foto->konten)}}" width="520" height="340" controls>
                                 </div>
                                 <div class="col-6" style="
-                                width: 20rem; 
+                                width: 40rem; 
                                 border: none;
                                 ">
                                     <h3>{{ $foto->judul }}</h3>
