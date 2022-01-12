@@ -40,7 +40,7 @@
                 <div class="col text-center">
                     <p class="fs-5">
                         Cakupan Bidang Prodamas Plus yang terdiri dari 6 bidang :
-                        Ekonomi, Sosial Budaya, Infrastruktur, Kesehatan, Pendidikan, kepemudaan.
+                        Ekonomi, Sosial Budaya, Infrastruktur, Kesehatan, Pendidikan dan Kepemudaan.
                     </p>
                 </div>
             </div>
@@ -52,7 +52,7 @@
     <div class="container mt-5 mb-5">
         <div class="row box">
             <div class="col-6">
-                <div class="bidang-img" style="background-image:url(img-tentang/Ekonomi.jpg)">
+                <div class="bidang-img" style="background-image:url('img-tentang/Ekonomi.jpg')">
                 </div>
             </div>
 
@@ -81,14 +81,14 @@
             </div>
 
             <div class="col-6">
-                <div class="bidang-img" style="background-image:url(img-tentang/SosialBudaya.jpg)">
+                <div class="bidang-img" style="background-image:url('img-tentang/SosialBudaya.jpg')">
                 </div>
             </div>
         </div>
 
         <div class="row box">
             <div class="col-6">
-                <div class="bidang-img" style="background-image:url(img-tentang/Infrastruktur.jpg)">
+                <div class="bidang-img" style="background-image:url('img-tentang/Infrastruktur.jpg')">
                 </div>
             </div>
 
@@ -118,14 +118,14 @@
             </div>
 
             <div class="col-6">
-                <div class="bidang-img" style="background-image:url(img-tentang/Kesehatan.jpg)">
+                <div class="bidang-img" style="background-image:url('img-tentang/Kesehatan.jpg')">
                 </div>
             </div>
         </div>
 
         <div class="row box">
             <div class="col-6">
-                <div class="bidang-img" style="background-image:url(img-tentang/Pendidikan.jpg)">
+                <div class="bidang-img" style="background-image:url('img-tentang/Pendidikan.jpg')">
                 </div>
             </div>
 
@@ -155,7 +155,7 @@
             </div>
 
             <div class="col-6">
-                <div class="bidang-img" style="background-image:url(img-tentang/Kepemudaan.jpg)">
+                <div class="bidang-img" style="background-image:url('img-tentang/Kepemudaan.jpg')">
                 </div>
             </div>
         </div>
