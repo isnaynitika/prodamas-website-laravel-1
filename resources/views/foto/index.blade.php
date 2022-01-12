@@ -80,6 +80,7 @@
                                 </div>
                                 <div class="card" style="
                                 width: 25rem; 
+                                max-width: 500px;
                                 border: none;
                                 ">
                                     <h3>{{ $foto->judul }}</h3>
