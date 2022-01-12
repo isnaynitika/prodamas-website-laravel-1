@@ -76,11 +76,10 @@
                                 margin: 0;  
                                 margin-top: 30px;
                                 ">
-                                    <img src="{{ asset('fotoProd/'. $foto->konten)}}" width="520" height="340" controls>
+                                    <img class="max-width: 500px" src="{{ asset('fotoProd/'. $foto->konten)}}" width="520" height="340" controls>
                                 </div>
                                 <div class="card" style="
                                 width: 25rem; 
-                                max-width: 500px;
                                 border: none;
                                 ">
                                     <h3>{{ $foto->judul }}</h3>
