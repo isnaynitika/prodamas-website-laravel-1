@@ -1,20 +1,17 @@
 .banner {
-    height: 90vh;
     width: 100%;
+    height: 90vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/header-media.png);
-    background-size: cover;
-    text-align: left;
-    text-shadow: 5px 5px 10px #4d148c;
-    font-size: xx-large;
-    color: white;
-    font-weight: bold;
-    padding-top: 15%;
 }
 
-.banner h1 {
-    font-size: 55px;
+.banner video {
+    position: absolute;
+    object-fit: cover;
+    z-index: 1;
+    width: 100%;
+    height: 90%;
 }
 
 .feedig {
@@ -120,8 +117,6 @@ footer {
     padding: 1em;
 }
 
-
-
 /* div{
     border:1px solid black;
 } */
@@ -129,4 +124,14 @@ footer {
 /* Video css */
 .feedVideo {
     margin: 2em;
+}
+
+/* Foto css */
+
+@media screen and (max-width: 800px) {
+    .fotoResp{   
+        width: 100%;
+        padding: 0;
+        margin-left: 0;
+    }
 }

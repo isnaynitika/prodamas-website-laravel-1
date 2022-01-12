@@ -37,24 +37,25 @@
     <body>
 
         <!-- awal jumbotron -->
-        <div class="container-fluid banner">
-            <div class="container banner-content">
-                <h1> Video </h1>
-            </div>
-        </div>
+        <div class="banner">
+            <video id="background-video" autoplay loop muted poster="kota.png">
+              <source src="img/VIDEO.mp4" type="video/mp4" />
+            </video>
+          </div>
         <!-- akhir jumbotrom -->
 
 
-        <!-- Awal feed video -->
-        <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedAudio">
-            {{-- Card video --}}
+       <!-- Awal feed video -->
+        <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedVideo">
+            {{-- Card video 1--}}
+            @forelse ($videos as $video)
             <div class=" card noBorder cardAudio" style="width: 18rem;">
                 <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer">
-                    <img src="https://cdn-2.tstatic.net/surabaya/foto/bank/images/sosialisasi-prodamas-kediri-untuk-bantuan.jpg" style="width: 250px; height: 270px" class="card-img-top d-flex justify-content" alt="video-prodamas">
+                    <img src="{{ asset('/videoProd/sampul/'.$video->gambar_sampul) }}" style="width: 250px; height: 270px" class="card-img-top d-flex justify-content" alt="video-prodamas">
                     <div class="card-body">
                         <h5 class="card-title">
                             <p class=" tittleAudio" href="">
-                                Sosialisasi Pelaksanaan Prodamas Plus 2021
+                                {{ $video->judul }}
                             </p>
                         </h5>
                     </div>
@@ -65,20 +66,28 @@
                 <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                         <div class="modal-header ">
-                            <h5 class="modal-title" id="videoPlayerLabel">JELANG PELAKSANAAN PRODAMAS PLUS 2021, PEMKOT KEDIRI LAKSANAKAN SOSIALISASI</h5>
+                            <h5 class="modal-title" id="fotoLabel">{{ $video->judul }}</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="row videoPlayerBox">
-                                <div class="col-6">
-                                    <video width="520" height="340" controls>
-                                        <source src="videoProd/video1.mp4" type="video/mp4">
+                            <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 videoPlayerBox centerItms">
+                                <div class="card" style="
+                                    width: 25rem;
+                                    border: none;
+                                    margin: 0;
+                                    margin-top: 30px;
+                                    ">
+                                    <video width="100%" max-width="850" height="auto" controls>
+                                        <source src="{{ asset('/videoProd/konten/'.$video->konten) }}">
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
-                                <div class="col-6">
-                                    <h3> JELANG PELAKSANAAN PRODAMAS PLUS 2021, PEMKOT KEDIRI LAKSANAKAN SOSIALISASI</h3>
-                                    <p>Wali kota Kediri menyelenggarakan sosialisasi prodamas plus kepada seluruh OPD.</p>
+                                <div class="card" style="
+                                    width: 25rem;
+                                    border: none;
+                                    ">
+                                    <h3> {{ $video->judul }} </h3>
+                                    <p> {{ $video->caption }} </p>
                                 </div>
                             </div>
                         </div>
@@ -89,96 +98,11 @@
                 </div>
             </div>
             {{-- Akhir Card Video --}}
-
-
-            {{-- Card video --}}
-            <div class=" card noBorder cardAudio" style="width: 18rem;">
-                <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer">
-                    <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=582&q=80" class="card-img-top d-flex justify-content" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <p class=" tittleAudio" href="">
-                                Sosialisasi Pelaksanaan Prodamas Plus 2021
-                            </p>
-                        </h5>
-                    </div>
-                </div>
+            @empty
+            <div class="alert alert-success" role="alert">
+                Tidak ada data
             </div>
-            {{-- Card Modal --}}
-            <div class="modal fade" id="audioPlayer" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
-                        <div class="modal-header ">
-                            <h5 class="modal-title" id="videoPlayerLabel">JELANG PELAKSANAAN PRODAMAS PLUS 2021, PEMKOT KEDIRI LAKSANAKAN SOSIALISASI</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row videoPlayerBox">
-                                <div class="col-6">
-                                    <video width="520" height="340" controls>
-                                        <source src="videoProd/video1.mp4" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </div>
-                                <div class="col-6">
-                                    <h3> JELANG PELAKSANAAN PRODAMAS PLUS 2021, PEMKOT KEDIRI LAKSANAKAN SOSIALISASI</h3>
-                                    <p>Wali kota Kediri menyelenggarakan sosialisasi prodamas plus kepada seluruh OPD.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{-- Akhir Card Video --}}
-            {{-- Card video --}}
-            <div class=" card noBorder cardAudio" style="width: 18rem;">
-                <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer">
-                    <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=582&q=80" class="card-img-top d-flex justify-content" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <p class=" tittleAudio" href="">
-                                Sosialisasi Pelaksanaan Prodamas Plus 2021
-                            </p>
-                        </h5>
-                    </div>
-                </div>
-            </div>
-            {{-- Card Modal --}}
-            <div class="modal fade" id="audioPlayer" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
-                        <div class="modal-header ">
-                            <h5 class="modal-title" id="videoPlayerLabel">JELANG PELAKSANAAN PRODAMAS PLUS 2021, PEMKOT KEDIRI LAKSANAKAN SOSIALISASI</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row videoPlayerBox">
-                                <div class="col-6">
-                                    <video width="520" height="340" controls>
-                                        <source src="videoProd/video1.mp4" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </div>
-                                <div class="col-6">
-                                    <h3> JELANG PELAKSANAAN PRODAMAS PLUS 2021, PEMKOT KEDIRI LAKSANAKAN SOSIALISASI</h3>
-                                    <p>Wali kota Kediri menyelenggarakan sosialisasi prodamas plus kepada seluruh OPD.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{-- Akhir Card Video --}}
-
-
-
-
+            @endforelse
         </div>
         <!-- akhir feed video -->
 

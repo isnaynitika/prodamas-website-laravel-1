@@ -47,11 +47,13 @@
 <body>
 
     <!-- awal jumbotron -->
-    <div class="container-fluid banner">
-        <div class="container banner-content">
-            <h1>Media</h1>
-        </div>
-    </div>
+        <!-- awal jumbotron -->
+        <div class="banner">
+            <video id="background-video" autoplay loop muted poster="kota.png">
+              <source src="img/MEDSOS.mp4" type="video/mp4" />
+            </video>
+          </div>
+        <!-- akhir jumbotrom -->
     <!-- akhir jumbotrom -->
 
 
