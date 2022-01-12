@@ -36,7 +36,6 @@
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -44,9 +43,6 @@
       </div>
       <div class="carousel-item">
         <img src="img/header2.png" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="img/slide1.jpeg" class="d-block w-100" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselndicators" data-bs-slide="prev">
@@ -83,15 +79,17 @@
   <div class="container artikel mb-5 mt-5">
     <h3 class="mb-4" style="font-family: Inter, sans-serif">Artikel</h3>
     <div class="row row-cols-1 row-cols-md-3 g-4">
-      <a href="../artikel/layout.blade"><div class="col">
-        <div class="card h-100 hover-card">
-          <img src="img/slide3.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Launching Kampung Keren</h5>
-            <p class="card-text">Wali Kota Kediri Abdullah Abu Bakar meluncurkan 10 Kampung Kreatif dan Independen (Keren) Prodamas, Selasa (9/11) bertempat di IKCC.</p>
+      <a href="../artikel/layout.blade">
+        <div class="col">
+          <div class="card h-100 hover-card">
+            <img src="img/slide3.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Launching Kampung Keren</h5>
+              <p class="card-text">Wali Kota Kediri Abdullah Abu Bakar meluncurkan 10 Kampung Kreatif dan Independen (Keren) Prodamas, Selasa (9/11) bertempat di IKCC.</p>
+            </div>
           </div>
         </div>
-      </div></a>
+      </a>
       <div class="col">
         <div class="card h-100 hover-card">
           <img src="img/slide4.jpeg" class="card-img-top" alt="...">
