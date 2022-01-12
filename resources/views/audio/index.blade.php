@@ -42,13 +42,12 @@
 <body>
 
     <!-- awal jumbotron -->
-    <div class="container-fluid banner">
-        <div class="container banner-content">
-            <h1>Audio</h1>
+    <div class="banner">
+        <video id="background-video" autoplay loop muted poster="kota.png">
+            <source src="img/AUDIO.mp4" type="video/mp4" />
+        </video>
         </div>
-    </div>
     <!-- akhir jumbotrom -->
-
 
     <!-- Awal feed audio -->
     <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 centerItms feedAudio">

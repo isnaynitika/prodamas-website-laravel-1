@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Models\user;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
+
 
 class AuthController extends Controller //auth disini dipake buat memberikan hak akses ke user
 {
@@ -20,7 +22,7 @@ class AuthController extends Controller //auth disini dipake buat memberikan hak
         if(Auth::attempt($request->only('username', 'password'))){ 
             
             //pindah ke halaman dashboard atau beranda
-            return redirect('/');
+            return redirect('admin.master');
         } 
 
         //gagal login 
