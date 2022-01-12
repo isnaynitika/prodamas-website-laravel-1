@@ -64,12 +64,8 @@
         <a class="usernameig" href="https://www.instagram.com/prodamasplus/">@prodamasplus</a>
 
         <!-- Tampilan embed Post ig -->
-         <div class="embedsocial-hashtag" style="" data-ref="60609657683c98bf0999eaee66f5be494f4530b2">
-            </div><script>(function(d, s, id){var js; if (d.getElementById(id)) 
-            {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; 
-            d.getElementsByTagName("head")[0].appendChild(js);}
-            (document, "script", "EmbedSocialHashtagScript"));</script>
-    </div>
+         <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+         <div class="elfsight-app-b536458b-3760-4283-b033-8973fa8cdf62"></div>
 
     </div>
     <!-- Akhir embed IG -->
