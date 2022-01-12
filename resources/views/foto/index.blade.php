@@ -70,7 +70,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="row videoPlayerBox">
+                            <div class="row row-cols-1 row-cols-md-3 mb-2 g-4 videoPlayerBox centerItms">
                                 <div class="col-6" style="width: 25rem;
                                 border: none;
                                 margin: 0;  
@@ -78,8 +78,8 @@
                                 ">
                                     <img src="{{ asset('fotoProd/'. $foto->konten)}}" width="520" height="340" controls>
                                 </div>
-                                <div class="col-6" style="
-                                width: 40rem; 
+                                <div class="card" style="
+                                width: 25rem; 
                                 border: none;
                                 ">
                                     <h3>{{ $foto->judul }}</h3>
