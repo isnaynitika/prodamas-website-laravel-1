@@ -17,6 +17,7 @@ class AuthController extends Controller //auth disini dipake buat memberikan hak
     }
 
     public function postlogin(Request $request){
+echo var_dump($request);die();
 
         //email & password ini sama dengan name yang di loginuser
         if(Auth::attempt($request->only('username', 'password'))){ 
