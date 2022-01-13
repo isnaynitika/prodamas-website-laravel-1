@@ -17,6 +17,10 @@ use App\Http\Controllers\TentangController;
 use App\Http\Controllers\TulisCeritaController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\FotoAdminController;
+use App\Http\Controllers\VideoAdminController;
+use App\Http\Controllers\AudioAdminController;
 //use App\Http\Controllers\SocialShareButtonsController;
 
 
@@ -96,38 +100,45 @@ Route::get('/artikel/1', function () {
 Route::get('kritik.index', [App\Http\Controllers\KritikController::class, 'kritik'])->name('kritik');
 Route::post('kritik-saran', [App\Http\Controllers\KritikController::class, 'storeContactForm'])->name('contact-form.store');
 
-//Admin
-Route::post('/admin', 'AuthSubmissionController@home');
-Route::post('/admin/submission', 'SubmissionController@store');
-Route::get('/admin/submission', 'SubmissionController@index');
-Route::get('/admin/submission/{subs_id}', 'SubmissionController@show');
-Route::delete('/admin/submission/{subs_id}', 'SubmissionController@destroy');
+//Authentication
+Route::get('admin', [CustomAuthController::class, 'admin']); 
+// Route::get('login', [CustomAuthController::class, 'index'])->name('login');
+Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
+Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
+Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
+Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 
 //artikel admin
-Route::get('/admin/add-article', 'ArticleController@create');
-Route::post('/admin/list-article', 'ArticleController@store');
-Route::get('/admin/list-article', 'ArticleController@index');
-Route::get('/admin/article/{article_id}', 'ArticleController@edit');
-Route::put('/admin/article/{article_id}', 'ArticleController@update');
-Route::delete('/admin/article/{article_id}', 'ArticleController@destroy');
+Route::get('/admin/add-article', [ArticleController::class, 'create']);
+Route::post('/admin/list-article', [ArticleController::class, 'store']);
+Route::get('/admin/list-article', [ArticleController::class, 'index']);
+Route::get('/admin/article/{article_id}', [ArticleController::class, 'edit']);
+Route::put('/admin/article/{article_id}', [ArticleController::class, 'update']);
+Route::delete('/admin/article/{article_id}', [ArticleController::class, 'destroy']);
 
 //foto
-Route::get('/admin/add-foto', 'FotoController@create');
-Route::post('/admin/list-foto', 'FotoController@store');
-Route::get('/admin/list-foto', 'FotoController@index');
-Route::get('/admin/foto/{foto_id}', 'FotoController@edit');
-Route::put('/admin/foto/{foto_id}', 'FotoController@update');
-Route::delete('/admin/foto/{foto_id}', 'FotoController@destroy');
+Route::get('/admin/add-foto', [FotoAdminController::class, 'create']);
+Route::post('/admin/list-foto', [FotoAdminController::class, 'store']);
+Route::get('/admin/list-foto', [FotoAdminController::class, 'index']);
+Route::get('/admin/foto/{foto_id}', [FotoAdminController::class, 'edit']);
+Route::put('/admin/foto/{foto_id}', [FotoAdminController::class, 'update']);
+Route::delete('/admin/foto/{foto_id}', [FotoAdminController::class, 'destroy']);
 
 //video
-Route::get('/admin/add-video', 'VideoController@create');
-Route::post('/admin/list-video', 'VideoController@store');
-Route::get('/admin/list-video', 'VideoController@index');
+Route::get('/admin/add-video', [VideoAdminController::class, 'create']);
+Route::post('/admin/list-video', [VideoAdminController::class, 'store']);
+Route::get('/admin/list-video', [VideoAdminController::class, 'index']);
+Route::get('/admin/video/{video_id}', [VideoAdminController::class, 'edit']);
+Route::put('/admin/video/{video_id}', [VideoAdminController::class, 'update']);
+Route::delete('/admin/video/{video_id}', [VideoAdminController::class, 'destroy']);
 
 //audio
-Route::get('/admin/add-audio', 'AudioController@create');
-Route::post('/admin/list-audio', 'AudioController@store');
-Route::get('/admin/list-audio', 'AudioController@index');
+Route::get('/admin/add-audio', [AudioAdminController::class, 'create']);
+Route::post('/admin/list-audio', [AudioAdminController::class, 'store']);
+Route::get('/admin/list-audio', [AudioAdminController::class, 'index']);
+Route::get('/admin/audio/{audio_id}', [AudioAdminController::class, 'edit']);
+Route::put('/admin/audio/{audio_id}', [AudioAdminController::class, 'update']);
+Route::delete('/admin/audio/{audio_id}', [AudioAdminController::class, 'destroy']);
 
 //admin
-Route::resource('admin', AdminController::class);
+// Route::resource('admin', AdminController::class);
