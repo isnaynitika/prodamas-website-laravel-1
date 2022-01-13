@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
         <!--CSS-->
-        <link rel="stylesheet" href="css/#.css">
+        <link rel="stylesheet" href="css/banksampah.css">
     </head>
     <body>
         <iframe width="100%" height="554" src="https://datastudio.google.com/embed/reporting/f117205c-a0c2-4558-b2e3-ab539d99259d/page/p_0e8euwgwqc" frameborder="0" style="border:0" allowfullscreen></iframe>
