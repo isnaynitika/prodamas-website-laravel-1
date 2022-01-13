@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\TestMail;
 use App\Models\kritik;
-use Mail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 
 class KritikController extends Controller
@@ -39,16 +39,16 @@ class KritikController extends Controller
         kritik::create($input);
 
         //  Send mail to admin
-//         Mail::send('kritik.kritikMail', array(
-//             'name' => $input['name'],
-//             'phone' => $input['phone'],
-//             'email' => $input['email'],
-//             'bodyMessage' => $input['message'],
-//         ), function ($message) use ($request){
-//             $message->from($request->email);
-//             $message->to('prodamas.pemkotkediri@gmail.com', 'Kritik & Saran Prodamas')->subject('Kritik & Saran dari Website Prodamas');
+        Mail::send('kritik.kritikMail', array(
+            'name' => $input['name'],
+            'phone' => $input['phone'],
+            'email' => $input['email'],
+            'bodyMessage' => $input['message'],
+        ), function ($message) use ($request){
+            $message->from($request->email);
+            $message->to('prodamas.pemkotkediri@gmail.com', 'Kritik & Saran Prodamas')->subject('Kritik & Saran dari Website Prodamas');
 
-//         });
+        });
 
         return redirect()->back()->with(['success' => 'Terkirim! Terimakasih atas Kritik & Saran Anda']);
     }
