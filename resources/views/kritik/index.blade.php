@@ -28,7 +28,7 @@
 
     <body>
         
-        <section>
+        <section style="margin-top: 80px;">
             <center>
             <nav class=section>
                 <div class= center>
