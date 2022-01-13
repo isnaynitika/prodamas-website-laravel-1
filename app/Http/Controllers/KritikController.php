@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\TestMail;
 use App\Models\kritik;
+use Mail;
 use Illuminate\Http\Request;
 
 class KritikController extends Controller
