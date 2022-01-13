@@ -10,14 +10,21 @@ a:link, a:visited,  a:hover, a:active
     text-decoration: none;
 }
 
+.carousel-sec{
+    padding: 0;
+    margin: 0;
+    padding-top: 50px;
+
+}
 .carousel-item img{
     max-height: 90vh;
-    margin:  auto;
   }
 
   .tentang p {
     font-family: "Montserrat", sans-serif;
 }
+
+
 
 .card-text {
     color: black;
