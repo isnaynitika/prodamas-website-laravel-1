@@ -32,7 +32,7 @@
 <body>
 
   <!-- awal jumbotron -->
-  <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div id="carouselIndicators" class="carousel slide carousel-sec" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -57,7 +57,7 @@
 
 
   <!--Tentang-->
-  <section class="tentang mt-5 ">
+  <section class="tentang mt-3 ">
     <div class="container">
       <div class="row">
         <div class="col-md-6 py-5">
