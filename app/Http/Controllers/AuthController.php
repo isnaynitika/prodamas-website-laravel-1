@@ -6,11 +6,36 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Models\user;
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\DB;
-
 
 class AuthController extends Controller //auth disini dipake buat memberikan hak akses ke user
 {
+//BAGIAN ADMIN
+    // public function registrasiadmin()
+    // {
+    //     return view('auths.registrasiadmin'); 
+    // }
+    
+    // public function postadminlogin(Request $request)
+    // {
+    //     //dd($request->all());
+    //     if(Auth::attempt($request->only('email', 'password'))) //email & password ini sama dengan name yang di isilogin
+    //     {
+    //         //pindah kehalaman admin
+    //         return redirect('/master');
+    //     }
+
+    //     //kalau tidak berhasil akan kembali ke halaman login
+    //     return redirect('/registrasiadmin');
+    // }
+
+    // public function logoutadmin()
+    // {
+    //     Auth::logoutadmin();
+    //     return redirect('/');
+    // }
+
+// ==============================================================================
+
 //BAGIAN USER
     public function loginuser(){
         return view('auth.loginuser'); 
@@ -22,7 +47,7 @@ class AuthController extends Controller //auth disini dipake buat memberikan hak
         if(Auth::attempt($request->only('username', 'password'))){ 
             
             //pindah ke halaman dashboard atau beranda
-            return redirect('admin.master');
+            return redirect('admin');
         } 
 
         //gagal login 
