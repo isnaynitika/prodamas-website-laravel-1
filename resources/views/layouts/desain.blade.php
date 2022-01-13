@@ -27,7 +27,7 @@
 
 <body>
     <!--navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4d148c">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #4d148c">
         <div class="container">
             <a href="{{ url('/') }}"><img src="{{ asset('img/logoprodamas.png') }}" alt="" width="40" height="40" class="d-inline-block align-text-top" /></a>
             <a href="{{ url('/') }}" class="navbar-brand" style="padding-left: 5px; font-family: Inter, sans-serif">PRODAMAS</a>
@@ -135,7 +135,7 @@
                             Kota kediri, Jawa Timur 64146
                         </p>
                         <p style="font-family: 'Font Awesome 5 Free'; font-weight: 600">&#xf0e0;
-                            prodamas@kedirikota.go.id</p>
+                            prodamas.pemkotkediri@gmail.com</p>
                         <p style="font-family: 'Font Awesome 5 Free'; font-weight: 600">&#xf095; (0354) 682955</p>
                     </div>
                     <div class="col-md-6 col-lg-5 footer-links" style="margin-top: 40px; color: white">
@@ -153,8 +153,8 @@
                                 <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
                                     Tautan Eksternal</p>
                                 <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
-                                <!--<a class="footer-link" href="https://survey123.arcgis.com/share/932769e15a27418aa9b448b0b1e6b6b6">Pengaduan
-                                    Bank Sampah</a> <br>-->
+                                <a class="footer-link" href="https://survey123.arcgis.com/share/932769e15a27418aa9b448b0b1e6b6b6">Pengaduan
+                                    Bank Sampah</a> <br>
                                 <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
                             </div>
                         </div>
