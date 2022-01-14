@@ -35,7 +35,8 @@ class KritikController extends Controller
         ], $messages);
 
         $input = $request->all();
-
+        var_dump($request); 
+        
         kritik::create($input);
 
         //  Send mail to admin
