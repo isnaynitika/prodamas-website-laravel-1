@@ -65,7 +65,7 @@
                 {{ csrf_field() }}
                 <div class="row">
                     <div >
-                        <div class="form-group">
+                        <div class="form-group" style="margin-top: 30px">
                             <strong>Nama</strong>
                             <input type="text" name="name" class="form-control" placeholder="Ketikkan Nama Lengkap Anda" value="{{ old('name') }}">
                             @if ($errors->has('name'))
