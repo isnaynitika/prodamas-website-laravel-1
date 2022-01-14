@@ -32,7 +32,7 @@
     <section id="prodamas">
         <div class="container">
             <div class="row mt-5">
-                <div class="col text-center" style="font-family: Inter, sans-serif;">
+                <div class="col text-center" style="font-family: Inter, sans-serif; margin-top: 35px">
                     <h1>Cakupan Bidang</h1>
                 </div>
             </div>
