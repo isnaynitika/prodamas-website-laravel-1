@@ -27,16 +27,15 @@ Video Submission
         <tr>
             <td>{{$key + 1}}</th>
             <td>{{$video->created_at}}</td>
-            <!-- <td>{{$video->name}}</td> -->
             <td>{{$video->judul}}</td>
             <!-- <td>{{Str::limit($video->video, 60)}}</td> -->
-            <td>{{$video->status}}</td>
+            <td>{{$video->konten}}</td>
             <td>
                 <form action="/admin/video/{{$video->id}}" method="POST">
                     <a href="/admin/video/{{$video->id}}" class="btn btn-info">Edit</a>
                     @csrf
                     @method('DELETE')
-                    <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin data yang Anda masukkan sudah benar?')"
+                    <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin ingin menghapus video?')"
                         value="Hapus">
                 </form>
             </td>

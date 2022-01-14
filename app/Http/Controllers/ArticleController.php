@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Article;
+use App\Models\ArticleAdmin;
 use DB;
 use File;
 
@@ -35,7 +35,7 @@ class ArticleController extends Controller
         $new_sampul = time() . ' - ' . $gambar_sampul->getClientOriginalName();
 
 
-        article::create([
+        ArticleAdmin::create([
             "status" => $request["status"],
             "kategori" => $request["kategori"],
             "gambar_sampul" => $new_sampul,
@@ -54,7 +54,7 @@ class ArticleController extends Controller
 
     public function index()
     {
-        $articles = article::all();
+        $articles = ArticleAdmin::all();
         return view('admin.article.list', compact('articles'));
     }
 
@@ -64,7 +64,7 @@ class ArticleController extends Controller
     // }
 
     public function edit($id) {
-        $article = article::find($id)->first();
+        $article = ArticleAdmin::find($id)->first();
         return view('admin.article.edit',compact('article'));
     }
 
@@ -80,7 +80,7 @@ class ArticleController extends Controller
             'picture' => 'mimes:jpeg,jpg,png|max:2200'
         ]);
 
-        $article = article::findorfail($id);
+        $article = ArticleAdmin::findorfail($id);
         if ($request->has('picture')) {
             File::delete("img-upload/".$article->picture);
             $picture = $request->picture;
@@ -119,12 +119,12 @@ class ArticleController extends Controller
     }
 
     public function upload($id) {
-        $article = Article::where('id',$id)->first();
+        $article = ArticleAdmin::where('id',$id)->first();
         return view('layouts.article_content',compact('article')); 
     }
 
     public function list_content() {
-        $articles = Article::all();
+        $articles = ArticleAdmin::all();
         return view('layouts.article',compact('articles')); 
     }
     

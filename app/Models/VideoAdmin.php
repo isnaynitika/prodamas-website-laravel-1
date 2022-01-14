@@ -11,7 +11,7 @@ class VideoAdmin extends Model
     use HasFactory;
     protected $table = "videos";
 
-    protected $fillable = ["gambar_sampul","judul","video","caption"];
+    protected $fillable = ["gambar_sampul","judul","konten","caption"];
 
     public function getCreatedAtAttribute() {
         return Carbon::parse($this->attributes['created_at'])

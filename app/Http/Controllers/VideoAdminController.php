@@ -33,7 +33,7 @@ class VideoAdminController extends Controller
         $konten = $request->file('video');
         $videoname = $konten->getClientOriginalName();
         $videopath = $konten->storeAs('video', $videoname);
-        $pathStore = $request->video->move(public_path('videProd/video'), $videopath);
+        $pathStore = $request->video->move(public_path('videProd/konten'), $videopath);
         
 
         VideoAdmin::create([
@@ -42,9 +42,6 @@ class VideoAdminController extends Controller
             "konten" => $videoname,
             "caption" => $request["caption"],
         ]);
-
-        //$konten->move('video-upload/', $new_video_konten);
-        //$video_sampul->move('img-video-sampul/', $new_video_sampul);
 
         return redirect('/admin/list-video')->with('success', 'Video Berhasil Ditambahkan');
     }
@@ -69,7 +66,7 @@ class VideoAdminController extends Controller
         $request->validate([
             'gambar_sampul' => 'mimes:jpeg,jpg,png|max:2200',
             'judul' => 'required',
-            //'konten' => 'mimes:video/mp4', 
+            'konten' => 'mimes:video/mp4', 
             'caption' => 'required'
         ]);
 

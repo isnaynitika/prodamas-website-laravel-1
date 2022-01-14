@@ -19,6 +19,7 @@ Foto Submission
             <th scope="col">Tanggal</th>
             <th scope="col">Judul</th>
             <th scope="col">Konten</th>
+            <th scope="col">Caption</th>
             <th scope="col">Aksi</th>
         </tr>
     </thead>
@@ -27,16 +28,16 @@ Foto Submission
         <tr>
             <td>{{$key + 1}}</th>
             <td>{{$foto->created_at}}</td>
-            <!-- <td>{{$foto->name}}</td> -->
             <td>{{$foto->judul}}</td>
-            <!-- <td>{{Str::limit($foto->foto, 60)}}</td> -->
-            <td>{{$foto->status}}</td>
+            <!-- <td>{{Str::limit($foto->konten, 60)}}</td> -->
+            <td>{{$foto->konten}}</td>
+            <td>{{$foto->caption}}</td>
             <td>
                 <form action="/admin/foto/{{$foto->id}}" method="POST">
                     <a href="/admin/foto/{{$foto->id}}" class="btn btn-info">Edit</a>
                     @csrf
                     @method('DELETE')
-                    <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus Data?')"
+                    <input type="submit" class="btn btn-danger my-1" onclick="return confirm('Yakin Ingin Menghapus Foto?')"
                         value="Delete">
                 </form>
             </td>
