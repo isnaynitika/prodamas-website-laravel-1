@@ -45,7 +45,14 @@
         <div class="card-body">
                         
             @if(Session::has('success'))
-            <div class="alert alert-success">
+            <div class="alert alert-success" style="
+                position:absolute; 
+                top: 165px; 
+                margin: auto
+                width: 100%;
+                height: 60px;
+                border-radius:7px
+            ">
                 {{ Session::get('success') }}
                 @php
                     Session::forget('success');
