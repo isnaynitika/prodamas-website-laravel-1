@@ -45,7 +45,14 @@
         <div class="card-body">
                         
             @if(Session::has('success'))
-            <div class="alert alert-success">
+            <div class="alert alert-success" style="
+                position:absolute; 
+                top: 165px; 
+                margin: auto
+                width: 100%;
+                height: 60px;
+                border-radius:7px
+            ">
                 {{ Session::get('success') }}
                 @php
                     Session::forget('success');
@@ -58,7 +65,7 @@
                 {{ csrf_field() }}
                 <div class="row">
                     <div >
-                        <div class="form-group">
+                        <div class="form-group" style="margin-top: 30px">
                             <strong>Nama</strong>
                             <input type="text" name="name" class="form-control" placeholder="Ketikkan Nama Lengkap Anda" value="{{ old('name') }}">
                             @if ($errors->has('name'))
@@ -90,7 +97,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <strong>Krtik & Saran</strong>
+                            <strong>Kritik & Saran</strong>
                             <textarea name="message" rows="3" class="form-control" placeholder="Tuliskan kritik dan saran Anda terkait Prodamas">{{ old('message') }}</textarea>
                             @if ($errors->has('message'))
                                 <span class="text-danger">{{ $errors->first('message') }}</span>
