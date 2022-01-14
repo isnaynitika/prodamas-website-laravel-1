@@ -97,7 +97,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <strong>Krtik & Saran</strong>
+                            <strong>Kritik & Saran</strong>
                             <textarea name="message" rows="3" class="form-control" placeholder="Tuliskan kritik dan saran Anda terkait Prodamas">{{ old('message') }}</textarea>
                             @if ($errors->has('message'))
                                 <span class="text-danger">{{ $errors->first('message') }}</span>
