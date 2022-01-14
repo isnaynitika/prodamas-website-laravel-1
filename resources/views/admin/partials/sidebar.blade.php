@@ -18,62 +18,35 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-                <!-- <li class="nav-item">
-                    <a href="/admin" class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt "></i>
-                        <p>
-                            Dashboard
-                        </p>
+                <li class="nav-item">
+                    <a href="/admin/list-article" class="nav-link">
+                        <i class="nav-icon far fa-newspaper"></i>
+                        <p>Artikel</p>
                     </a>
-                </li> -->
-                <li class="nav-item has-treeview">
-                    <a href="/admin" class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Dashboard
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/submission" class="nav-link">
+                        <i class="nav-icon fas fa-user-edit"></i>
+                        <p>Tulis Cerita</p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="/admin/list-article" class="nav-link">
-                                <i class="nav-icon far fa-newspaper"></i>
-                                <p>Artikel</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/admin/submission" class="nav-link">
-                                <i class="nav-icon fas fa-user-edit"></i>
-                                <p>Tulis Cerita</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/admin/list-foto" class="nav-link">
-                                <i class="nav-icon far fa-images"></i>
-                                <p>Foto</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/admin/list-video" class="nav-link">
-                                <i class="nav-icon fas fa-video"></i>
-                                <p>Video</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/admin/list-audio" class="nav-link">
-                                <i class="nav-icon fas fa-microphone"></i>
-                                <p>Audio</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-users"></i>
-                                <p>Data Pokmas</p>
-                            </a>
-                        </li>
-                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/list-foto" class="nav-link">
+                        <i class="nav-icon far fa-images"></i>
+                        <p>Foto</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/list-video" class="nav-link">
+                        <i class="nav-icon fas fa-video"></i>
+                        <p>Video</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/list-audio" class="nav-link">
+                        <i class="nav-icon fas fa-microphone"></i>
+                        <p>Audio</p>
+                    </a>
                 </li>
             </ul>
         </nav>

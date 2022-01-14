@@ -28,9 +28,9 @@
             @enderror
         </div>
         <div class="form-group">
-            <label for="video">Konten</label>
-            <textarea name="video" class="form-control" cols="30" rows="10">{{$video->video}}</textarea>
-            @error('video')
+            <label for="konten">Konten</label>
+            <textarea name="konten" class="form-control" cols="30" rows="10">{{$video->konten}}</textarea>
+            @error('konten')
                 <div class="alert alert-danger">
                     {{ $message }}
                 </div>

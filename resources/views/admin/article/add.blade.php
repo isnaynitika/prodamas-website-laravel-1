@@ -52,7 +52,7 @@
 
         <div class="form-group">
             <label for="judul">Judul</label>
-            <input name="judul" class="form-control" name="judul" id="judul" placeholder="Judul"></input>
+            <input name="judul" class="form-control" name="judul" id="judul" placeholder="Judul">
             @error('judul')
                 <div class="alert alert-danger">
                     {{ $message }}
@@ -61,7 +61,7 @@
         </div>
         <div class="form-group">
             <label for="slug">Slug</label>
-            <input name="slug" class="form-control" name="slug" id="slug" placeholder="Slug"></input>
+            <input name="slug" class="form-control" name="slug" id="slug" placeholder="Slug">
             @error('slug')
                 <div class="alert alert-danger">
                     {{ $message }}

@@ -32,9 +32,9 @@
             @enderror
         </div>
         <div class="form-group">
-            <label for="video">Upload Konten Video</label><br>
-            <input type="file" name="video" id="video">
-            @error('video')
+            <label for="konten">Upload Konten Video</label><br>
+            <input type="file" name="konten" id="konten">
+            @error('konten')
                 <div class="alert alert-danger">
                     {{ $message }}
                 </div>

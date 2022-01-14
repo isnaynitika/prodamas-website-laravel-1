@@ -19,21 +19,19 @@ class FotoAdminController extends Controller
     {
         $this->validate($request,[
             'judul' => 'required',
-            'foto_konten' => 'required|file|image|max:2200',
+            'konten' => 'required|file|image|max:2200',
             'caption' => 'required',
         ]);
 
-        $extFoto = $request->foto_konten->getClientOriginalExtension();
+        $extFoto = $request->konten->getClientOriginalExtension();
         $pathFoto = "foto-".time().".".$extFoto;
-        $pathStore = $request->foto_konten->move(public_path('img-foto-konten'), $pathFoto);
+        $pathStore = $request->konten->move(public_path('fotoProd/'), $pathFoto);
 
         FotoAdmin::create([
             "judul" => $request["judul"],
-            "foto_konten" => $pathFoto,
+            "konten" => $pathFoto,
             "caption" => $request["caption"],
         ]);
-
-        //$foto_konten->move('img-foto-konten/', $new_foto_konten);
 
         return redirect('/admin/list-foto')->with('success', 'Foto Berhasil Ditambahkan!');
     }
@@ -57,32 +55,32 @@ class FotoAdminController extends Controller
     public function update($id, Request $request) {
         $request->validate([
             'judul' => 'required',
-            'foto_konten' => 'mimes:jpeg,jpg,png|max:2200', 
+            'konten' => 'mimes:jpeg,jpg,png|max:2200', 
             'caption' => 'required'
         ]);
 
         $foto = FotoAdmin::findorfail($id);
         if ($request->has('picture')) {
-            File::delete("img-foto-konten/".$foto->picture);
+            File::delete("fotoProd//".$foto->picture);
             $picture = $request->picture;
             $pathFoto = time() . ' - ' . $picture->getClientOriginalName();
-            $picture->move('img-foto-konten/', $pathFoto);
+            $picture->move('fotoProd//', $pathFoto);
 /*
             $request->has('konten_picture')) {
-            File::delete("img-foto-konten/".$foto->konten_picture);
+            File::delete("fotoProd//".$foto->konten_picture);
             $konten_picture = $request->konten_picture;
-            $new_foto_konten = time() . ' - ' . $konten_picture->getClientOriginalName();
-            $konten_picture->move('img-foto-konten/', $new_foto_sampul);
+            $new_konten = time() . ' - ' . $konten_picture->getClientOriginalName();
+            $konten_picture->move('fotoProd//', $new_foto_sampul);
 */
             $foto_data = [
                 "judul" => $request["judul"],
-                "foto_konten" => $pathFoto,
+                "konten" => $pathFoto,
                 "caption" => $request["caption"],
             ];
         } else {
             $foto_data = [
                 "judul" => $request["judul"],
-                //"foto_konten" => $pathFoto,
+                //"konten" => $pathFoto,
                 "caption" => $request["caption"]
             ];
         }
