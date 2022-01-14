@@ -27,13 +27,13 @@ class AudioAdminController extends Controller
         // sampul
         $extThumb = $request->gambar_sampul->getClientOriginalExtension();
         $pathThumb = "sampul-".time().".".$extThumb;
-        $pathStore = $request->gambar_sampul->move(public_path('audioProd/sampul'), $pathThumb);
+        $pathStore = $request->gambar_sampul->move(public_path('audioProd/thumb'), $pathThumb);
 
         // konten audio
         $konten = $request->file('konten');
         $audioname = $konten->getClientOriginalName();
         $audiopath = $konten->storeAs('konten', $audioname);
-        $pathStore = $request->konten->move(public_path('audioProd/audio'), $audiopath);
+        $pathStore = $request->konten->move(public_path('audioProd/fileaudio'), $audiopath);
 /*
         $audio_sampul = $request->audio_sampul;
         $new_audio_sampul = time() . ' - ' . $audio_sampul->getClientOriginalName();

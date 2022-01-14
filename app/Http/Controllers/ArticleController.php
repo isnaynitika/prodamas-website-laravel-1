@@ -11,8 +11,7 @@ class ArticleController extends Controller
 {
     public function create()
     {
-        $statuss = article::all();
-        return view('admin.article.add', compact('statuss'));
+        return view('admin.article.add');
     }
 
     public function store(Request $request)
@@ -28,28 +27,34 @@ class ArticleController extends Controller
             //'picture' => 'mimes:jpeg,jpg,png|max:2200'
         ]);
 
-        //$picture = $request->picture;
-        //$new_picture = time() . ' - ' . $picture->getClientOriginalName();
+        // $gambar_sampul = $request->gambar_sampul;
+        // $new_sampul = time() . ' - ' . $gambar_sampul->getClientOriginalName();
 
-        $gambar_sampul = $request->gambar_sampul;
-        $new_sampul = time() . ' - ' . $gambar_sampul->getClientOriginalName();
+        // sampul artikel
+        $extThumb = $request->gambar_sampul->getClientOriginalExtension();
+        $pathThumb = "sampul-".time().".".$extThumb;
+        $pathStore = $request->gambar_sampul->move(public_path('aticleProd/sampul'), $pathThumb);
 
+        // konten artikel
+        $konten = $request->file('aticle');
+        $articlename = $konten->getClientOriginalName();
+        $articlepath = $konten->storeAs('article', $articlename);
+        $pathStore = $request->article->move(public_path('articleProd/konten'), $articlepath);
 
         ArticleAdmin::create([
             "status" => $request["status"],
             "kategori" => $request["kategori"],
-            "gambar_sampul" => $new_sampul,
+            "gambar_sampul" => $pathThumb,
             "text_sampul" => $request["text_sampul"],
             "judul" => $request["judul"],
             "slug" => $request["slug"],
             "article" => $request["article"],
-            //"picture" => $new_picture
+            // "picture" => $articlename
         ]);
 
-        //$picture->move('img-upload/', $new_picture);
-        $gambar_sampul->move('img-artikel-sampul/', $new_sampul);
+        $gambar_sampul->move('articleProd/sampul/', $new_sampul);
 
-        return redirect('/admin/list-article')->with('success', 'Data submission successful!');
+        return redirect('/admin/list-article')->with('success', 'Artikel Berhasil Ditambahkan!');
     }
 
     public function index()
@@ -77,20 +82,20 @@ class ArticleController extends Controller
             'judul' => 'required',
             'slug' => 'required',
             'article' => 'required',
-            'picture' => 'mimes:jpeg,jpg,png|max:2200'
+            // 'picture' => 'mimes:jpeg,jpg,png|max:2200'
         ]);
 
         $article = ArticleAdmin::findorfail($id);
         if ($request->has('picture')) {
-            File::delete("img-upload/".$article->picture);
+            File::delete("articleProd/sampul/".$article->picture);
             $picture = $request->picture;
-            $new_picture = time() . ' - ' . $picture->getClientOriginalName();
-            $picture->move('img-upload/', $new_picture);
+            $pathThumb = time() . ' - ' . $picture->getClientOriginalName();
+            $picture->move('articleProd/sampul/', $pathThumb);
             $article_data = [
                 "status" => $request["status"],
                 "kategori" => $request["kategori"],
-                "gambar_sampul" => $new_picture,
-                "text_sampul" => $new_picture["text-sampul"],
+                "gambar_sampul" => $pathThumb,
+                "text_sampul" => $request["text-sampul"],
                 "judul" => $request["judul"],
                 "slug" => $request["slug"],
                 "article" => $request["article"],
@@ -100,7 +105,7 @@ class ArticleController extends Controller
             $article_data = [
                 "status" => $request["status"],
                 "kategori" => $request["kategori"],
-                //"gambar-sampul" => $new_picture["gambar-sampul"],
+                "gambar-sampul" => $pathThumb,
                 "text_sampul" => $request["text_sampul"],
                 "judul" => $request["judul"],
                 "slug" => $request["slug"],
@@ -110,12 +115,12 @@ class ArticleController extends Controller
         
         $article->update($article_data);
 
-        return redirect('/admin/list-article')->with('success', 'Submission successfully updated!');
+        return redirect('/admin/list-article')->with('success', 'Artikel Berhasil Diedit!');
     }
 
     public function destroy($id) {
         $submission = DB::table('articles')->where('id', $id)->delete();
-        return redirect('/admin/list-article')->with('success', 'Submission successfully deleted!');
+        return redirect('/admin/list-article')->with('success', 'Artikel Berhasil Dihapus!');
     }
 
     public function upload($id) {

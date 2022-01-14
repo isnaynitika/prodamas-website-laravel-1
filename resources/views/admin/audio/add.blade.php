@@ -11,7 +11,7 @@
         </div>
     @endif
 
-    <form action="/admin/add-audio" method="POST"  enctype="multipart/form-data" >
+    <form action="/admin/list-audio" method="POST"  enctype="multipart/form-data" >
         @csrf
         <div class="form-group">
             <label for="gambar_sampul">Upload Gambar Sampul</label><br>
