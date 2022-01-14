@@ -118,7 +118,7 @@ Route::delete('/admin/article/{article_id}', [ArticleController::class, 'destroy
 
 //foto
 Route::get('/admin/add-foto', [FotoAdminController::class, 'create']);
-Route::post('/admin/list-foto', [FotoAdminController::class, 'store']);
+Route::post('/admin/list-foto', [FotoAdminController::class, 'store']); 
 Route::get('/admin/list-foto', [FotoAdminController::class, 'index']);
 Route::get('/admin/foto/{foto_id}', [FotoAdminController::class, 'edit']);
 Route::put('/admin/foto/{foto_id}', [FotoAdminController::class, 'update']);
