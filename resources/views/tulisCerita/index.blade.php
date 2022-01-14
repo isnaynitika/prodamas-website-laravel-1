@@ -42,7 +42,6 @@
     <!-- awal jumbotron -->
     <div class="container-fluid banner">
         <div class="container banner-content">
-            <h1>Tulis Cerita</h1>
         </div>
     </div>
     <!-- akhir jumbotrom -->
