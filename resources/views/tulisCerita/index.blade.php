@@ -172,7 +172,27 @@
         </div>
     </div>
 
-
+    <style>
+    .banner {
+    height: 90vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/header-tulis-cerita.png);
+    background-size: cover;
+    text-align: left;
+    text-shadow: 5px 5px 10px #4d148c;
+    font-size: xx-large;
+    color: white;
+    font-weight: bold;
+    padding-top: 15%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    }
+    </style>
+    
   </body>
 </html>
 @endsection
