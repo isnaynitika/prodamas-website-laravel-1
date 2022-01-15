@@ -79,6 +79,7 @@ Route::get('/registrasi', [AuthController::class, 'registrasi']);
 Route::post('/postregist', [AuthController::class, 'postregist']);
 Route::resource('profil', EditprofilController::class);
 
+
 Route::group(['middleware' => 'auth'], function(){ //agar tidak dapat tampil menggunakan linknya
     Route::get('/profil/{id}/edit', [ProfilController::class, 'index']);
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
@@ -101,11 +102,11 @@ Route::get('kritik.index', [App\Http\Controllers\KritikController::class, 'kriti
 Route::post('kritik-saran', [App\Http\Controllers\KritikController::class, 'storeContactForm'])->name('contact-form.store');
 
 //Authentication
-Route::get('admin', [CustomAuthController::class, 'admin']); 
+Route::get('admin', [CustomAuthController::class, 'admin']);
 // Route::get('login', [CustomAuthController::class, 'index'])->name('login');
-Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
+Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
 Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
-Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
+Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 
 //artikel admin
@@ -118,7 +119,7 @@ Route::delete('/admin/article/{article_id}', [ArticleController::class, 'destroy
 
 //foto
 Route::get('/admin/add-foto', [FotoAdminController::class, 'create']);
-Route::post('/admin/list-foto', [FotoAdminController::class, 'store']); 
+Route::post('/admin/list-foto', [FotoAdminController::class, 'store']);
 Route::get('/admin/list-foto', [FotoAdminController::class, 'index']);
 Route::get('/admin/foto/{foto_id}', [FotoAdminController::class, 'edit']);
 Route::put('/admin/foto/{foto_id}', [FotoAdminController::class, 'update']);

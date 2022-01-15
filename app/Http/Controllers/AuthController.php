@@ -77,6 +77,14 @@ class AuthController extends Controller //auth disini dipake buat memberikan hak
             'password' => 'required',
             'remember_token' => 'required'
         ]);
+        $data = new user();
+        $data->nama = $validateData['nama'];
+        $data->level = "user";
+        $data->email = $validateData['email'];
+        $data->telp = $validateData['telp'];
+        $data->username = $validateData['username'];
+        $data->password = $validateData['[password]'];
+        $data->remember_token = Str::random(60);
         dump($validateData);
         //kembali ke halaman login setelah submit
         // return redirect('/loginuser');
