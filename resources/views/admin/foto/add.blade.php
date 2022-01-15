@@ -18,7 +18,6 @@
             <button type="button" class="btn-close t" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
-    <!-- notif-->
 
     <!-- @if(session('success')) 
         <div class="alert alert-success">
