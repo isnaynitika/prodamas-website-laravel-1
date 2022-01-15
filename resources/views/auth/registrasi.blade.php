@@ -25,17 +25,17 @@
 
 </head>
 <body>
-	
+
 	<div class="limiter">
 		<div class="container-login100" style="background-color: #4d148c;">
 			<div class="wrap-login100 p-t-30 p-b-50">
-				
+
 				<form class="login100-form validate-form p-b-33 p-t-5" action="/postregist" method="POST">
                 {{csrf_field()}}
                     <span class="login100-form-title p-b-41" style="color:black; margin-top:15px;">
                         Registration
                     </span>
-					
+
 					<!--NAMA-->
                     <div class="wrap-input100 validate-input" data-validate = "Enter username">
 						<input class="input100" type="text" name="name" placeholder="Nama">
@@ -47,19 +47,19 @@
 						<input class="input100" type="text" name="email" placeholder="Email">
 						<span class="focus-input100" data-placeholder="&#xe818;"></span>
 					</div>
-					
+
 					<!--NO TELP-->
 					<div class="wrap-input100 validate-input" data-validate = "Enter telp">
 						<input class="input100" type="text" name="telp" placeholder="No Telp">
 						<span class="focus-input100" data-placeholder="&#xe830;"></span>
 					</div>
-					
+
 					<!--USERNAME-->
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
 						<input class="input100" type="text" name="username" placeholder="Username">
 						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
 					</div>
-					
+
 					<!--PASSWORD -->
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
 						<input class="input100" type="password" name="password" placeholder="Password">
@@ -80,7 +80,7 @@
 			</div>
 		</div>
 	</div>
-	
+
     <!--script-->
 	<script src="login/Login_v16/vendor/jquery/jquery-3.2.1.min.js"></script>
 	<script src="login/Login_v16/vendor/animsition/js/animsition.min.js"></script>
