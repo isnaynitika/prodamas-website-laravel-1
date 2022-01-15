@@ -1,9 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use Auth;
 use App\Models\user;
 use Illuminate\Support\Str;
 
@@ -12,9 +11,9 @@ class AuthController extends Controller //auth disini dipake buat memberikan hak
 //BAGIAN ADMIN
     // public function registrasiadmin()
     // {
-    //     return view('auths.registrasiadmin'); 
+    //     return view('auths.registrasiadmin');
     // }
-    
+
     // public function postadminlogin(Request $request)
     // {
     //     //dd($request->all());
@@ -38,19 +37,19 @@ class AuthController extends Controller //auth disini dipake buat memberikan hak
 
 //BAGIAN USER
     public function loginuser(){
-        return view('auth.loginuser'); 
+        return view('auth.loginuser');
     }
 
     public function postlogin(Request $request){
 
         //email & password ini sama dengan name yang di loginuser
-        if(Auth::attempt($request->only('username', 'password'))){ 
-            
+        if(Auth::attempt($request->only('username', 'password'))){
+
             //pindah ke halaman dashboard atau beranda
             return redirect('admin');
-        } 
+        }
 
-        //gagal login 
+        //gagal login
         return redirect('/loginuser');
     }
 
