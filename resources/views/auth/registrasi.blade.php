@@ -27,6 +27,12 @@
 <body>
 
 	<div class="limiter">
+        @if (session()->has('pesan'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session()->get('pesan') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
 		<div class="container-login100" style="background-color: #4d148c;">
 			<div class="wrap-login100 p-t-30 p-b-50">
 
