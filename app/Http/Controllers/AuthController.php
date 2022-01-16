@@ -70,12 +70,12 @@ class AuthController extends Controller //auth disini dipake buat memberikan hak
         // ]);
         $validateData = $request->validate([
             'name' => 'required|max:120',
-            'level' => 'required',
+            'level' => 'null',
             'email' => 'required',
             'telp' => 'required',
             'username' => 'required',
             'password' => 'required',
-            'remember_token' => 'required'
+            'remember_token' => 'null'
         ]);
         dump($validateData);
         // $data = new user();
