@@ -59,24 +59,25 @@ class AuthController extends Controller //auth disini dipake buat memberikan hak
 
     public function postregist(Request $request){
         //untuk menyimpan data regist ke DB
-        User::create([
-            'name' => $request->name,
-            'level' => 'user',
-            'email'=> $request->email,
-            'telp' => $request->telp,
-            'username' => $request->username,
-            'password' => bcrypt($request->password),
-            'remember_token' => Str::random(60),
-        ]);
-        // $validateData = $request->validate([
-        //     'nama' => 'required|max:120',
-        //     'level' => 'required',
-        //     'email' => 'required',
-        //     'telp' => 'required',
-        //     'username' => 'required',
-        //     'password' => 'required',
-        //     'remember_token' => 'required'
+        // User::create([
+        //     'name' => $request->name,
+        //     'level' => 'user',
+        //     'email'=> $request->email,
+        //     'telp' => $request->telp,
+        //     'username' => $request->username,
+        //     'password' => bcrypt($request->password),
+        //     'remember_token' => Str::random(60),
         // ]);
+        $validateData = $request->validate([
+            'nama' => 'required|max:120',
+            'level' => 'required',
+            'email' => 'required',
+            'telp' => 'required',
+            'username' => 'required',
+            'password' => 'required',
+            'remember_token' => 'required'
+        ]);
+        dump($validateData);
         // $data = new user();
         // $data->nama = $validateData['nama'];
         // $data->level = "user";
@@ -85,9 +86,9 @@ class AuthController extends Controller //auth disini dipake buat memberikan hak
         // $data->username = $validateData['username'];
         // $data->password = $validateData['[password]'];
         // $data->remember_token = Str::random(60);
-        // // dump($validateData);
+
         // $data->save();
-        return redirect()->back()->with('pesan', "Cerita sudah di Submit");
+        // return redirect()->back()->with('pesan', "Cerita sudah di Submit");
         //kembali ke halaman login setelah submit
         // return redirect('/loginuser');
     }
