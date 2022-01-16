@@ -69,7 +69,7 @@ class AuthController extends Controller //auth disini dipake buat memberikan hak
         //     'remember_token' => Str::random(60),
         // ]);
         $validateData = $request->validate([
-            'nama' => 'required|max:120',
+            'name' => 'required|max:120',
             'level' => 'required',
             'email' => 'required',
             'telp' => 'required',
@@ -79,7 +79,7 @@ class AuthController extends Controller //auth disini dipake buat memberikan hak
         ]);
         dump($validateData);
         // $data = new user();
-        // $data->nama = $validateData['nama'];
+        // $data->name = $validateData['name'];
         // $data->level = "user";
         // $data->email = $validateData['email'];
         // $data->telp = $validateData['telp'];
