@@ -68,26 +68,26 @@ class AuthController extends Controller //auth disini dipake buat memberikan hak
         //     'password' => bcrypt($request->password),
         //     'remember_token' => Str::random(60),
         // ]);
-        // $validateData = $request->validate([
-        //     'nama' => 'required|max:120',
-        //     'level' => 'required',
-        //     'email' => 'required',
-        //     'telp' => 'required',
-        //     'username' => 'required',
-        //     'password' => 'required',
-        //     'remember_token' => 'required'
-        // ]);
-        // $data = new user();
-        // $data->nama = $validateData['nama'];
-        // $data->level = "user";
-        // $data->email = $validateData['email'];
-        // $data->telp = $validateData['telp'];
-        // $data->username = $validateData['username'];
-        // $data->password = $validateData['[password]'];
-        // $data->remember_token = Str::random(60);
-        // $data->save();
-        sasdasdasd;
-        // return redirect()->back()->with('pesan', "Cerita sudah di Submit");
+        $validateData = $request->validate([
+            'nama' => 'required|max:120',
+            'level' => 'required',
+            'email' => 'required',
+            'telp' => 'required',
+            'username' => 'required',
+            'password' => 'required',
+            'remember_token' => 'required'
+        ]);
+        $data = new user();
+        $data->nama = $validateData['nama'];
+        $data->level = "user";
+        $data->email = $validateData['email'];
+        $data->telp = $validateData['telp'];
+        $data->username = $validateData['username'];
+        $data->password = $validateData['[password]'];
+        $data->remember_token = Str::random(60);
+        // dump($validateData);
+        $data->save();
+        return redirect()->back()->with('pesan', "Cerita sudah di Submit");
         //kembali ke halaman login setelah submit
         // return redirect('/loginuser');
     }
