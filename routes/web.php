@@ -21,6 +21,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\FotoAdminController;
 use App\Http\Controllers\VideoAdminController;
 use App\Http\Controllers\AudioAdminController;
+use App\Http\Controllers\TestregistController;
 //use App\Http\Controllers\SocialShareButtonsController;
 
 
@@ -79,7 +80,7 @@ Route::get('/registrasi', [AuthController::class, 'registrasi']);
 Route::post('/postregist', [AuthController::class, 'postregist'])
 ->name('auth.store');
 Route::resource('profil', EditprofilController::class);
-
+Route::post('/test123', [TestregistController::class, 'store']);
 
 
 Route::group(['middleware' => 'auth'], function(){ //agar tidak dapat tampil menggunakan linknya
