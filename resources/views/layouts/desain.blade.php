@@ -105,7 +105,7 @@
                 </div>
                 @endauth
                 @guest
-                <a class="nav-icon position-relative text-decoration-none " href="{{ url('loginuser') }}">
+                <a class="nav-icon position-relative text-decoration-none " href="{{route('auth.loginuser')}}">
                     <i class="fa fa-fw fa-user text-light mr-3"></i>
                 </a>
                 @endguest
