@@ -73,12 +73,12 @@ Route::resource('tuliscerita', TulisCeritaController::class);
 
 
 //login & profil
-// Route::get('/loginuser', [AuthController::class, 'loginuser'])->name('login');
-// Route::post('/postlogin', [AuthController::class, 'postlogin']);
-// Route::get('/registrasi', [AuthController::class, 'registrasi']);
-// Route::post('/postregist', [AuthController::class, 'postregist']);
-// Route::resource('profil', EditprofilController::class);
-Route::resource('auth', AuthController::class);
+Route::get('/loginuser', [AuthController::class, 'loginuser'])->name('login');
+Route::post('/postlogin', [AuthController::class, 'postlogin']);
+Route::get('/registrasi', [AuthController::class, 'registrasi']);
+Route::post('/postregist', [AuthController::class, 'postregist']);
+Route::resource('profil', EditprofilController::class);
+
 
 
 Route::group(['middleware' => 'auth'], function(){ //agar tidak dapat tampil menggunakan linknya
