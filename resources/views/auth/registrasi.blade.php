@@ -37,6 +37,7 @@
 			<div class="wrap-login100 p-t-30 p-b-50">
 
 				<form class="login100-form validate-form p-b-33 p-t-5" action="{{ route('auth.store') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
                     <span class="login100-form-title p-b-41" style="color:black; margin-top:15px;">
                         Registration
                     </span>
@@ -73,11 +74,10 @@
 
 					<!--SUBMIT-->
 					<div class="container-login100-form-btn m-t-32">
-						<button class="login100-form-btn" value="submit">
+						<button class="login100-form-btn" type="submit">
 							Submit
 						</button>
 					</div>
-                    @csrf
                     <br>
 
                     <h6 class="text-center">Sudah punya akun?</h6><br>
