@@ -36,8 +36,7 @@
 		<div class="container-login100" style="background-color: #4d148c;">
 			<div class="wrap-login100 p-t-30 p-b-50">
 
-				<form class="login100-form validate-form p-b-33 p-t-5" action="{{route('auth.postregist')}}" method="POST">
-                {{csrf_field()}}
+				<form class="login100-form validate-form p-b-33 p-t-5" action="{{ url('postregist') }}" method="POST" enctype="multipart/form-data">
                     <span class="login100-form-title p-b-41" style="color:black; margin-top:15px;">
                         Registration
                     </span>
@@ -78,6 +77,7 @@
 							Submit
 						</button>
 					</div>
+                    @csrf
                     <br>
 
                     <h6 class="text-center">Sudah punya akun?</h6><br>
