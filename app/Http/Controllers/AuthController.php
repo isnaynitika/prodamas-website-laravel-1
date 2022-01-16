@@ -77,7 +77,7 @@ class AuthController extends Controller //auth disini dipake buat memberikan hak
             'password' => 'required',
             'remember_token' => 'null'
         ]);
-        $data = new user();
+        $data = new User();
         // $data->name = $validateData['name'];
         // $data->level = "user";
         // $data->email = $validateData['email'];
