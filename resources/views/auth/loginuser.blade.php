@@ -54,7 +54,7 @@
 					<br>
 
 					<h6 class="text-center"> Belum punya akun? </h6><br>
-					<p class="text-muted text-center"><a href="" class="h6 text-decoration-none text-dark">SIGN UP</a></p>
+					<p class="text-muted text-center"><a href="/registrasi" class="h6 text-decoration-none text-dark">SIGN UP</a></p>
 
 				</form>
 			</div>
