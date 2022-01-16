@@ -73,7 +73,7 @@ Route::resource('tuliscerita', TulisCeritaController::class);
 
 
 //login & profil
-Route::get('/loginuser', [AuthController::class, 'loginuser'])->name('login');
+Route::get('/loginuser', [AuthController::class, 'index'])->name('login');
 Route::post('/postlogin', [AuthController::class, 'postlogin']);
 Route::get('/registrasi', [AuthController::class, 'registrasi']);
 Route::post('/postregist', [AuthController::class, 'postregist']);
