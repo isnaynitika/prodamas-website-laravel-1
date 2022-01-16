@@ -77,10 +77,10 @@ class AudioAdminController extends Controller
 
         $audio = AudioAdmin::findorfail($id);
         if ($request->has('picture')) {
-            File::delete("img-audio-sampul/".$audio->picture);
+            File::delete("audioProd/thumb/".$audio->picture);
             $picture = $request->picture;
             $new_audio_sampul = time() . ' - ' . $picture->getClientOriginalName();
-            $picture->move('img-audio-sampul/', $new_audio_sampul);
+            $picture->move('audioProd/thumb/', $new_audio_sampul);
 /*
             $request->has('konten_picture')) {
             File::delete("img-audio-konten/".$audio->konten_picture);

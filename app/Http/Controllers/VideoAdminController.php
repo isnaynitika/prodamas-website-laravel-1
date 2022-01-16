@@ -18,7 +18,7 @@ class VideoAdminController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'gambar_sampul' => 'mimes:jpeg,jpg,png|max:2200',
+            'gambar_sampul' => 'required|file|image|max:2200',
             'judul' => 'required',
             'konten' => 'required|file',
             'caption' => 'required'
@@ -27,13 +27,13 @@ class VideoAdminController extends Controller
         // sampul video
         $extThumb = $request->gambar_sampul->getClientOriginalExtension();
         $pathThumb = "sampul-".time().".".$extThumb;
-        $pathStore = $request->gambar_sampul->move(public_path('videProd/sampul'), $pathThumb);
+        $pathStore = $request->gambar_sampul->move(public_path('videoProd/sampul'), $pathThumb);
 
         // konten video
-        $konten = $request->file('video');
+        $konten = $request->file('konten');
         $videoname = $konten->getClientOriginalName();
-        $videopath = $konten->storeAs('video', $videoname);
-        $pathStore = $request->video->move(public_path('videProd/konten'), $videopath);
+        $videopath = $konten->storeAs('konten', $videoname);
+        $pathStore = $request->konten->move(public_path('videoProd/konten'), $videopath);
         
 
         VideoAdmin::create([
