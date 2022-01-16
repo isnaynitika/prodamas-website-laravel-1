@@ -36,7 +36,7 @@ class AuthController extends Controller //auth disini dipake buat memberikan hak
 // ==============================================================================
 
 //BAGIAN USER
-    public function loginuser(){
+    public function index(){
         return view('auth.loginuser');
     }
 
