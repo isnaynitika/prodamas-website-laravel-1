@@ -77,7 +77,6 @@ class AuthController extends Controller //auth disini dipake buat memberikan hak
             'password' => 'required',
             'remember_token' => 'null'
         ]);
-        dump($validateData);
         $data = new user();
         $data->name = $validateData['name'];
         $data->level = "user";
@@ -86,9 +85,9 @@ class AuthController extends Controller //auth disini dipake buat memberikan hak
         $data->username = $validateData['username'];
         $data->password = $validateData['[password]'];
         $data->remember_token = Str::random(60);
-
+        dump($data);
         $data->save();
-        return redirect()->back()->with('pesan', "Cerita sudah di Submit");
+        // return redirect()->back()->with('pesan', "Cerita sudah di Submit");
         //kembali ke halaman login setelah submit
         // return redirect('/loginuser');
     }
