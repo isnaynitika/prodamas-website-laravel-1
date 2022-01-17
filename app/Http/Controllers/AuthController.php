@@ -1,13 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use App\Models\user;
-use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
-class AuthController extends Controller //auth disini dipake buat memberikan hak akses ke user
-{
+class AuthController extends Controller {
 //BAGIAN ADMIN
     // public function registrasiadmin()
     // {
@@ -94,6 +91,10 @@ class AuthController extends Controller //auth disini dipake buat memberikan hak
 
     public function logout(){
         Auth::logout();
+        request()->session()->invalidate();
+
+        request()->session()->regenerateToken();
+
         return redirect('/');
     }
 }

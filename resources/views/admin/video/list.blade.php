@@ -1,5 +1,7 @@
 @extends('admin.master')
 
+@section('video', 'active')
+
 @section('title')
 Video Submission
 @endsection

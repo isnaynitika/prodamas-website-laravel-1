@@ -1,5 +1,7 @@
 @extends('admin.master')
 
+@section('artikel', 'active')
+
 @push('link_summer')
     <!-- Summernote -->
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
@@ -34,7 +36,7 @@
         </div>
         <div class="form-group">
             <label for="gambar_sampul">Upload Gambar Sampul</label><br>
-            <input type="file" name="gambar_sampul" id="gambar_sampul">
+            <input type="file" class="form-control" name="gambar_sampul" id="gambar_sampul">
             @error('gambar_sampul')
                 <div class="alert alert-danger">
                     {{ $message }}
@@ -49,8 +51,7 @@
                     {{ $message }}
                 </div>
             @enderror
-        </div><br>
-
+        </div>
         <div class="form-group">
             <label for="judul">Judul</label>
             <input name="judul" class="form-control" name="judul" id="judul" placeholder="Judul">

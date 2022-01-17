@@ -1,5 +1,7 @@
 @extends('admin.master')
 
+@section('audio', 'active')
+
 @section('title')
 Audio Submission
 @endsection

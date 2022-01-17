@@ -79,35 +79,19 @@
   <div class="container artikel mb-5 mt-5">
     <h3 class="mb-4" style="font-family: Inter, sans-serif">Artikel</h3>
     <div class="row row-cols-1 row-cols-md-3 g-4">
-      <a href="../artikel/layout.blade">
+      @foreach ($artikel as $item)     
+      <a href="artikel/{{$item->id}}">
         <div class="col">
           <div class="card h-100 hover-card">
-            <img src="img/slide3.jpeg" class="card-img-top" alt="...">
+            <img src="{{ asset('articleProd/sampul/'.$item->gambar_sampul) }}" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Launching Kampung Keren</h5>
-              <p class="card-text">Wali Kota Kediri Abdullah Abu Bakar meluncurkan 10 Kampung Kreatif dan Independen (Keren) Prodamas, Selasa (9/11) bertempat di IKCC.</p>
+              <h5 class="card-title">{{ $item->judul }}</h5>
+              <p class="card-text">{{ $item->text_sampul }}</p>
             </div>
           </div>
         </div>
       </a>
-      <div class="col">
-        <div class="card h-100 hover-card">
-          <img src="img/slide4.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Kampung Keren</h5>
-            <p class="card-text"> Di mana alokasi anggaran Prodamas Plus mencapai Rp 100 juta per RT per tahun yang akan mencakup enam bidang kegiatan. Pemkot Kediri Kucurkan Rp 100 Juta Per RT.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 hover-card">
-          <img src="img/slide5.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Prodamas</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-          </div>
-        </div>
-      </div>
+      @endforeach
     </div>
     <a href="{{ url('bincangprodamas') }}">
       <h6 class="text-end mt-3"><u>Info Lainnya <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">

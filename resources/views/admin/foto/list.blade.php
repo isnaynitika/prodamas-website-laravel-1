@@ -1,5 +1,7 @@
 @extends('admin.master')
 
+@section('foto', 'active')
+
 @section('title')
 Foto Submission
 @endsection

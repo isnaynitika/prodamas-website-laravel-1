@@ -50,7 +50,7 @@
             {{-- Card video 1--}}
             @forelse ($videos as $video)
             <div class=" card noBorder cardAudio" style="width: 18rem;">
-                <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer">
+                <div class="card h-100 noBorder" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$video->id}}">
                     <img src="{{ asset('/videoProd/sampul/'.$video->gambar_sampul) }}" style="width: 250px; height: 270px" class="card-img-top d-flex justify-content" alt="video-prodamas">
                     <div class="card-body">
                         <h5 class="card-title">
@@ -61,8 +61,10 @@
                     </div>
                 </div>
             </div>
+
+            @foreach ($videos as $video)
             {{-- Card Modal --}}
-            <div class="modal fade" id="audioPlayer" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
+            <div class="modal fade" id="audioPlayer{{$video->id}}" tabindex="-1" aria-labelledby="audioPlayerLabel" aria-hidden="true">
                 <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                         <div class="modal-header ">
@@ -98,6 +100,7 @@
                 </div>
             </div>
             {{-- Akhir Card Video --}}
+            @endforeach
             @empty
             <div class="alert alert-success" role="alert">
                 Tidak ada data

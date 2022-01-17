@@ -49,176 +49,48 @@
 
             <!-- Kiri -->
             <div class="col">
+
+                @foreach ($artikel as $item)     
                 <div class="mb-3 kartu">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="img/slide1.jpeg" class="img-fluid rounded-start">
+                            <img src="{{ asset('articleProd/sampul/'.$item->gambar_sampul) }}" class="img-fluid rounded-start">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <a href="artikel/1" class="link-dark">
-                                    <h5 class="card-title">Wali Kota Kediri Luncurkan 10 Kampung Keren Prodamas,
-                                        Harapkan Ekonomi dan Kreativitas Akan Terus Tumbuh</h5>
+                                <a href="artikel/{{$item->id}}" class="link-dark">
+                                    <h5 class="card-title">{{$item->judul}}</h5>
                                 </a>
-                                <p class="card-text">Wali Kota Kediri Abdullah Abu Bakar meluncurkan 10 Kampung Kreatif
-                                    dan Independen (Keren) Prodamas, Selasa (9/11) bertempat di IKCC.
+                                <p class="card-text">{{$item->text_sampul}}
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
+                @endforeach
 
-                <div class="mb-3 kartu">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="img/sosial-budaya.jpg" class="img-fluid rounded-start">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.
-                                    This is a wider card with supporting text below as a natural lead-in to additional
-                                    content. This content is a little bit longer.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="mb-3 kartu">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="img/sosial-budaya.jpg" class="img-fluid rounded-start">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.
-                                    This is a wider card with supporting text below as a natural lead-in to additional
-                                    content. This content is a little bit longer.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-3 kartu">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="img/sosial-budaya.jpg" class="img-fluid rounded-start">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.
-                                    This is a wider card with supporting text below as a natural lead-in to additional
-                                    content. This content is a little bit longer.
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="mb-3 kartu">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="img/sosial-budaya.jpg" class="img-fluid rounded-start">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.
-                                    This is a wider card with supporting text below as a natural lead-in to additional
-                                    content. This content is a little bit longer.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-3 kartu">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="img/sosial-budaya.jpg" class="img-fluid rounded-start">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.
-                                    This is a wider card with supporting text below as a natural lead-in to additional
-                                    content. This content is a little bit longer.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             <!-- kanan -->
             <div class="rightcolumn">
                 <div class="card-right bg-light">
                     <h5 class="card-header">Update Artikel</h5>
+                    @foreach ($artikelupdate as $item)
+                        
                     <div class="col-sm-12">
                         <div class="caption">
-                            <h5>Kampung Keren</h5>
+                            <a href="artikel/{{$item->id}}"><h5>{{$item->judul}}</h5></a>
                             <div class="row">
                                 <div class="col-xl-3">
-                                    <img src="{{ asset('img/slide1.jpeg') }}" width="100%" alt="Cinque Terre">
+                                    <img src="{{ asset('articleProd/sampul/'.$item->gambar_sampul) }}" width="100%" alt="Cinque Terre">
                                 </div>
                                 <div class="col-sm-9">
-                                    <p>Kampung Keren Prodamas merupakan salah satu dari 10 program unggulan Wali Kota
-                                        Kediri. </p>
+                                    <p>{{$item->text_sampul}}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12">
-                        <div class="caption">
-                            <h5>Kampung Keren</h5>
-                            <div class="row">
-                                <div class="col-xl-3">
-                                    <img src="{{ asset('img/slide2.jpeg') }}" width="100%" alt="Cinque Terre">
-                                </div>
-                                <div class="col-sm-9">
-                                    <p>Kampung Keren Prodamas merupakan salah satu dari 10 program unggulan Wali Kota
-                                        Kediri. </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="caption">
-                            <h5>Kampung Keren</h5>
-                            <div class="row">
-                                <div class="col-xl-3">
-                                    <img src="{{ asset('img/slide3.jpeg') }}" width="100%" alt="Cinque Terre">
-                                </div>
-                                <div class="col-sm-9">
-                                    <p>Kampung Keren Prodamas merupakan salah satu dari 10 program unggulan Wali Kota
-                                        Kediri. </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="caption">
-                            <h5>Kampung Keren</h5>
-                            <div class="row">
-                                <div class="col-xl-3">
-                                    <img src="{{ asset('img/slide4.jpeg') }}" width="100%" alt="Cinque Terre">
-                                </div>
-                                <div class="col-sm-9">
-                                    <p>Kampung Keren Prodamas merupakan salah satu dari 10 program unggulan Wali Kota
-                                        Kediri. </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 <div class="card-right bg-light">
                     <h5 class="card-header">Kunjungi Website</h5>
