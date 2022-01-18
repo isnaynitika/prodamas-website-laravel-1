@@ -90,7 +90,7 @@
                         placeholder=" &#xf002;" aria-label="Search" />
                 </form> --}}
 
-                @auth
+                <!-- @auth
                 <div class="dropdown">
                     <button class="btn" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fas fa-user" style="font-size:20px; font-weight: lighter; color: white;"></i>
@@ -103,7 +103,7 @@
                         <li><button class="dropdown-item"><a href="{{ url('logout') }}" style="text-decoration: none; color: black;">Logout</a></button></li>
                     </ul>
                 </div>
-                @endauth
+                @endauth -->
                 @guest
                 <a class="nav-icon position-relative text-decoration-none " href="{{ url('loginuser') }}">
                     <i class="fa fa-fw fa-user text-light mr-3"></i>
