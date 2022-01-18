@@ -92,6 +92,8 @@ Route::group(['middleware' => 'auth'], function(){ //agar tidak dapat tampil men
     Route::get('/admin/article/{article_id}', [ArticleController::class, 'edit']);
     Route::put('/admin/article/{article_id}', [ArticleController::class, 'update']);
     Route::delete('/admin/article/{article_id}', [ArticleController::class, 'destroy']);
+    Route::post('/admin/status', [ArticleController::class, 'status']);
+
 
     //foto
     Route::get('/admin/add-foto', [FotoAdminController::class, 'create']);
