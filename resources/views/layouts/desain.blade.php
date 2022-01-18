@@ -58,7 +58,7 @@
                     </li>
                     <li>
                         <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle @yield('main-tentang')" href="{{ url('/peta') }}" data-bs-toggle="dropdown" aria-expanded="false">
                                 Data
                             </a>
                             <ul class="dropdown-menu menu-navigation" aria-labelledby="dropdownMenuLink">
@@ -90,7 +90,7 @@
                         placeholder=" &#xf002;" aria-label="Search" />
                 </form> --}}
 
-                @auth
+                <!-- @auth
                 <div class="dropdown">
                     <button class="btn" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fas fa-user" style="font-size:20px; font-weight: lighter; color: white;"></i>
@@ -103,12 +103,12 @@
                         <li><button class="dropdown-item"><a href="{{ url('logout') }}" style="text-decoration: none; color: black;">Logout</a></button></li>
                     </ul>
                 </div>
-                @endauth
-                @guest
+                @endauth -->
+                <!-- @guest -->
                 <a class="nav-icon position-relative text-decoration-none " href="{{ url('loginuser') }}">
                     <i class="fa fa-fw fa-user text-light mr-3"></i>
                 </a>
-                @endguest
+                <!-- @endguest -->
 
             </div>
         </div>
