@@ -1,5 +1,7 @@
 @extends('admin.master')
 
+@section('artikel', 'active')
+
 @push('link_summer')
     <!-- Summernote -->
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
@@ -16,19 +18,13 @@
         @method('put')
         <div class="form-group">
             <label for="status">Status</label>
-            <select class="form-control" name="status" id="id_status" placeholder="status" value="{{$article->status}}">
-                <option value="">- pilih -</option>
-                <option value="published">Published</option>
-                <option value="unpublished">Unpublished</option>
-            </select> 
-            @error('status')
-                <div class="alert alert-danger">
-                    {{ $message }}
-                </div>
-            @enderror
+            <input type="text" class="form-control" value="{{ $article->status }}" readonly>
         </div>
         <div class="form-group">
             <label for="gambar_sampul">Gambar Sampul</label><br>
+            @if ($article->gambar_sampul)
+                <p>{{$article->gambar_sampul}}</p>
+            @endif
             <input type="file" name="gambar_sampul" id="gambar_sampul">
             @error('gambar_sampul')
                 <div class="alert alert-danger">

@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ArticleAdmin;
-use DB;
-use File;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 class ArticleController extends Controller
 {
@@ -18,41 +18,53 @@ class ArticleController extends Controller
     {
         $this->validate($request,[
             'status' => 'required',
-            'kategori' => 'required',
             'gambar_sampul' => 'mimes:jpeg,jpg,png|max:2200',
             'text_sampul' => 'required',
             'judul' => 'required',
             'slug' => 'required',
             'article' => 'required',
-            //'picture' => 'mimes:jpeg,jpg,png|max:2200'
+            'picture' => 'mimes:jpeg,jpg,png|max:2200'
         ]);
 
-        // $gambar_sampul = $request->gambar_sampul;
-        // $new_sampul = time() . ' - ' . $gambar_sampul->getClientOriginalName();
-
+        
+        // dd($request->all());
+        $gambar_sampul = $request->gambar_sampul;
+        $new_sampul = time() . ' - ' . $gambar_sampul->getClientOriginalName();
+        
         // sampul artikel
-        $extThumb = $request->gambar_sampul->getClientOriginalExtension();
-        $pathThumb = "sampul-".time().".".$extThumb;
-        $pathStore = $request->gambar_sampul->move(public_path('aticleProd/sampul'), $pathThumb);
+        // $extThumb = $request->gambar_sampul->getClientOriginalName();
+        // $pathThumb = "sampul-".time().".".$extThumb;
+        // $pathStore = $request->gambar_sampul->move(public_path('aticleProd/sampul'), $pathThumb);
 
-        // konten artikel
-        $konten = $request->file('aticle');
-        $articlename = $konten->getClientOriginalName();
-        $articlepath = $konten->storeAs('article', $articlename);
-        $pathStore = $request->article->move(public_path('articleProd/konten'), $articlepath);
+        // // konten artikel
+        // $article = $request->file('aticle');
+        // $articlename = $article->getClientOriginalName();
+        // $articlepath = $article->storeAs('article', $articlename);
+        // $pathStore = $request->article->move(public_path('articleProd/konten'), $articlepath);
 
-        ArticleAdmin::create([
-            "status" => $request["status"],
-            "kategori" => $request["kategori"],
-            "gambar_sampul" => $pathThumb,
-            "text_sampul" => $request["text_sampul"],
-            "judul" => $request["judul"],
-            "slug" => $request["slug"],
-            "article" => $request["article"],
-            // "picture" => $articlename
-        ]);
+        // ArticleAdmin::create([
+        //     "status" => $request["status"],
+        //     "gambar_sampul" => $pathThumb,
+        //     "text_sampul" => $request["text_sampul"],
+        //     "judul" => $request["judul"],
+        //     "slug" => $request["slug"],
+        //     "article" => $request["article"],
+        //     // "picture" => $articlename
+        // ]);
+
+        $artikel =new ArticleAdmin;
+        $artikel->status = $request->status;
+        $artikel->gambar_sampul =  $new_sampul;
+        $artikel->text_sampul = $request->text_sampul;
+        $artikel->judul = $request->judul;
+        $artikel->slug = $request->slug;
+        $artikel->picture =  $new_sampul;
+        $artikel->article = $request->article;
+
+        // dd($artikel);
 
         $gambar_sampul->move('articleProd/sampul/', $new_sampul);
+        $artikel->save();
 
         return redirect('/admin/list-article')->with('success', 'Artikel Berhasil Ditambahkan!');
     }
@@ -75,8 +87,6 @@ class ArticleController extends Controller
 
     public function update($id, Request $request) {
         $request->validate([
-            'status' => 'required',
-            'kategori' => 'required',
             'gambar_sampul' => 'mimes:jpeg,jpg,png|max:2200',
             'text_sampul' => 'required',
             'judul' => 'required',
@@ -89,12 +99,10 @@ class ArticleController extends Controller
         if ($request->has('picture')) {
             File::delete("articleProd/sampul/".$article->picture);
             $picture = $request->picture;
-            $pathThumb = time() . ' - ' . $picture->getClientOriginalName();
-            $picture->move('articleProd/sampul/', $pathThumb);
+            $new_sampul = time() . ' - ' . $picture->getClientOriginalName();
+            $picture->move('articleProd/sampul/', $new_sampul);
             $article_data = [
-                "status" => $request["status"],
-                "kategori" => $request["kategori"],
-                "gambar_sampul" => $pathThumb,
+                "gambar_sampul" => $new_sampul,
                 "text_sampul" => $request["text-sampul"],
                 "judul" => $request["judul"],
                 "slug" => $request["slug"],
@@ -103,9 +111,7 @@ class ArticleController extends Controller
             ];
         } else {
             $article_data = [
-                "status" => $request["status"],
-                "kategori" => $request["kategori"],
-                "gambar-sampul" => $pathThumb,
+                // "gambar-sampul" => $new_sampul,
                 "text_sampul" => $request["text_sampul"],
                 "judul" => $request["judul"],
                 "slug" => $request["slug"],
@@ -121,6 +127,14 @@ class ArticleController extends Controller
     public function destroy($id) {
         $submission = DB::table('articles')->where('id', $id)->delete();
         return redirect('/admin/list-article')->with('success', 'Artikel Berhasil Dihapus!');
+    }
+
+    public function status(Request $request)
+    {
+        ArticleAdmin::where('id', $request->id)->update(['status' => $request->status]);
+        // dd($request->all());
+
+        return back();
     }
 
     public function upload($id) {

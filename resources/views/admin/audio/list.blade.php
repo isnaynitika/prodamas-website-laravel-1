@@ -1,5 +1,7 @@
 @extends('admin.master')
 
+@section('audio', 'active')
+
 @section('title')
 Audio Submission
 @endsection
@@ -12,7 +14,7 @@ Audio Submission
 @endif
 
 <a href="/admin/add-audio" class="btn btn-primary mb-3">Tambah Audio</a>
-<table class="table">
+<table class="table" id="tableAudio">
     <thead class="thead-light">
         <tr>
             <th scope="col">ID</th>
@@ -47,4 +49,12 @@ Audio Submission
         @endforelse
     </tbody>
 </table>
+@endsection
+
+@section('table')
+    <script>
+      $(document).ready(function() {
+          $('#tableAudio').DataTable(); //sesuikan id tabel yg dibat
+      } );
+    </script>
 @endsection

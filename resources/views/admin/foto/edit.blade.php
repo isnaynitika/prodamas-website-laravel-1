@@ -1,5 +1,7 @@
 @extends('admin.master')
 
+@section('foto', 'active')
+
 @section('title')
     Edit Artikel
 @endsection
@@ -20,7 +22,10 @@
         </div>
         <div class="form-group">
             <label for="konten">Konten</label><br>
-            <input type="file" name="konten" id="konten" value="{{$foto->konten}}">
+            @if ($foto->konten)
+                <p>{{$foto->konten}}</p>
+            @endif
+            <input type="file" class="form-control" name="konten" id="konten" value="{{$foto->konten}}">
             @error('konten')
                 <div class="alert alert-danger">
                     {{ $message }}
@@ -29,7 +34,7 @@
         </div>
         <div class="form-group">
             <label for="caption">Caption</label>
-            <textarea name="caption" class="form-control" cols="30" rows="10">{{$foto->caption}}</textarea>
+            <textarea name="caption" class="form-control" cols="30" rows="3">{{$foto->caption}}</textarea>
             @error('caption')
                 <div class="alert alert-danger">
                     {{ $message }}

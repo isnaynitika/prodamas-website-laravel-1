@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color: #E7DCF3">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
-        <img src="{{asset('/layouts/img/logoprodamas.png')}}" alt="AdminLTE Logo"
+        <img src="{{ asset('img/logoprodamas.png') }}"
             class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-bold">PRODAMAS</span>
     </a>
@@ -19,31 +19,31 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="/admin/list-article" class="nav-link">
+                    <a href="/admin/list-article" class="nav-link @yield('artikel')">
                         <i class="nav-icon far fa-newspaper"></i>
                         <p>Artikel</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="/admin/submission" class="nav-link">
+                {{-- <li class="nav-item">
+                    <a href="/admin/submission" class="nav-link @yield('cerita')">
                         <i class="nav-icon fas fa-user-edit"></i>
                         <p>Tulis Cerita</p>
                     </a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
-                    <a href="/admin/list-foto" class="nav-link">
+                    <a href="/admin/list-foto" class="nav-link @yield('foto')">
                         <i class="nav-icon far fa-images"></i>
                         <p>Foto</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/admin/list-video" class="nav-link">
+                    <a href="/admin/list-video" class="nav-link @yield('video')">
                         <i class="nav-icon fas fa-video"></i>
                         <p>Video</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/admin/list-audio" class="nav-link">
+                    <a href="/admin/list-audio" class="nav-link @yield('audio')">
                         <i class="nav-icon fas fa-microphone"></i>
                         <p>Audio</p>
                     </a>

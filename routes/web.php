@@ -37,9 +37,7 @@ use App\Http\Controllers\TestregistController;
 */
 
 //tampilan
-Route::get('/', function () {
-    return view('beranda.index');
-})->name('dashboard');
+Route::get('/', [artikelController::class, 'beranda'])->name('dashboard');
 
 // tentang
 Route::get('/tentang', [TentangController::class, 'index']);
@@ -84,8 +82,41 @@ Route::post('/test123', [TestregistController::class, 'store']);
 
 
 Route::group(['middleware' => 'auth'], function(){ //agar tidak dapat tampil menggunakan linknya
-    Route::get('/profil/{id}/edit', [ProfilController::class, 'index']);
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/profil/{id}/edit', [ProfilController::class, 'index']);
+
+    //artikel admin
+    Route::get('/admin/add-article', [ArticleController::class, 'create']);
+    Route::post('/admin/list-article', [ArticleController::class, 'store']);
+    Route::get('/admin/list-article', [ArticleController::class, 'index']);
+    Route::get('/admin/article/{article_id}', [ArticleController::class, 'edit']);
+    Route::put('/admin/article/{article_id}', [ArticleController::class, 'update']);
+    Route::delete('/admin/article/{article_id}', [ArticleController::class, 'destroy']);
+    Route::post('/admin/status', [ArticleController::class, 'status']);
+
+    //foto
+    Route::get('/admin/add-foto', [FotoAdminController::class, 'create']);
+    Route::post('/admin/list-foto', [FotoAdminController::class, 'store']);
+    Route::get('/admin/list-foto', [FotoAdminController::class, 'index']);
+    Route::get('/admin/foto/{foto_id}', [FotoAdminController::class, 'edit']);
+    Route::put('/admin/foto/{foto_id}', [FotoAdminController::class, 'update']);
+    Route::delete('/admin/foto/{foto_id}', [FotoAdminController::class, 'destroy']);
+
+    //video
+    Route::get('/admin/add-video', [VideoAdminController::class, 'create']);
+    Route::post('/admin/list-video', [VideoAdminController::class, 'store']);
+    Route::get('/admin/list-video', [VideoAdminController::class, 'index']);
+    Route::get('/admin/video/{video_id}', [VideoAdminController::class, 'edit']);
+    Route::put('/admin/video/{video_id}', [VideoAdminController::class, 'update']);
+    Route::delete('/admin/video/{video_id}', [VideoAdminController::class, 'destroy']);
+
+    //audio
+    Route::get('/admin/add-audio', [AudioAdminController::class, 'create']);
+    Route::post('/admin/list-audio', [AudioAdminController::class, 'store']);
+    Route::get('/admin/list-audio', [AudioAdminController::class, 'index']);
+    Route::get('/admin/audio/{audio_id}', [AudioAdminController::class, 'edit']);
+    Route::put('/admin/audio/{audio_id}', [AudioAdminController::class, 'update']);
+    Route::delete('/admin/audio/{audio_id}', [AudioAdminController::class, 'destroy']);
 
 });
 
@@ -95,9 +126,7 @@ Route::post('beranda.index', [NewsletterController::class, 'store']);
 
 //artikel
 Route::resource('artikel', artikelController::class);
-Route::get('/artikel/1', function () {
-    return view('artikel.artikelLay');
-});
+Route::get('/artikel/{id}', [artikelController::class, 'show']);
 //Route::post('add_prosess', 'artikelController@add_process');
 
 //kritik saran
@@ -112,37 +141,7 @@ Route::get('registration', [CustomAuthController::class, 'registration'])->name(
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 
-//artikel admin
-Route::get('/admin/add-article', [ArticleController::class, 'create']);
-Route::post('/admin/list-article', [ArticleController::class, 'store']);
-Route::get('/admin/list-article', [ArticleController::class, 'index']);
-Route::get('/admin/article/{article_id}', [ArticleController::class, 'edit']);
-Route::put('/admin/article/{article_id}', [ArticleController::class, 'update']);
-Route::delete('/admin/article/{article_id}', [ArticleController::class, 'destroy']);
 
-//foto
-Route::get('/admin/add-foto', [FotoAdminController::class, 'create']);
-Route::post('/admin/list-foto', [FotoAdminController::class, 'store']);
-Route::get('/admin/list-foto', [FotoAdminController::class, 'index']);
-Route::get('/admin/foto/{foto_id}', [FotoAdminController::class, 'edit']);
-Route::put('/admin/foto/{foto_id}', [FotoAdminController::class, 'update']);
-Route::delete('/admin/foto/{foto_id}', [FotoAdminController::class, 'destroy']);
-
-//video
-Route::get('/admin/add-video', [VideoAdminController::class, 'create']);
-Route::post('/admin/list-video', [VideoAdminController::class, 'store']);
-Route::get('/admin/list-video', [VideoAdminController::class, 'index']);
-Route::get('/admin/video/{video_id}', [VideoAdminController::class, 'edit']);
-Route::put('/admin/video/{video_id}', [VideoAdminController::class, 'update']);
-Route::delete('/admin/video/{video_id}', [VideoAdminController::class, 'destroy']);
-
-//audio
-Route::get('/admin/add-audio', [AudioAdminController::class, 'create']);
-Route::post('/admin/list-audio', [AudioAdminController::class, 'store']);
-Route::get('/admin/list-audio', [AudioAdminController::class, 'index']);
-Route::get('/admin/audio/{audio_id}', [AudioAdminController::class, 'edit']);
-Route::put('/admin/audio/{audio_id}', [AudioAdminController::class, 'update']);
-Route::delete('/admin/audio/{audio_id}', [AudioAdminController::class, 'destroy']);
 
 //admin
 // Route::resource('admin', AdminController::class);
