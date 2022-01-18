@@ -96,11 +96,7 @@
                         <i class="fas fa-user" style="font-size:20px; font-weight: lighter; color: white;"></i>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <li><button class="dropdown-item"><a href="{{ url('profil') }}" style="text-decoration: none; color: black;">Edit Profil</a></button></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><button class="dropdown-item"><a href="{{ url('logout') }}" style="text-decoration: none; color: black;">Logout</a></button></li>
+                        <li><button type="button" class="btn btn-light"><a href="{{ url('logout') }}" style="text-decoration: none; color: black;">Logout</a></button></li>
                     </ul>
                 </div>
                 @endauth
