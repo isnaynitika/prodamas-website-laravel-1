@@ -16,7 +16,7 @@
         </div>
 
         <!-- Sidebar Menu -->
-        <nav class="mt-2 fixed-top">
+        <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
                     <a href="/admin/list-article" class="nav-link @yield('artikel')">
