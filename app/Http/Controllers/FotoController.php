@@ -10,6 +10,8 @@ class FotoController extends Controller
 {
     public function index()
     {
-        $fotos = DB::table('fotos')->get();
+        $fotos = DB::table('fotos')
+        ->orderBy('id', 'asc')
+        ->get();
         return view('foto.index', ['fotos'=>$fotos]);
     }}
