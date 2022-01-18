@@ -104,11 +104,11 @@
                     </ul>
                 </div>
                 @endauth -->
-                <!-- @guest -->
+                @guest
                 <a class="nav-icon position-relative text-decoration-none " href="{{ url('loginuser') }}">
                     <i class="fa fa-fw fa-user text-light mr-3"></i>
                 </a>
-                <!-- @endguest -->
+                @endguest
 
             </div>
         </div>
