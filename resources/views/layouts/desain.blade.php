@@ -62,8 +62,6 @@
                                 Data
                             </a>
                             <ul class="dropdown-menu menu-navigation" aria-labelledby="dropdownMenuLink">
-                               <!-- <li><a class="dropdown-item @yield('grafik')" href="{{ url('/grafik') }}">Prodamas Dalam Grafik</a>
-                                </li> -->
                                 <li><a class="dropdown-item @yield('peta')" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
                                 <li><a class="dropdown-item @yield('banksampah')" href="{{ url('/banksampah') }}"> Bank Sampah </a></li>
                             </ul>
