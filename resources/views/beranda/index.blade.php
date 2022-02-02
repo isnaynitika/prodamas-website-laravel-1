@@ -167,6 +167,29 @@
   <div class="container artikel mb-5 mt-5">
     <h3 class="mb-4" style="font-family: Inter, sans-serif">Foto</h3>
     <div class="row row-cols-1 row-cols-md-3 g-4">
+      @foreach ($foto as $item)         
+      <div class="col">
+        <div class="card h-100 hover-card" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$item->id}}">
+          <img src="{{ asset('fotoProd/'.$item->konten) }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ $item->judul }}</h5>
+            <p class="card-text">{{ $item->caption }}</p>
+          </div>
+        </div>
+      </div>
+      @endforeach
+    </div>
+    <a href="{{ url('foto') }}">
+      <h6 class="text-end mt-3"><u>Info Lainnya <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+          </svg></u></h6>
+    </a>
+  </div>
+
+
+  {{-- <div class="container artikel mb-5 mt-5">
+    <h3 class="mb-4" style="font-family: Inter, sans-serif">Foto</h3>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
       @foreach ($foto as $item)
       <a href="foto/{{$item->id}}"></a>  
       <div class="col">
@@ -185,7 +208,7 @@
             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
           </svg></u></h6>
     </a>
-  </div>
+  </div> --}}
 
 @foreach ($foto as $item)
 {{-- Card Modal --}}
@@ -231,7 +254,7 @@
       @foreach ($audio as $item) 
       <div class="col">
         <div class="card h-100 hover-card" data-bs-toggle="modal" data-bs-target="#audioPlayer{{$item->id}}">
-          <img src="{{ asset('audioProd/thumb'.$item->gambar_sampul) }}" class="card-img-top" alt="...">
+          <img src="{{ asset('audioProd/thumb/'.$item->gambar_sampul) }}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{ $item->judul }}</h5>
             <p class="card-text">{{ $item->caption }}</p>
@@ -289,7 +312,7 @@
   <!--end audio-->
 
   <!--berlangganan-->
-  <div class="container py-5 mb-5">
+  {{-- <div class="container py-5 mb-5">
     <div class="cardberlangganan">
       <div class="card-body">
         <h5 class="card-title text-center mb-4 mt-5" style="font-weight: bold;font-family:Inter, sans-serif;">Berlangganan</h5>
@@ -326,7 +349,7 @@
         </form>
       </div>
     </div>
-  </div>
+  </div> --}}
   <!--end berlangganan-->
 
 

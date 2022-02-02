@@ -62,8 +62,8 @@
                                 Data
                             </a>
                             <ul class="dropdown-menu menu-navigation" aria-labelledby="dropdownMenuLink">
-                                <li><a class="dropdown-item @yield('grafik')" href="{{ url('/grafik') }}">Prodamas Dalam Grafik</a>
-                                </li>
+                                {{-- <li><a class="dropdown-item @yield('grafik')" href="{{ url('/grafik') }}">Prodamas Dalam Grafik</a>
+                                </li> --}}
                                 <li><a class="dropdown-item @yield('peta')" href="{{ url('/peta') }}">Prodamas Dalam Peta</a></li>
                                 <li><a class="dropdown-item @yield('banksampah')" href="{{ url('/banksampah') }}"> Bank Sampah </a></li>
                             </ul>
@@ -144,17 +144,17 @@
                                 <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
                                     Navigasi</p>
                                 <a class="footer-link" href="{{ url('/') }}">Beranda</a> <br />
-                                <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br />
+                                {{-- <a class="footer-link" href="{{ url('tuliscerita') }}">Tulis Cerita</a> <br /> --}}
                                 <a class="footer-link" href="{{ url('kritik') }}">Kritik & Saran</a> <br>
-                                <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br />
-                                <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a>
+                                {{-- <a class="footer-link" href="{{ url('grafik') }}">Prodamas Dalam Grafik</a> <br /> --}}
+                                <a class="footer-link" href="{{ url('peta') }}">Prodamas Dalam Peta</a> <br>
+                                <a class="footer-link" href="{{ url('banksampah') }}">Bank Sampah</a>
                             </div>
                             <div class="col-md-6">
                                 <p style="font-family: Inter, sans-serif; font-weight: 600; font-weight: bold; font-size:25px;">
                                     Tautan Eksternal</p>
                                 <a class="footer-link" href="https://www.kedirikota.go.id/">Kota Kediri</a> <br />
-                                <!--<a class="footer-link" href="https://survey123.arcgis.com/share/932769e15a27418aa9b448b0b1e6b6b6">Pengaduan
-                                    Bank Sampah</a> <br>-->
+                                <a class="footer-link" href="https://play.google.com/store/apps/details?id=com.ebanksampah.kedirikota">E-Bank Sampah</a> <br>
                                 <a class="footer-link" href="https://prodamasplus.kedirikota.go.id/auth/login">Progressio</a>
                             </div>
                         </div>

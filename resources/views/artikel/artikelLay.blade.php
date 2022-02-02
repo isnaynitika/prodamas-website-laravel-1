@@ -39,7 +39,7 @@
                 </div>
                 <br>
                 <div class="">
-                    <img src="{{ asset('articleProd/sampul/'.$item->gambar_sampul) }}" alt="" style="height:100%;">
+                    <img src="{{ asset('articleProd/sampul/'.$item->gambar_sampul) }}" alt="" style="height:100%; max-width: 800px">
                 </div><br>
                 <p>{{$item->article}}</p>
             </div>

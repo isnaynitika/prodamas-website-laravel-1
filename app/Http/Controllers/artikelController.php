@@ -15,10 +15,12 @@ use DB;
 class artikelController extends Controller
 {
     public function index(){
-        $artikel = ArticleAdmin::where('status', 'published')->get();
+        $artikel = ArticleAdmin::where('status', 'published')
+        ->orderBy('id', 'desc') 
+        ->get();
         // dd($artikel);
         $artikelupdate = ArticleAdmin::where('status', 'published') 
-                ->orderBy('id', 'asc') 
+                ->orderBy('id', 'desc') 
                 ->take(4) 
                 ->get();
         return view('artikel.index', compact('artikel','artikelupdate'));
@@ -27,19 +29,19 @@ class artikelController extends Controller
     public function beranda()
     {
         $artikel = ArticleAdmin::where('status', 'published') 
-                ->orderBy('id', 'asc') 
+                ->orderBy('id', 'desc') 
                 ->take(3) 
                 ->get();
 
-        $video = VideoAdmin::orderBy('id', 'asc') 
+        $video = VideoAdmin::orderBy('id', 'desc') 
                 ->take(3) 
                 ->get();
 
-        $foto = FotoAdmin::orderBy('id', 'asc') 
+        $foto = FotoAdmin::orderBy('id', 'desc') 
                 ->take(3) 
                 ->get();
 
-        $audio = AudioAdmin::orderBy('id', 'asc') 
+        $audio = AudioAdmin::orderBy('id', 'desc') 
                 ->take(3) 
                 ->get();
 
@@ -49,7 +51,9 @@ class artikelController extends Controller
     }
 
     public function show($id){
-        $artikel = ArticleAdmin::where('id', $id)->get();
+        $artikel = ArticleAdmin::where('id', $id)
+        ->orderBy('id', 'desc') 
+        ->get();
         // dd($artikel);
         return view ('artikel.artikelLay', compact('artikel'));
     }

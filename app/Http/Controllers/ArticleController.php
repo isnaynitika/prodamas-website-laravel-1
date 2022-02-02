@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\ArticleAdmin;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\mb_strimwidth;
 
 class ArticleController extends Controller
 {
